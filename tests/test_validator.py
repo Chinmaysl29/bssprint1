@@ -17,7 +17,7 @@ def test_dq01_no_duplicate_companies():
     # We expect some failures but the validator should find none for DQ01
     dq01_failures = [f for f in validator.failures if f['rule'] == 'DQ01']
     # Original data has some duplicates, but we can check
-    assert isinstance(dq01_failures
+    assert isinstance(dq01_failures, list)
 
 def test_dq02_duplicate_company_year():
     validator = DataQualityValidator()
