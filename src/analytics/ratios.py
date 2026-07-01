@@ -254,6 +254,165 @@ def calculate_pat_to_assets():
     return df
 
 
+def calculate_debt_to_equity():
+    """Calculate Debt-to-Equity ratio = Borrowings / (Equity Capital + Reserves)
+    Rules:
+    - If Borrowings == 0, return 0
+    - If Equity + Reserves <= 0, return None"""
+    conn = sqlite3.connect(get_database_path())
+    
+    query = """
+    SELECT 
+        bs.company_id,
+        c.company_name,
+        bs.year,
+        bs.equity_capital,
+        bs.reserves,
+        bs.borrowings,
+        CASE 
+            WHEN bs.borrowings = 0 THEN 0
+            WHEN (bs.equity_capital + bs.reserves) > 0 
+            THEN ROUND(bs.borrowings / (bs.equity_capital + bs.reserves), 2)
+            ELSE NULL
+        END as debt_to_equity_ratio
+    FROM balancesheet bs
+    JOIN companies c ON bs.company_id = c.id
+    ORDER BY debt_to_equity_ratio ASC
+    """
+    
+    df = pd.read_sql(query, conn)
+    conn.close()
+    
+    return df
+
+
+def calculate_interest_coverage_ratio():
+    """Calculate Interest Coverage Ratio = (Operating Profit + Other Income) / Interest
+    Edge Case:
+    - If Interest == 0, return None for ratio and 'Debt Free' as icr_label
+    - Otherwise, 'Normal' as icr_label"""
+    conn = sqlite3.connect(get_database_path())
+    
+    query = """
+    SELECT 
+        p.company_id,
+        c.company_name,
+        p.year,
+        (p.operating_profit + p.other_income) as ebit,
+        p.interest,
+        CASE 
+            WHEN p.interest > 0 
+            THEN ROUND((p.operating_profit + p.other_income) / p.interest, 2)
+            ELSE NULL
+        END as interest_coverage_ratio,
+        CASE 
+            WHEN p.interest = 0 
+            THEN 'Debt Free'
+            ELSE 'Normal'
+        END as icr_label
+    FROM profitandloss p
+    JOIN companies c ON p.company_id = c.id
+    ORDER BY interest_coverage_ratio DESC
+    """
+    
+    df = pd.read_sql(query, conn)
+    conn.close()
+    
+    return df
+
+
+def calculate_net_debt():
+    """Calculate Net Debt = Borrowings - Investments
+    Negative values are allowed, no extra checks required"""
+    conn = sqlite3.connect(get_database_path())
+    
+    query = """
+    SELECT 
+        bs.company_id,
+        c.company_name,
+        bs.year,
+        bs.borrowings,
+        bs.investments,
+        (bs.borrowings - bs.investments) as net_debt
+    FROM balancesheet bs
+    JOIN companies c ON bs.company_id = c.id
+    ORDER BY net_debt DESC
+    """
+    
+    df = pd.read_sql(query, conn)
+    conn.close()
+    
+    return df
+
+
+def calculate_asset_turnover():
+    """Calculate Asset Turnover = Sales / Total Assets
+    If Assets ==0 → return None"""
+    conn = sqlite3.connect(get_database_path())
+    
+    query = """
+    SELECT 
+        p.company_id,
+        c.company_name,
+        p.year,
+        p.sales,
+        bs.total_assets,
+        CASE 
+            WHEN bs.total_assets > 0 
+            THEN ROUND(p.sales / bs.total_assets, 2)
+            ELSE NULL
+        END as asset_turnover
+    FROM profitandloss p
+    JOIN balancesheet bs ON p.company_id = bs.company_id AND p.year = bs.year
+    JOIN companies c ON p.company_id = c.id
+    ORDER BY asset_turnover DESC
+    """
+    
+    df = pd.read_sql(query, conn)
+    conn.close()
+    
+    return df
+
+
+def get_leverage_labels():
+    """Get High Leverage Flag and Debt Free Label for each company and year
+    Rules for High Leverage Flag:
+    - High Leverage = True if:
+        - Debt-to-Equity >5 AND Company is NOT Financials
+    - Otherwise False"""
+    conn = sqlite3.connect(get_database_path())
+    
+    query = """
+    SELECT 
+        bs.company_id,
+        c.company_name,
+        bs.year,
+        s.sector,
+        bs.equity_capital,
+        bs.reserves,
+        bs.borrowings,
+        CASE 
+            WHEN bs.borrowings = 0 THEN 'Yes'
+            ELSE 'No'
+        END as debt_free_label,
+        CASE 
+            WHEN (bs.equity_capital + bs.reserves) > 0 
+                 AND (bs.borrowings / (bs.equity_capital + bs.reserves)) > 5 
+                 AND s.sector != 'Financials' THEN 'Yes'
+            ELSE 'No'
+        END as high_leverage_flag
+    FROM balancesheet bs
+    JOIN companies c ON bs.company_id = c.id
+    JOIN sectors s ON bs.company_id = s.company_id
+    ORDER BY bs.company_id, bs.year DESC
+    """
+    
+    df = pd.read_sql(query, conn)
+    conn.close()
+    
+    return df
+
+
 if __name__ == "__main__":
     print("=== Net Profit Margin ===")
     npm_df = calculate_net_profit_margin()
@@ -290,3 +449,23 @@ if __name__ == "__main__":
     print("\n=== Top 10 PAT to Assets Ratios ===")
     pat_to_assets_df = calculate_pat_to_assets()
     print(pat_to_assets_df.head(10))
+    
+    print("\n=== Debt-to-Equity Ratios (Lowest First) ===")
+    dte_df = calculate_debt_to_equity()
+    print(dte_df.head(10))
+    
+    print("\n=== Interest Coverage Ratios (Highest First) ===")
+    icr_df = calculate_interest_coverage_ratio()
+    print(icr_df.head(10))
+    
+    print("\n=== Net Debt (Highest First) ===")
+    net_debt_df = calculate_net_debt()
+    print(net_debt_df.head(10))
+    
+    print("\n=== Asset Turnover (Highest First) ===")
+    asset_turnover_df = calculate_asset_turnover()
+    print(asset_turnover_df.head(10))
+    
+    print("\n=== Leverage Labels ===")
+    leverage_labels_df = get_leverage_labels()
+    print(leverage_labels_df.head(20))
