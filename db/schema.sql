@@ -141,6 +141,12 @@ CREATE TABLE financial_ratios (
     ratio10 REAL,
     ratio11 REAL,
     ratio12 REAL,
+    free_cash_flow_cr REAL,
+    cfo_quality_score REAL,
+    capex_intensity_pct REAL,
+    capex_label TEXT,
+    fcf_conversion_pct REAL,
+    capital_allocation_pattern TEXT,
     FOREIGN KEY (company_id) REFERENCES companies(id)
 );
 

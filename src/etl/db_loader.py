@@ -152,7 +152,13 @@ def load_data():
         ratio9 REAL,
         ratio10 REAL,
         ratio11 REAL,
-        ratio12 REAL
+        ratio12 REAL,
+        free_cash_flow_cr REAL,
+        cfo_quality_score REAL,
+        capex_intensity_pct REAL,
+        capex_label TEXT,
+        fcf_conversion_pct REAL,
+        capital_allocation_pattern TEXT
     );
     CREATE TABLE peer_groups (
         id INTEGER PRIMARY KEY,
@@ -204,7 +210,9 @@ def load_data():
          0, {'market_cap_crore': 'mc1', 'enterprise_value_crore': 'mc2', 'pe_ratio': 'val3', 'pb_ratio': 'val4', 'ev_ebitda': 'val5', 'dividend_yield_pct': 'val6'}),
         ('financial_ratios', os.path.join(supporting_dir, 'financial_ratios.xlsx'),
          ['id', 'company_id', 'year', 'ratio1', 'ratio2', 'ratio3', 'ratio4', 'ratio5',
-          'ratio6', 'ratio7', 'ratio8', 'ratio9', 'ratio10', 'ratio11', 'ratio12'],
+          'ratio6', 'ratio7', 'ratio8', 'ratio9', 'ratio10', 'ratio11', 'ratio12',
+          'free_cash_flow_cr', 'cfo_quality_score', 'capex_intensity_pct', 'capex_label',
+          'fcf_conversion_pct', 'capital_allocation_pattern'],
          0, {'net_profit_margin_pct': 'ratio1', 'operating_profit_margin_pct': 'ratio2', 'return_on_equity_pct': 'ratio3', 'debt_to_equity': 'ratio4', 'interest_coverage': 'ratio5', 'asset_turnover': 'ratio6', 'free_cash_flow_cr': 'ratio7', 'capex_cr': 'ratio8', 'earnings_per_share': 'ratio9', 'book_value_per_share': 'ratio10', 'dividend_payout_ratio_pct': 'ratio11', 'total_debt_cr': 'ratio12'}),
         ('peer_groups', os.path.join(supporting_dir, 'peer_groups.xlsx'),
          ['id', 'group_name', 'company_id', 'is_primary'],
