@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIFTY100 Financial Intelligence Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-icon"><i class="fa-solid fa-chart-mixed"></i></div>
+    <div class="brand-text">
+      <span class="brand-name">NIFTY100</span>
+      <span class="brand-sub">Financial Intelligence</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">OVERVIEW</div>
+    <a href="#" class="nav-item active" data-page="overview">
+      <i class="fa-solid fa-gauge-high"></i>
+      <span>Executive Overview</span>
+    </a>
+
+    <div class="nav-section-label">SPRINT 1</div>
+    <a href="#" class="nav-item" data-page="etl">
+      <i class="fa-solid fa-database"></i>
+      <span>ETL Dashboard</span>
+    </a>
+    <a href="#" class="nav-item" data-page="dq">
+      <i class="fa-solid fa-shield-check"></i>
+      <span>Data Quality Center</span>
+    </a>
+
+    <div class="nav-section-label">SPRINT 2</div>
+    <a href="#" class="nav-item" data-page="profitability">
+      <i class="fa-solid fa-arrow-trend-up"></i>
+      <span>Profitability Analytics</span>
+    </a>
+    <a href="#" class="nav-item" data-page="leverage">
+      <i class="fa-solid fa-scale-unbalanced"></i>
+      <span>Leverage &amp; Risk</span>
+    </a>
+    <a href="#" class="nav-item" data-page="cagr">
+      <i class="fa-solid fa-seedling"></i>
+      <span>CAGR Growth Engine</span>
+    </a>
+    <a href="#" class="nav-item" data-page="cashflow">
+      <i class="fa-solid fa-money-bill-wave"></i>
+      <span>Cash Flow Intelligence</span>
+    </a>
+    <a href="#" class="nav-item" data-page="capital">
+      <i class="fa-solid fa-sitemap"></i>
+      <span>Capital Allocation</span>
+    </a>
+    <a href="#" class="nav-item" data-page="ranking">
+      <i class="fa-solid fa-ranking-star"></i>
+      <span>Company Ranking</span>
+    </a>
+
+    <div class="nav-section-label">REPORTS</div>
+    <a href="#" class="nav-item" data-page="summary">
+      <i class="fa-solid fa-flag-checkered"></i>
+      <span>Sprint Summary</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="db-status">
+      <span class="status-dot pulse"></span>
+      <span>nifty100.db · Live</span>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main-wrapper">
+
+  <!-- TOP HEADER -->
+  <header class="top-header">
+    <div class="header-left">
+      <button class="sidebar-toggle" id="sidebarToggle"><i class="fa-solid fa-bars"></i></button>
+      <div class="breadcrumb">
+        <span id="breadcrumb-page">Executive Overview</span>
+      </div>
+    </div>
+    <div class="header-center">
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="globalSearch" placeholder="Search companies, sectors…" />
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-filters" id="headerFilters">
+        <select id="sectorFilter" class="filter-select">
+          <option value="">All Sectors</option>
+        </select>
+        <select id="yearFilter" class="filter-select">
+          <option value="">All Years</option>
+        </select>
+      </div>
+      <div class="header-badge">
+        <i class="fa-solid fa-circle-check success"></i>
+        <span>92 Companies</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="content" id="mainContent">
+    <!-- Pages injected by JS -->
+  </main>
+
+</div>
+
+<!-- LOADING OVERLAY -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loader-card">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Loading NIFTY100 Data…</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/data_loader.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
