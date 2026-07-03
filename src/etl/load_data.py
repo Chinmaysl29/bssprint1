@@ -151,7 +151,13 @@ def load_data():
         ratio9 REAL,
         ratio10 REAL,
         ratio11 REAL,
-        ratio12 REAL
+        ratio12 REAL,
+        free_cash_flow_cr REAL,
+        cfo_quality_score REAL,
+        capex_intensity_pct REAL,
+        capex_label TEXT,
+        fcf_conversion_pct REAL,
+        capital_allocation_pattern TEXT
     );
 
     CREATE TABLE peer_groups (
@@ -271,7 +277,9 @@ def load_data():
         os.path.join(supporting_dir, 'financial_ratios.xlsx'), 
         'financial_ratios', 
         ['id', 'company_id', 'year', 'ratio1', 'ratio2', 'ratio3', 'ratio4', 
-         'ratio5', 'ratio6', 'ratio7', 'ratio8', 'ratio9', 'ratio10', 'ratio11', 'ratio12'],
+         'ratio5', 'ratio6', 'ratio7', 'ratio8', 'ratio9', 'ratio10', 'ratio11', 'ratio12',
+         'free_cash_flow_cr', 'cfo_quality_score', 'capex_intensity_pct', 'capex_label',
+         'fcf_conversion_pct', 'capital_allocation_pattern'],
         rename_cols={
             '1': 'id',
             'ABB': 'company_id',
@@ -477,6 +485,12 @@ def load_data():
         ratio10 REAL,
         ratio11 REAL,
         ratio12 REAL,
+        free_cash_flow_cr REAL,
+        cfo_quality_score REAL,
+        capex_intensity_pct REAL,
+        capex_label TEXT,
+        fcf_conversion_pct REAL,
+        capital_allocation_pattern TEXT,
         FOREIGN KEY (company_id) REFERENCES companies(id)
     );
     INSERT INTO financial_ratios_new SELECT * FROM financial_ratios;

@@ -10,7 +10,7 @@ def test_load_audit_exists():
 def test_load_audit_columns():
     audit_path = os.path.join(os.path.dirname(__file__), '../output/load_audit.csv')
     df = pd.read_csv(audit_path)
-    expected_columns = ['Table', 'Rows in', 'Rows loaded', 'Rejected', 'Runtime', 'Timestamp']
+    expected_columns = ['Table', 'Rows in', 'Rows loaded', 'Rejected', 'Runtime (s)', 'Timestamp']
     for col in expected_columns:
         assert col in df.columns, f"Column {col} should exist in load_audit"
 
