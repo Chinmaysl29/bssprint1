@@ -413,6 +413,199 @@ def get_leverage_labels():
     return df
 
 
+def cross_check_roce(clear_log_first=True):
+    """
+    Cross Check Calculated ROCE vs Source ROCE (companies.roce_percentage)
+    Rules:
+        - If absolute difference >5%, log to ratio_edge_cases.log
+        - Categorize:
+            - DATA_SOURCE_ISSUE: Scale mismatch (source*100 or similar matches calculated)
+            - FORMULA_DIFFERENCE: Source is constant across all years for this company
+            - VERSION_DIFFERENCE: All other differences
+        - ROCE = EBIT / (Equity + Reserves + Borrowings)
+        - EBIT = Operating Profit + Other Income
+    """
+    from .edge_case_logger import log_edge_case, clear_log
+
+    if clear_log_first:
+        clear_log()
+
+    conn = sqlite3.connect(get_database_path())
+
+    query = """
+    SELECT 
+        c.id as company_id,
+        c.company_name,
+        p.year,
+        c.roce_percentage as source_roce,
+        (p.operating_profit + p.other_income) as ebit,
+        bs.equity_capital as equity,
+        bs.reserves,
+        bs.borrowings,
+        (bs.equity_capital + bs.reserves + bs.borrowings) as capital_employed
+    FROM companies c
+    JOIN profitandloss p ON c.id = p.company_id
+    JOIN balancesheet bs ON c.id = bs.company_id AND p.year = bs.year
+    ORDER BY c.id, p.year DESC
+    """
+
+    df = pd.read_sql(query, conn)
+    conn.close()
+
+    # Calculate ROCE
+    df['calculated_roce'] = df.apply(
+        lambda row: round((row['ebit'] / row['capital_employed']) * 100, 2) 
+        if pd.notna(row['ebit']) and pd.notna(row['capital_employed']) and row['capital_employed'] > 0 
+        else None,
+        axis=1
+    )
+
+    # For each company, check if source is constant
+    company_constant_source = {}
+    for company_id in df['company_id'].unique():
+        company_rows = df[df['company_id'] == company_id]
+        source_values = company_rows['source_roce'].dropna().unique()
+        company_constant_source[company_id] = len(source_values) == 1
+
+    # Calculate difference and log edge cases
+    logged_count = 0
+    for idx, row in df.iterrows():
+        if pd.notna(row['calculated_roce']) and pd.notna(row['source_roce']):
+            calculated = row['calculated_roce']
+            source = row['source_roce']
+            difference = abs(calculated - source)
+            
+            # Check for scale mismatch (e.g., source is 0.52 vs 52)
+            scale_mismatch = False
+            for scale in [100, 10, 1/10, 1/100]:
+                scaled_source = source * scale
+                if scaled_source != 0:
+                    relative_diff = abs(calculated - scaled_source) / abs(scaled_source)
+                    if relative_diff < 0.5:  # within 50% of scaled source
+                        scale_mismatch = True
+                        break
+            
+            if difference > 5:
+                if scale_mismatch:
+                    category = 'DATA_SOURCE_ISSUE'
+                    explanation = 'Source scale mismatch'
+                elif company_constant_source[row['company_id']]:
+                    category = 'FORMULA_DIFFERENCE'
+                    explanation = 'Different calculation method (constant source value across years)'
+                else:
+                    category = 'VERSION_DIFFERENCE'
+                    explanation = f"Calculated ROCE ({calculated:.2f}%) differs from source ({source:.2f}%) by {difference:.2f}%"
+                
+                log_edge_case(
+                    company_id=row['company_id'],
+                    year=row['year'],
+                    ratio_name='ROCE',
+                    calculated_value=calculated,
+                    source_value=source,
+                    difference=difference,
+                    category=category,
+                    explanation=explanation
+                )
+                logged_count +=1
+
+    print(f"ROCE cross-check complete! Logged {logged_count} ROCE edge cases to ratio_edge_cases.log")
+    return df
+
+
+def cross_check_roe(clear_log_first=False):
+    """
+    Cross Check Calculated ROE vs Source ROE (companies.roe_percentage)
+    Rules:
+        - If absolute difference >5%, log to ratio_edge_cases.log
+        - Categorize:
+            - DATA_SOURCE_ISSUE: Scale mismatch (source*100 or similar matches calculated)
+            - FORMULA_DIFFERENCE: Source is constant across all years for this company
+            - VERSION_DIFFERENCE: All other differences
+        - ROE = Net Profit / (Equity + Reserves) * 100
+    """
+    from .edge_case_logger import log_edge_case
+
+    conn = sqlite3.connect(get_database_path())
+
+    query = """
+    SELECT 
+        c.id as company_id,
+        c.company_name,
+        p.year,
+        c.roe_percentage as source_roe,
+        p.net_profit,
+        bs.equity_capital as equity,
+        bs.reserves,
+        (bs.equity_capital + bs.reserves) as equity_reserves
+    FROM companies c
+    JOIN profitandloss p ON c.id = p.company_id
+    JOIN balancesheet bs ON c.id = bs.company_id AND p.year = bs.year
+    ORDER BY c.id, p.year DESC
+    """
+
+    df = pd.read_sql(query, conn)
+    conn.close()
+
+    # Calculate ROE
+    df['calculated_roe'] = df.apply(
+        lambda row: round((row['net_profit'] / row['equity_reserves']) * 100, 2) 
+        if pd.notna(row['net_profit']) and pd.notna(row['equity_reserves']) and row['equity_reserves'] > 0 
+        else None,
+        axis=1
+    )
+
+    # For each company, check if source is constant
+    company_constant_source = {}
+    for company_id in df['company_id'].unique():
+        company_rows = df[df['company_id'] == company_id]
+        source_values = company_rows['source_roe'].dropna().unique()
+        company_constant_source[company_id] = len(source_values) == 1
+
+    # Calculate difference and log edge cases
+    logged_count = 0
+    for idx, row in df.iterrows():
+        if pd.notna(row['calculated_roe']) and pd.notna(row['source_roe']):
+            calculated = row['calculated_roe']
+            source = row['source_roe']
+            difference = abs(calculated - source)
+            
+            # Check for scale mismatch (e.g., source is 0.52 vs 52)
+            scale_mismatch = False
+            for scale in [100, 10, 1/10, 1/100]:
+                scaled_source = source * scale
+                if scaled_source != 0:
+                    relative_diff = abs(calculated - scaled_source) / abs(scaled_source)
+                    if relative_diff < 0.5:  # within 50% of scaled source
+                        scale_mismatch = True
+                        break
+            
+            if difference > 5:
+                if scale_mismatch:
+                    category = 'DATA_SOURCE_ISSUE'
+                    explanation = 'Source scale mismatch'
+                elif company_constant_source[row['company_id']]:
+                    category = 'FORMULA_DIFFERENCE'
+                    explanation = 'Different calculation method (constant source value across years)'
+                else:
+                    category = 'VERSION_DIFFERENCE'
+                    explanation = f"Calculated ROE ({calculated:.2f}%) differs from source ({source:.2f}%) by {difference:.2f}%"
+                
+                log_edge_case(
+                    company_id=row['company_id'],
+                    year=row['year'],
+                    ratio_name='ROE',
+                    calculated_value=calculated,
+                    source_value=source,
+                    difference=difference,
+                    category=category,
+                    explanation=explanation
+                )
+                logged_count +=1
+
+    print(f"ROE cross-check complete! Logged {logged_count} ROE edge cases to ratio_edge_cases.log")
+    return df
+
+
 if __name__ == "__main__":
     print("=== Net Profit Margin ===")
     npm_df = calculate_net_profit_margin()
@@ -469,3 +662,7 @@ if __name__ == "__main__":
     print("\n=== Leverage Labels ===")
     leverage_labels_df = get_leverage_labels()
     print(leverage_labels_df.head(20))
+    
+    print("\n=== ROCE Cross Check ===")
+    roce_cross_check_df = cross_check_roce()
+    print(roce_cross_check_df.head(20))
