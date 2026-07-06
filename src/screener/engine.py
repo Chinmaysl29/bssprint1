@@ -131,6 +131,26 @@ class StockScreener:
             axis=1
         )
 
+        # Load CAGR data for composite score
+        revenue_cagr = self._get_cagr_data('revenue')
+        if not revenue_cagr.empty:
+            self.financial_data = self.financial_data.merge(
+                revenue_cagr[['company_id', 'revenue_cagr_5y']],
+                on='company_id',
+                how='left'
+            )
+
+        # Calculate composite quality score (Day 1 temp version)
+        self.financial_data['composite_quality_score'] = self.financial_data.apply(
+            lambda row:
+                (row['roe_percentage'] if pd.notna(row['roe_percentage']) else 0) +
+                (row['roce_percentage'] if pd.notna(row['roce_percentage']) else 0) +
+                (row['revenue_cagr_5y'] if pd.notna(row['revenue_cagr_5y']) else 0) +
+                (row['cfo_quality_score'] if pd.notna(row['cfo_quality_score']) else 0) -
+                (row['debt_equity'] if pd.notna(row['debt_equity']) else 0),
+            axis=1
+        )
+
         return self.financial_data
 
     def _get_cagr_data(self, metric: str):
