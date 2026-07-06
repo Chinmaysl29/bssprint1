@@ -116,8 +116,16 @@ class StockScreener:
             axis=1
         )
 
+        # Determine if company is debt free (borrowings == 0 or NaN)
+        self.financial_data['icr_label'] = self.financial_data['borrowings'].apply(
+            lambda x: "Debt Free" if pd.notna(x) and x == 0 else None
+        )
+
+        # Calculate ICR: set to infinity for debt free companies
         self.financial_data['icr'] = self.financial_data.apply(
-            lambda row: (row['operating_profit'] + row['other_income']) / row['interest']
+            lambda row: float('inf')
+            if pd.notna(row['icr_label']) and row['icr_label'] == "Debt Free"
+            else (row['operating_profit'] + row['other_income']) / row['interest']
             if pd.notna(row['operating_profit']) and pd.notna(row['other_income']) and pd.notna(row['interest']) and row['interest'] != 0
             else None,
             axis=1
@@ -188,6 +196,9 @@ class StockScreener:
                     return col
             return None
 
+        # Identify D/E filter keys
+        is_de_filter = lambda key: key in ['debt_equity_max', 'debt_to_equity_max', 'debt_equity_min', 'debt_to_equity_min']
+
         for filter_key, filter_value in kwargs.items():
             if filter_value is None:
                 continue
@@ -195,6 +206,27 @@ class StockScreener:
             # Validate filter value
             if not isinstance(filter_value, (int, float)):
                 raise ValueError(f"Invalid filter value for {filter_key}: must be numeric, got {type(filter_value).__name__}")
+
+            # Skip D/E filter for financial sector companies (Rule 1)
+            if is_de_filter(filter_key) and 'sector' in filtered_df.columns:
+                # Apply filter to non-financial companies, keep all financial companies
+                non_financial = filtered_df[filtered_df['sector'] != 'Financials']
+                financial = filtered_df[filtered_df['sector'] == 'Financials']
+                
+                # Get col name for D/E
+                if filter_key.endswith('_min'):
+                    metric = filter_key[:-4]
+                else:
+                    metric = filter_key[:-4]
+                col_name = get_col_name(non_financial, metric)
+                
+                if col_name:
+                    if filter_key.endswith('_min'):
+                        filtered_non_financial = non_financial[non_financial[col_name] >= filter_value]
+                    else:
+                        filtered_non_financial = non_financial[non_financial[col_name] <= filter_value]
+                    filtered_df = pd.concat([filtered_non_financial, financial], ignore_index=True)
+                continue
 
             # Determine if it's a min or max filter
             if filter_key.endswith('_min'):
