@@ -1,4 +1,3 @@
-
 import sqlite3
 import yaml
 import pandas as pd
@@ -355,4 +354,3 @@ class StockScreener:
         """Close the database connection"""
         if self.conn:
             self.conn.close()
-
