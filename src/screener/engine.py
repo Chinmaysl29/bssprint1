@@ -8,7 +8,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 from analytics.cagr import (
     calculate_multiyear_sales_cagr,
     calculate_multiyear_profit_cagr,
-    calculate_multiyear_cagr_for_metric,
+    calculate_multiyear_eps_cagr,
     pivot_multiyear_cagr
 )
 
@@ -131,14 +131,46 @@ class StockScreener:
             axis=1
         )
 
-        # Load CAGR data for composite score
-        revenue_cagr = self._get_cagr_data('revenue')
-        if not revenue_cagr.empty:
+        # Load CAGR data for 3-Year and 5-Year for all metrics
+        sales_cagr = calculate_multiyear_sales_cagr(period_list=[3,5])
+        sales_pivot = pivot_multiyear_cagr(sales_cagr, 'sales')
+        
+        profit_cagr = calculate_multiyear_profit_cagr(period_list=[3,5])
+        profit_pivot = pivot_multiyear_cagr(profit_cagr, 'net_profit')
+        
+        eps_cagr = calculate_multiyear_eps_cagr(period_list=[3,5])
+        eps_pivot = pivot_multiyear_cagr(eps_cagr, 'eps')
+        
+        # Merge all CAGR data
+        if not sales_pivot.empty:
             self.financial_data = self.financial_data.merge(
-                revenue_cagr[['company_id', 'revenue_cagr_5y']],
+                sales_pivot[['company_id', '3-Year_cagr_pct', '5-Year_cagr_pct']],
                 on='company_id',
                 how='left'
-            )
+            ).rename(columns={
+                '3-Year_cagr_pct': 'revenue_cagr_3y',
+                '5-Year_cagr_pct': 'revenue_cagr_5y'
+            })
+        
+        if not profit_pivot.empty:
+            self.financial_data = self.financial_data.merge(
+                profit_pivot[['company_id', '3-Year_cagr_pct', '5-Year_cagr_pct']],
+                on='company_id',
+                how='left'
+            ).rename(columns={
+                '3-Year_cagr_pct': 'pat_cagr_3y',
+                '5-Year_cagr_pct': 'pat_cagr_5y'
+            })
+        
+        if not eps_pivot.empty:
+            self.financial_data = self.financial_data.merge(
+                eps_pivot[['company_id', '3-Year_cagr_pct', '5-Year_cagr_pct']],
+                on='company_id',
+                how='left'
+            ).rename(columns={
+                '3-Year_cagr_pct': 'eps_cagr_3y',
+                '5-Year_cagr_pct': 'eps_cagr_5y'
+            })
 
         # Calculate composite quality score (Day 1 temp version)
         self.financial_data['composite_quality_score'] = self.financial_data.apply(
@@ -153,27 +185,12 @@ class StockScreener:
 
         return self.financial_data
 
-    def _get_cagr_data(self, metric: str):
-        """Helper to get CAGR data for a given metric"""
-        if metric == "revenue":
-            cagr_df = calculate_multiyear_sales_cagr(period_list=[5])
-            pivot_df = pivot_multiyear_cagr(cagr_df, 'sales')
-        elif metric == "pat":
-            cagr_df = calculate_multiyear_profit_cagr(period_list=[5])
-            pivot_df = pivot_multiyear_cagr(cagr_df, 'net_profit')
-        elif metric == "eps":
-            cagr_df = calculate_multiyear_cagr_for_metric('eps', period_list=[5])
-            pivot_df = pivot_multiyear_cagr(cagr_df, 'eps')
-        else:
-            return pd.DataFrame()
-        return pivot_df.rename(columns={'5-Year_cagr_pct': f'{metric}_cagr_5y'})
-
     def apply_filters(self, df, **kwargs):
         """
         Apply generic filters to the dataframe
 
         Accepts keyword arguments like:
-            roe_min=15, debt_equity_max=1, fcf_min=0, etc.
+            roe_min:15, debt_equity_max:1, fcf_min:0, etc.
 
         Logic:
             - {metric}_min: keep rows where metric >= value
@@ -195,8 +212,11 @@ class StockScreener:
             'sales': ['sales', 'revenue'],
             'pat': ['pat', 'net_profit'],
             'net_profit': ['net_profit', 'pat'],
+            'revenue_cagr_3y': ['revenue_cagr_3y'],
             'revenue_cagr_5y': ['revenue_cagr_5y', 'revenue_cagr'],
+            'pat_cagr_3y': ['pat_cagr_3y'],
             'pat_cagr_5y': ['pat_cagr_5y', 'pat_cagr'],
+            'eps_cagr_3y': ['eps_cagr_3y'],
             'eps_cagr_5y': ['eps_cagr_5y', 'eps_cagr'],
             'opm': ['opm_percentage', 'opm'],
             'pe': ['pe'],
@@ -297,7 +317,7 @@ class StockScreener:
             merged_filters = {**predefined_filters, **kwargs}
             filters = merged_filters
             # Load joined data with all metrics for predefined screens
-            filtered_df = self.load_joined_data()
+            filtered_df = self.financial_data.copy()
 
         # Apply filters
         filtered_companies = self.apply_filters(filtered_df, **filters)
@@ -330,44 +350,6 @@ class StockScreener:
             scored_df['composite_score'] = scored_df[norm_cols].mean(axis=1)
 
         return scored_df
-
-    def load_joined_data(self):
-        """
-        Load and join all required data for screening
-        Returns a dataframe with all 15 metrics
-        """
-        # Start with basic financial data
-        if self.financial_data is None:
-            self.load_financial_data()
-
-        base_df = self.financial_data.copy()
-
-        # Load CAGR data
-        revenue_cagr = self._get_cagr_data('revenue')
-        pat_cagr = self._get_cagr_data('pat')
-        eps_cagr = self._get_cagr_data('eps')
-
-        # Merge CAGR data
-        if not revenue_cagr.empty:
-            base_df = base_df.merge(
-                revenue_cagr[['company_id', 'revenue_cagr_5y']],
-                on='company_id',
-                how='left'
-            )
-        if not pat_cagr.empty:
-            base_df = base_df.merge(
-                pat_cagr[['company_id', 'pat_cagr_5y']],
-                on='company_id',
-                how='left'
-            )
-        if not eps_cagr.empty:
-            base_df = base_df.merge(
-                eps_cagr[['company_id', 'eps_cagr_5y']],
-                on='company_id',
-                how='left'
-            )
-
-        return base_df
 
     def close(self):
         """Close the database connection"""
