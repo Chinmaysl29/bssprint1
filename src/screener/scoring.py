@@ -125,6 +125,9 @@ class ScreenerScoring:
             "revenue_cagr_5y",         # CAGR (5yr)
             "pat_cagr_3y",             # CAGR (3yr)
             "pat_cagr_5y",             # CAGR (5yr)
+            "fcf_cagr_3y",             # CAGR (3yr)
+            "fcf_cagr_5y",             # CAGR (5yr)
+            "avg_cfo_pat_ratio",       # CFO/PAT Ratio
             "debt_equity",             # Debt
             "icr",                     # ICR
             # Existing metrics for backward compatibility
@@ -172,6 +175,9 @@ class ScreenerScoring:
             "revenue_cagr_5y",
             "pat_cagr_3y",
             "pat_cagr_5y",
+            "fcf_cagr_3y",
+            "fcf_cagr_5y",
+            "avg_cfo_pat_ratio",
             "debt_equity",
             "icr",
             "eps_cagr_5y",
@@ -207,34 +213,167 @@ class ScreenerScoring:
     @staticmethod
     def calculate_composite_score(df: pd.DataFrame, weights: dict = None) -> pd.DataFrame:
         """
-        Calculates advanced weighted composite score.
+        Calculates new composite score as per sprint requirements
+        
+        Total: 100 Points
+        - Profitability (35):
+            - ROE (15)
+            - ROCE (10)
+            - OPM (Net Profit Margin proxy) (10)
+        - Cash Quality (30):
+            - FCF CAGR (15)
+            - CFO/PAT Ratio (10)
+            - FCF Positive (5)
+        - Growth (20):
+            - Revenue CAGR (10)
+            - PAT CAGR (10)
+        - Leverage (15):
+            - Debt Score (10)
+            - ICR Score (5)
         
         Args:
             df: DataFrame with normalized metrics
             weights: Optional custom weights dict (metric -> weight)
         
         Returns:
-            DataFrame with composite score added
+            DataFrame with all individual scores and final composite score
         """
-        if weights is None:
-            # Default weights (sum to 100)
-            weights = {
-                "roe_percentage_norm_p10p90": 20,
-                "roce_percentage_norm_p10p90": 20,
-                "revenue_cagr_5y_norm_p10p90": 15,
-                "pat_cagr_5y_norm_p10p90": 15,
-                "cfo_quality_score_norm_p10p90": 15,
-                "opm_percentage_norm_p10p90": 10,
-                "asset_turnover_norm_p10p90": 5,
-            }
-
+        
         result_df = df.copy()
-        result_df["composite_score"] = 0.0
-
-        for metric, weight in weights.items():
-            if metric in result_df.columns:
-                result_df["composite_score"] += result_df[metric].fillna(0) * weight
-
+        
+        # ------------------------------
+        # 1. Profitability Score (35)
+        # ------------------------------
+        # ROE (15)
+        roe_norm = "roe_percentage_norm_p10p90"
+        if roe_norm in result_df.columns:
+            result_df["score_roe"] = (result_df[roe_norm].fillna(0.5) * 15)
+        else:
+            result_df["score_roe"] = 0.0
+            
+        # ROCE (10)
+        roce_norm = "roce_percentage_norm_p10p90"
+        if roce_norm in result_df.columns:
+            result_df["score_roce"] = (result_df[roce_norm].fillna(0.5) * 10)
+        else:
+            result_df["score_roce"] = 0.0
+            
+        # OPM (10)
+        opm_norm = "opm_percentage_norm_p10p90"
+        if opm_norm in result_df.columns:
+            result_df["score_opm"] = (result_df[opm_norm].fillna(0.5) * 10)
+        else:
+            result_df["score_opm"] = 0.0
+            
+        result_df["score_profitability"] = result_df["score_roe"] + result_df["score_roce"] + result_df["score_opm"]
+        
+        # ------------------------------
+        # 2. Cash Quality Score (30)
+        # ------------------------------
+        # FCF CAGR (15) - use 5y if available, else 3y
+        fcf_cagr_5y_norm = "fcf_cagr_5y_norm_p10p90"
+        fcf_cagr_3y_norm = "fcf_cagr_3y_norm_p10p90"
+        if fcf_cagr_5y_norm in result_df.columns:
+            result_df["score_fcf_cagr"] = (result_df[fcf_cagr_5y_norm].fillna(0.5) * 15)
+        elif fcf_cagr_3y_norm in result_df.columns:
+            result_df["score_fcf_cagr"] = (result_df[fcf_cagr_3y_norm].fillna(0.5) * 15)
+        else:
+            result_df["score_fcf_cagr"] = 0.0
+            
+        # CFO/PAT Ratio (10) - normalize from 0 to 1 (capped at 2.0)
+        if "avg_cfo_pat_ratio" in result_df.columns:
+            result_df["cfo_pat_clamped"] = result_df["avg_cfo_pat_ratio"].apply(
+                lambda x: min(max(x, 0), 2.0) if pd.notna(x) else 1.0
+            )
+            # Normalize to 0-1 range (0: 0, 1: 2.0)
+            result_df["cfo_pat_normalized"] = result_df["cfo_pat_clamped"] / 2.0
+            result_df["score_cfo_pat"] = (result_df["cfo_pat_normalized"] * 10)
+        else:
+            result_df["score_cfo_pat"] = 0.0
+            
+        # FCF Positive (5)
+        if "fcf" in result_df.columns:
+            result_df["score_fcf_positive"] = result_df["fcf"].apply(
+                lambda x: 5.0 if pd.notna(x) and x > 0 else 0.0
+            )
+        else:
+            result_df["score_fcf_positive"] = 0.0
+            
+        result_df["score_cash_quality"] = (
+            result_df["score_fcf_cagr"] 
+            + result_df["score_cfo_pat"] 
+            + result_df["score_fcf_positive"]
+        )
+        
+        # ------------------------------
+        # 3. Growth Score (20)
+        # ------------------------------
+        # Revenue CAGR (10) - use 5y if available, else 3y
+        rev_cagr_5y_norm = "revenue_cagr_5y_norm_p10p90"
+        rev_cagr_3y_norm = "revenue_cagr_3y_norm_p10p90"
+        if rev_cagr_5y_norm in result_df.columns:
+            result_df["score_rev_cagr"] = (result_df[rev_cagr_5y_norm].fillna(0.5) * 10)
+        elif rev_cagr_3y_norm in result_df.columns:
+            result_df["score_rev_cagr"] = (result_df[rev_cagr_3y_norm].fillna(0.5) * 10)
+        else:
+            result_df["score_rev_cagr"] = 0.0
+            
+        # PAT CAGR (10) - use 5y if available, else 3y
+        pat_cagr_5y_norm = "pat_cagr_5y_norm_p10p90"
+        pat_cagr_3y_norm = "pat_cagr_3y_norm_p10p90"
+        if pat_cagr_5y_norm in result_df.columns:
+            result_df["score_pat_cagr"] = (result_df[pat_cagr_5y_norm].fillna(0.5) * 10)
+        elif pat_cagr_3y_norm in result_df.columns:
+            result_df["score_pat_cagr"] = (result_df[pat_cagr_3y_norm].fillna(0.5) * 10)
+        else:
+            result_df["score_pat_cagr"] = 0.0
+            
+        result_df["score_growth"] = result_df["score_rev_cagr"] + result_df["score_pat_cagr"]
+        
+        # ------------------------------
+        # 4. Leverage Score (15)
+        # ------------------------------
+        # Debt Score (10): lower debt -> higher score
+        # Let's normalize debt_equity to 0-1 range, then invert it (1 - normalized)
+        if "debt_equity" in result_df.columns:
+            # Clamp debt_equity between 0 and 5.0
+            result_df["debt_clamped"] = result_df["debt_equity"].apply(
+                lambda x: min(max(x, 0), 5.0) if pd.notna(x) else 2.5
+            )
+            # Normalize to 0-1 (0: 0, 1:5.0)
+            result_df["debt_normalized"] = result_df["debt_clamped"] / 5.0
+            # Invert (low debt = high score)
+            result_df["debt_score_normalized"] = 1.0 - result_df["debt_normalized"]
+            result_df["score_debt"] = (result_df["debt_score_normalized"] * 10)
+        else:
+            result_df["score_debt"] = 0.0
+            
+        # ICR Score (5): higher ICR -> higher score
+        if "icr" in result_df.columns:
+            # For ICR: treat inf (debt-free) as 100%
+            result_df["icr_processed"] = result_df["icr"].apply(
+                lambda x: 10.0 if pd.notna(x) and x == float("inf") 
+                else min(max(x, 0), 10.0) if pd.notna(x) 
+                else 5.0
+            )
+            # Normalize to 0-1 range (0: 0, 1:10.0)
+            result_df["icr_normalized"] = result_df["icr_processed"] / 10.0
+            result_df["score_icr"] = (result_df["icr_normalized"] * 5)
+        else:
+            result_df["score_icr"] = 0.0
+            
+        result_df["score_leverage"] = result_df["score_debt"] + result_df["score_icr"]
+        
+        # ------------------------------
+        # Final Composite Score
+        # ------------------------------
+        result_df["composite_score"] = (
+            result_df["score_profitability"]
+            + result_df["score_cash_quality"]
+            + result_df["score_growth"]
+            + result_df["score_leverage"]
+        )
+        
         # Keep simple composite_quality_score for backward compatibility
         result_df["composite_quality_score"] = result_df.apply(
             lambda row: (

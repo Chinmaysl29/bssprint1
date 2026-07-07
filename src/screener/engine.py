@@ -11,8 +11,10 @@ from analytics.cagr import (
     calculate_multiyear_sales_cagr,
     calculate_multiyear_profit_cagr,
     calculate_multiyear_eps_cagr,
+    calculate_multiyear_fcf_cagr,
     pivot_multiyear_cagr,
 )
+from analytics.cashflow_kpis import calculate_cfo_quality_score
 from .scoring import ScreenerScoring
 from .exporter import ScreenerExporter
 
@@ -155,6 +157,11 @@ class StockScreener:
         profit_pivot = pivot_multiyear_cagr(profit_cagr, "net_profit")
         eps_cagr = calculate_multiyear_eps_cagr(period_list=[3, 5])
         eps_pivot = pivot_multiyear_cagr(eps_cagr, "eps")
+        fcf_cagr = calculate_multiyear_fcf_cagr(period_list=[3, 5])
+        fcf_pivot = pivot_multiyear_cagr(fcf_cagr, "free_cash_flow_cr")
+        
+        # Load CFO/PAT ratio
+        cfo_quality = calculate_cfo_quality_score()
 
         if not sales_pivot.empty:
             self.financial_data = self.financial_data.merge(
@@ -190,6 +197,25 @@ class StockScreener:
                     "3-Year_cagr_pct": "eps_cagr_3y",
                     "5-Year_cagr_pct": "eps_cagr_5y",
                 }
+            )
+            
+        if not fcf_pivot.empty:
+            self.financial_data = self.financial_data.merge(
+                fcf_pivot[["company_id", "3-Year_cagr_pct", "5-Year_cagr_pct"]],
+                on="company_id",
+                how="left",
+            ).rename(
+                columns={
+                    "3-Year_cagr_pct": "fcf_cagr_3y",
+                    "5-Year_cagr_pct": "fcf_cagr_5y",
+                }
+            )
+            
+        if not cfo_quality.empty:
+            self.financial_data = self.financial_data.merge(
+                cfo_quality[["company_id", "avg_cfo_pat_ratio"]],
+                on="company_id",
+                how="left",
             )
 
         # Apply scoring

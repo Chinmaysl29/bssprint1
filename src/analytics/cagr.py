@@ -220,6 +220,43 @@ def calculate_multiyear_eps_cagr(period_list=[3,5,10]):
     return calculate_multiyear_cagr_for_metric('eps', period_list=period_list)
 
 
+def calculate_multiyear_fcf_cagr(period_list=[3,5,10]):
+    """Calculate 3/5/10-Year Free Cash Flow CAGR
+    
+    Args:
+        period_list: List of years for CAGR (default [3,5,10])
+        
+    Returns:
+        DataFrame with 3/5/10-Year CAGRs and flags
+    """
+    conn = sqlite3.connect(get_database_path())
+    
+    query = """
+        SELECT 
+            cf.company_id,
+            c.company_name,
+            cf.year,
+            (cf.operating_activity + cf.investing_activity) as free_cash_flow_cr
+        FROM cashflow cf
+        JOIN companies c ON cf.company_id = c.id
+        ORDER BY cf.company_id, cf.year
+    """
+    
+    df = pd.read_sql(query, conn)
+    conn.close()
+    
+    all_cagr = []
+    for period in period_list:
+        period_df = calculate_cagr_for_metric(df, 'free_cash_flow_cr', period_years=period, 
+                                              company_id_col='company_id', 
+                                              year_col='year', 
+                                              company_name_col='company_name')
+        period_df['period_name'] = f'{period}-Year'
+        all_cagr.append(period_df)
+    
+    return pd.concat(all_cagr, ignore_index=True)
+
+
 def pivot_multiyear_cagr(multiyear_df, metric_col):
     """Pivot multiyear CAGR DataFrame so each period is a separate column
     
