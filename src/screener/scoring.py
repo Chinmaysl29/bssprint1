@@ -21,7 +21,7 @@ class ScreenerScoring:
         Returns:
             Winsorized pandas Series
         """
-        series = series.copy()
+        series = series.copy().astype(float)
         non_na = series.dropna()
         
         if len(non_na) == 0:
@@ -46,7 +46,7 @@ class ScreenerScoring:
         Returns:
             Normalized pandas Series
         """
-        series = series.copy()
+        series = series.copy().astype(float)
         non_na = series.dropna()
         result = series.copy()
         
