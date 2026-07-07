@@ -74,18 +74,73 @@ def test_growth_preset(screener):
 
 
 def test_output_sorting(screener):
-    """Test that the output can be sorted"""
+    """Test that the output is sorted by Score DESC (composite_score descending)"""
     result = screener.run_screener('quality_compounder')
     df = pd.DataFrame(result['companies'])
     assert len(df) > 0
+    # composite_score must be present and sorted descending
+    assert 'composite_score' in df.columns
+    scores = df['composite_score'].dropna().tolist()
+    assert scores == sorted(scores, reverse=True), "Results must be sorted by composite_score DESC"
+    # Legacy column still present for backward compatibility
     sorted_df = df.sort_values('composite_quality_score', ascending=False)
     assert len(sorted_df) == len(df)
     assert sorted_df.iloc[0]['composite_quality_score'] >= sorted_df.iloc[-1]['composite_quality_score']
 
 
+def test_ranked_output(screener):
+    """Test that run_screener returns a ranked Company/Score table"""
+    result = screener.run_screener('quality_compounder')
+
+    # 'ranked' key must exist
+    assert 'ranked' in result, "run_screener must return a 'ranked' key"
+
+    ranked = result['ranked']
+    assert isinstance(ranked, pd.DataFrame), "'ranked' must be a DataFrame"
+    assert list(ranked.columns) == ['Company', 'Score'], "ranked must have columns [Company, Score]"
+    assert len(ranked) == result['count'], "ranked row count must match companies count"
+
+    # Scores must be integers, sorted descending
+    assert ranked['Score'].dtype in (int, 'int64', 'Int64', object) or pd.api.types.is_integer_dtype(ranked['Score'])
+    scores = ranked['Score'].tolist()
+    assert scores == sorted(scores, reverse=True), "ranked must be sorted Score DESC"
+
+    # Spot-check: top company has highest score
+    if len(ranked) >= 2:
+        assert ranked.iloc[0]['Score'] >= ranked.iloc[1]['Score']
+
+
+def test_pipeline_order(screener):
+    """
+    Verify the full pipeline:
+        Load Data → Apply Preset Filter → Calculate Score → Sort Score DESC → Return Result
+    """
+    result = screener.run_screener('quality_compounder')
+
+    # Pipeline produced results
+    assert result['count'] > 0
+
+    # Filters were applied (quality_compounder requires roe_min=18)
+    df = pd.DataFrame(result['companies'])
+    assert (df['roe_percentage'] >= 18).all(), "Preset filter roe_min=18 must be applied"
+
+    # Scores were calculated
+    assert 'composite_score' in df.columns
+    assert 'advanced_composite_score' in df.columns
+
+    # Result is sorted descending by composite_score
+    scores = df['composite_score'].dropna().tolist()
+    assert scores == sorted(scores, reverse=True), "Pipeline must sort Score DESC"
+
+    # ranked table is present and consistent
+    ranked = result['ranked']
+    assert len(ranked) == result['count']
+    assert ranked.iloc[0]['Score'] == int(round(scores[0]))
+
+
 def test_p10_p90_normalization(screener):
     """Test that P10/P90 normalization is calculated correctly"""
-    data = screener.load_financial_data()
+    data = screener.load_financial_data(compute_scores=True)
     assert 'roe_percentage_norm_p10p90' in data.columns
     assert 'roce_percentage_norm_p10p90' in data.columns
     # Check that normalized values are between 0 and 1
@@ -95,7 +150,7 @@ def test_p10_p90_normalization(screener):
 
 def test_sector_comparison(screener):
     """Test that sector comparison metrics are calculated"""
-    data = screener.load_financial_data()
+    data = screener.load_financial_data(compute_scores=True)
     assert 'roe_percentage_sector_mean' in data.columns
     assert 'roe_percentage_sector_median' in data.columns
     assert 'roe_percentage_vs_sector' in data.columns
@@ -104,7 +159,7 @@ def test_sector_comparison(screener):
 
 def test_advanced_score_engine(screener):
     """Test that advanced composite score is calculated"""
-    data = screener.load_financial_data()
+    data = screener.load_financial_data(compute_scores=True)
     assert 'advanced_composite_score' in data.columns
     # Check that scores are between 0 and 100 (approx, given weights sum to 100)
     assert (data['advanced_composite_score'] >= 0).all()

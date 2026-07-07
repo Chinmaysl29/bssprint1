@@ -35,7 +35,7 @@ class StockScreener:
                 return yaml.safe_load(f)
         return {}
 
-    def load_financial_data(self):
+    def load_financial_data(self, compute_scores=False):
         query = """
         WITH latest_year AS (
             SELECT company_id, MAX(year) as latest_year
@@ -218,10 +218,11 @@ class StockScreener:
                 how="left",
             )
 
-        # Apply scoring
-        self.financial_data = self.scoring.calculate_p10_p90_normalization(self.financial_data)
-        self.financial_data = self.scoring.calculate_sector_comparison(self.financial_data)
-        self.financial_data = self.scoring.calculate_advanced_composite_score(self.financial_data)
+        if compute_scores:
+            # Compute scores on all data for backward compatibility
+            self.financial_data = self.scoring.calculate_p10_p90_normalization(self.financial_data)
+            self.financial_data = self.scoring.calculate_sector_comparison(self.financial_data)
+            self.financial_data = self.scoring.calculate_advanced_composite_score(self.financial_data)
 
         return self.financial_data
 
@@ -327,6 +328,31 @@ class StockScreener:
         excel_filename="screener_output.xlsx",
         **kwargs,
     ):
+        """
+        Full screener pipeline:
+            Load Data
+              ↓
+            Apply Preset Filter
+              ↓
+            Calculate Score
+              ↓
+            Sort Score DESC
+              ↓
+            Return Result
+
+        Args:
+            screen_name: Name of a predefined screen from screener_config.yaml
+            export_to_excel: Whether to export results to Excel
+            excel_filename: Output filename for Excel export
+            **kwargs: Additional filter overrides (e.g. roe_min=20)
+
+        Returns:
+            dict with keys: screen_name, screen_display_name, filters,
+                            companies (list of dicts), count,
+                            ranked (DataFrame with Company + Score),
+                            excel_exported, excel_filename
+        """
+        # ── Step 1: Load Data ────────────────────────────────────────────────
         if self.financial_data is None:
             self.load_financial_data()
 
@@ -334,28 +360,92 @@ class StockScreener:
         display_name = "Custom Screen"
         filters = kwargs
 
+        # ── Step 2: Apply Preset Filter ──────────────────────────────────────
         if screen_name and "screens" in self.config and screen_name in self.config["screens"]:
             screen = self.config["screens"][screen_name]
             display_name = screen.get("name", screen_name)
             predefined_filters = screen.get("filters", {})
+            # Caller kwargs override preset values
             merged_filters = {**predefined_filters, **kwargs}
             filters = merged_filters
 
         filtered_companies = self.apply_filters(filtered_df, **filters)
 
+        # ── Step 3: Calculate Score ──────────────────────────────────────────
+        if not filtered_companies.empty:
+            filtered_companies = self.scoring.calculate_p10_p90_normalization(filtered_companies)
+            filtered_companies = self.scoring.calculate_sector_comparison(filtered_companies)
+            filtered_companies = self.scoring.calculate_advanced_composite_score(filtered_companies)
+
+            # ── Step 4: Sort Score DESC ──────────────────────────────────────
+            filtered_companies = filtered_companies.sort_values(
+                by="composite_score", ascending=False, na_position="last"
+            )
+
+        # ── Step 5: Build ranked output (Company / Score table) ──────────────
+        ranked = self._build_ranked_output(filtered_companies)
+
         excel_exported = False
         if export_to_excel:
             excel_exported = self.exporter.export_to_excel(filtered_companies, excel_filename)
 
+        # ── Step 5: Return Result ────────────────────────────────────────────
         return {
             "screen_name": screen_name or "custom",
             "screen_display_name": display_name,
             "filters": filters,
             "companies": filtered_companies.to_dict("records"),
             "count": len(filtered_companies),
+            "ranked": ranked,
             "excel_exported": excel_exported,
             "excel_filename": excel_filename if excel_exported else None,
         }
+
+    # ── Helper: ranked output ────────────────────────────────────────────────
+    @staticmethod
+    def _build_ranked_output(df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Build a clean Company / Score summary table from the scored DataFrame.
+
+        Score is rounded to the nearest integer (0–100).
+
+        Example output:
+            Company      Score
+            TCS             91
+            Infosys         89
+            Reliance        85
+
+        Args:
+            df: Scored and sorted DataFrame from run_screener
+
+        Returns:
+            DataFrame with columns [Company, Score], sorted descending.
+        """
+        if df is None or df.empty:
+            return pd.DataFrame(columns=["Company", "Score"])
+
+        score_col = "composite_score"
+        if score_col not in df.columns:
+            # Fall back to legacy column if present
+            score_col = "advanced_composite_score" if "advanced_composite_score" in df.columns else None
+
+        name_col = "company_name" if "company_name" in df.columns else None
+
+        if name_col is None or score_col is None:
+            return pd.DataFrame(columns=["Company", "Score"])
+
+        ranked = df[[name_col, score_col]].copy()
+        ranked.columns = ["Company", "Score"]
+
+        # Clean up company name (strip extra whitespace / newlines)
+        ranked["Company"] = ranked["Company"].astype(str).str.strip().str.replace(r"\s+", " ", regex=True)
+
+        # Scale composite_score (0–100) to integer
+        ranked["Score"] = ranked["Score"].apply(
+            lambda x: int(round(float(x))) if pd.notna(x) else 0
+        )
+
+        return ranked.sort_values("Score", ascending=False).reset_index(drop=True)
 
     def close(self):
         if self.conn:
