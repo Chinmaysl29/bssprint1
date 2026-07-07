@@ -374,6 +374,29 @@ class ScreenerScoring:
             + result_df["score_leverage"]
         )
         
+        # ------------------------------
+        # Sector Relative Scoring & Ranking
+        # ------------------------------
+        # Normalize composite score within each sector (0-100 relative range)
+        def normalize_sector_composite(group):
+            non_na = group.dropna()
+            if len(non_na) == 0:
+                return group
+            min_score = non_na.min()
+            max_score = non_na.max()
+            if max_score - min_score == 0:
+                # All scores same, give 50
+                return group.apply(lambda x: 50.0 if pd.notna(x) else None)
+            # Normalize to 0-100
+            normalized = ((group - min_score) / (max_score - min_score)) * 100
+            return normalized
+        
+        if "sector" in result_df.columns and "composite_score" in result_df.columns:
+            result_df["sector_relative_score"] = result_df.groupby("sector")["composite_score"].transform(normalize_sector_composite)
+            
+            # Create sector_quality_rank (1 = best in sector)
+            result_df["sector_quality_rank"] = result_df.groupby("sector")["composite_score"].rank(ascending=False, method="min").astype("Int64")
+        
         # Keep simple composite_quality_score for backward compatibility
         result_df["composite_quality_score"] = result_df.apply(
             lambda row: (
