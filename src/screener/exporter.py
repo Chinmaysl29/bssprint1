@@ -50,6 +50,30 @@ Score colour bands (Composite Score column)
     50–69 →  yellow (A-Tier – Buy)
     30–49 →  orange (B-Tier – Watch)
     < 30  →  red    (C-Tier – Avoid)
+
+Conditional Formatting (openpyxl CellIsRule)
+─────────────────────────────────────────────
+    Applied to every numeric KPI column for every data cell:
+
+    KPI              PASS (GREEN)    FAIL (RED)
+    ─────────────    ────────────    ──────────
+    ROE (%)          ≥ 15            < 15
+    ROCE (%)         ≥ 15            < 15
+    NPM (%)          ≥ 10            < 10
+    OPM (%)          ≥ 15            < 15
+    Debt / Equity    ≤ 1.0           > 1.0
+    ICR              numeric ≥ 1.5   numeric < 1.5
+    FCF (₹ Cr)       > 0             ≤ 0
+    Revenue CAGR 3Y  ≥ 10            < 10
+    PAT CAGR 3Y      ≥ 10            < 10
+    EPS CAGR 3Y      ≥ 10            < 10
+    Dividend Yield   ≥ 1.0           < 1.0
+    Composite Score  ≥ 50            < 30
+
+    Implementation: cell-by-cell fill applied in Python during write
+    (works correctly even for merged/formatted sheets without a live
+    Excel engine).  Also registers openpyxl ConditionalFormatting rules
+    so the rules persist when the file is re-opened in Excel.
 """
 
 import logging
@@ -59,6 +83,7 @@ from typing import TYPE_CHECKING, Optional
 import pandas as pd
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+from openpyxl.formatting.rule import CellIsRule, ColorScaleRule
 from openpyxl.utils import get_column_letter
 
 if TYPE_CHECKING:
@@ -86,6 +111,185 @@ _FILL_S_LIGHT = "ECFDF5"
 _FILL_A_LIGHT = "FEFCE8"
 _FILL_B_LIGHT = "FFF7ED"
 _FILL_C_LIGHT = "FEF2F2"
+
+# Conditional-formatting fills (cell-level pass / fail)
+_CF_GREEN_PASS = "C6EFCE"   # Excel standard green fill
+_CF_RED_FAIL   = "FFC7CE"   # Excel standard red fill
+_CF_GREEN_FONT = "276221"   # dark green font
+_CF_RED_FONT   = "9C0006"   # dark red font
+_CF_YELLOW     = "FFEB9C"   # neutral / warning
+_CF_YELLOW_FONT = "9C6500"
+
+# ── Conditional-formatting rule definitions ────────────────────────────────────
+#
+# Each entry:
+#   df_column        – column in the DataFrame
+#   pass_operator    – "greaterThanOrEqual" | "lessThanOrEqual" | "greaterThan"
+#                      | "lessThan" | "equal" | "between"
+#   pass_threshold   – numeric threshold for the PASS (green) rule
+#   fail_operator    – operator for the FAIL (red) rule
+#   fail_threshold   – numeric threshold for the FAIL (red) rule
+#   direction        – "high_good" → higher = greener;
+#                      "low_good"  → lower = greener  (D/E, ICR warning)
+#
+# Rules are applied both as:
+#   1. cell-by-cell Python fill (instant, always visible)
+#   2. openpyxl ConditionalFormatting registration (preserved in Excel)
+#
+CF_RULES: list[dict] = [
+    # ── Profitability ──────────────────────────────────────────────────────
+    {
+        "df_col":         "roe_percentage",
+        "header":         "ROE (%)",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       15,
+        "fail_op":        "lessThan",
+        "fail_val":       15,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    {
+        "df_col":         "roce_percentage",
+        "header":         "ROCE (%)",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       15,
+        "fail_op":        "lessThan",
+        "fail_val":       15,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    {
+        "df_col":         "npm",
+        "header":         "Net Profit Margin (%)",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       10,
+        "fail_op":        "lessThan",
+        "fail_val":       10,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    {
+        "df_col":         "opm_percentage",
+        "header":         "OPM (%)",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       15,
+        "fail_op":        "lessThan",
+        "fail_val":       15,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    # ── Leverage ───────────────────────────────────────────────────────────
+    {
+        "df_col":         "debt_equity",
+        "header":         "Debt / Equity",
+        "pass_op":        "lessThanOrEqual",
+        "pass_val":       1.0,
+        "fail_op":        "greaterThan",
+        "fail_val":       1.0,
+        "direction":      "low_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    {
+        "df_col":         "icr_numeric",    # derived from icr before inf-replacement
+        "header":         "ICR",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       1.5,
+        "fail_op":        "lessThan",
+        "fail_val":       1.5,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    # ── Cash flow ──────────────────────────────────────────────────────────
+    {
+        "df_col":         "fcf",
+        "header":         "FCF (₹ Cr)",
+        "pass_op":        "greaterThan",
+        "pass_val":       0,
+        "fail_op":        "lessThanOrEqual",
+        "fail_val":       0,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    # ── CAGR ───────────────────────────────────────────────────────────────
+    {
+        "df_col":         "revenue_cagr_3y",
+        "header":         "Revenue CAGR (3Y %)",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       10,
+        "fail_op":        "lessThan",
+        "fail_val":       10,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    {
+        "df_col":         "pat_cagr_3y",
+        "header":         "PAT CAGR (3Y %)",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       10,
+        "fail_op":        "lessThan",
+        "fail_val":       10,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    {
+        "df_col":         "eps_cagr_3y",
+        "header":         "EPS CAGR (3Y %)",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       10,
+        "fail_op":        "lessThan",
+        "fail_val":       10,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    # ── Yield ──────────────────────────────────────────────────────────────
+    {
+        "df_col":         "dividend_yield",
+        "header":         "Dividend Yield (%)",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       1.0,
+        "fail_op":        "lessThan",
+        "fail_val":       1.0,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+    # ── Composite Score ────────────────────────────────────────────────────
+    {
+        "df_col":         "composite_score",
+        "header":         "Composite Score",
+        "pass_op":        "greaterThanOrEqual",
+        "pass_val":       50,
+        "fail_op":        "lessThan",
+        "fail_val":       30,
+        "direction":      "high_good",
+        "warn_op":        None,
+        "warn_val":       None,
+    },
+]
+
+# Build a lookup: df_col → rule dict  (for fast access during cell writing)
+_CF_BY_COL: dict[str, dict] = {r["df_col"]: r for r in CF_RULES}
+
+# openpyxl operator strings for CellIsRule
+_OP_MAP = {
+    "greaterThan":           "greaterThan",
+    "greaterThanOrEqual":    "greaterThanOrEqual",
+    "lessThan":              "lessThan",
+    "lessThanOrEqual":       "lessThanOrEqual",
+    "equal":                 "equal",
+    "notEqual":              "notEqual",
+    "between":               "between",
+}
 
 
 # ── The exact 20 KPI columns ──────────────────────────────────────────────────
@@ -158,6 +362,90 @@ def _remarks_text(score: float) -> str:
     else:             return "C-Tier – Avoid"
 
 
+# ── Conditional-formatting helpers ────────────────────────────────────────────
+
+_CF_PASS_FILL = PatternFill(fill_type="solid", fgColor=_CF_GREEN_PASS)
+_CF_FAIL_FILL = PatternFill(fill_type="solid", fgColor=_CF_RED_FAIL)
+_CF_WARN_FILL = PatternFill(fill_type="solid", fgColor=_CF_YELLOW)
+
+_CF_PASS_FONT = Font(color=_CF_GREEN_FONT, bold=True, size=10, name="Calibri")
+_CF_FAIL_FONT = Font(color=_CF_RED_FONT,   bold=True, size=10, name="Calibri")
+_CF_WARN_FONT = Font(color=_CF_YELLOW_FONT, bold=True, size=10, name="Calibri")
+
+
+def _evaluate_cf(df_col: str, value) -> str:
+    """
+    Return "pass", "fail", "warn", or "neutral" for a given column value.
+
+    "pass"    → green cell
+    "fail"    → red cell
+    "warn"    → yellow cell  (currently unused — reserved for future rules)
+    "neutral" → no override (fall back to row stripe)
+    """
+    rule = _CF_BY_COL.get(df_col)
+    if rule is None or value is None:
+        return "neutral"
+
+    # icr_numeric is stored as float; ICR display column contains string "∞ …"
+    try:
+        v = float(value)
+    except (TypeError, ValueError):
+        return "neutral"   # string like "∞ (Debt Free)" → treat as pass for ICR
+    if pd.isna(v):
+        return "neutral"
+
+    def check(op: str, threshold) -> bool:
+        if op == "greaterThanOrEqual":    return v >= threshold
+        if op == "greaterThan":           return v >  threshold
+        if op == "lessThanOrEqual":       return v <= threshold
+        if op == "lessThan":              return v <  threshold
+        if op == "equal":                 return v == threshold
+        return False
+
+    if check(rule["pass_op"], rule["pass_val"]):
+        return "pass"
+    if check(rule["fail_op"], rule["fail_val"]):
+        return "fail"
+    return "neutral"   # between pass and fail → no colour override
+
+
+def _apply_cf_openpyxl_rules(ws, col_letter: str, first_data_row: int,
+                              last_data_row: int, rule: dict) -> None:
+    """
+    Register openpyxl ConditionalFormatting rules for one column range so
+    the rules are preserved and re-evaluated when the file is opened in Excel.
+    """
+    if first_data_row > last_data_row:
+        return
+
+    col_range = f"{col_letter}{first_data_row}:{col_letter}{last_data_row}"
+
+    pass_font_style = Font(color=_CF_GREEN_FONT, bold=True)
+    fail_font_style = Font(color=_CF_RED_FONT,   bold=True)
+
+    # PASS rule (green)
+    ws.conditional_formatting.add(
+        col_range,
+        CellIsRule(
+            operator=_OP_MAP[rule["pass_op"]],
+            formula=[str(rule["pass_val"])],
+            fill=PatternFill(fill_type="solid", fgColor=_CF_GREEN_PASS),
+            font=pass_font_style,
+        ),
+    )
+
+    # FAIL rule (red)
+    ws.conditional_formatting.add(
+        col_range,
+        CellIsRule(
+            operator=_OP_MAP[rule["fail_op"]],
+            formula=[str(rule["fail_val"])],
+            fill=PatternFill(fill_type="solid", fgColor=_CF_RED_FAIL),
+            font=fail_font_style,
+        ),
+    )
+
+
 # ── Data preparation ──────────────────────────────────────────────────────────
 
 def _prepare_df(df: pd.DataFrame, screen_display_name: str) -> pd.DataFrame:
@@ -185,11 +473,18 @@ def _prepare_df(df: pd.DataFrame, screen_display_name: str) -> pd.DataFrame:
             out["npm"] = None
 
     # ── ICR: replace inf with a readable string for Excel
+    # Keep a numeric shadow column for conditional formatting evaluation
     if "icr" in out.columns:
+        out["icr_numeric"] = out["icr"].apply(
+            lambda x: 999.0 if x == float("inf") else   # debt-free → treat as very high ICR
+                      (float(x) if pd.notna(x) else None)
+        )
         out["icr"] = out["icr"].apply(
             lambda x: "∞ (Debt Free)" if x == float("inf") else
                       (round(x, 2) if pd.notna(x) else None)
         )
+    else:
+        out["icr_numeric"] = None
 
     # ── Dividend Yield: use market_cap.val5 from the SQL join (already in df)
     if "dividend_yield" not in out.columns:
@@ -233,12 +528,30 @@ def _prepare_df(df: pd.DataFrame, screen_display_name: str) -> pd.DataFrame:
 # ── Sheet builder ─────────────────────────────────────────────────────────────
 
 def _write_sheet(wb: Workbook, sheet_name: str, df: pd.DataFrame, display_name: str) -> None:
-    """Write one preset-screen sheet with all 20 KPI columns."""
+    """
+    Write one preset-screen sheet with all 20 KPI columns.
+
+    Conditional formatting is applied at TWO levels:
+      1. Cell-by-cell (Python fill) — immediately visible, never overridden.
+      2. openpyxl ConditionalFormatting registration — rules re-evaluated
+         by Excel when the file is opened (preserves the logic).
+
+    Rules:
+        GREEN (pass): value meets the KPI threshold   e.g. ROE >= 15
+        RED   (fail): value misses the KPI threshold  e.g. ROE <  15
+    """
 
     ws = wb.create_sheet(title=sheet_name[:31])
 
     headers = [h for _, h, _ in KPI_COLUMNS]
     n_cols  = len(headers)
+
+    # Build a map  df_col → col_idx (1-based)  for fast CF lookup
+    col_idx_map: dict[str, int] = {
+        df_col: idx for idx, (df_col, _, _) in enumerate(KPI_COLUMNS, start=1)
+    }
+    # Also map the ICR display column for CF via icr_numeric
+    # (icr display → string; icr_numeric → float used for CF)
 
     # ── Row 1: Screen title bar ──────────────────────────────────────────────
     title_cell = ws.cell(row=1, column=1, value=f"NIFTY100  ·  {display_name}")
@@ -248,8 +561,11 @@ def _write_sheet(wb: Workbook, sheet_name: str, df: pd.DataFrame, display_name: 
     ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=n_cols)
     ws.row_dimensions[1].height = 28
 
-    # Sub-title: company count + filter summary
-    count_text = f"{len(df)} companies  |  Sorted by Composite Score DESC"
+    # ── Row 2: Sub-title ─────────────────────────────────────────────────────
+    count_text = (
+        f"{len(df)} companies  |  Sorted by Composite Score DESC  |  "
+        "GREEN = Condition Passed  ·  RED = Condition Failed"
+    )
     sub_cell   = ws.cell(row=2, column=1, value=count_text)
     sub_cell.font      = Font(italic=True, size=9, color="64748B", name="Calibri")
     sub_cell.fill      = _fill("F8FAFC")
@@ -266,12 +582,15 @@ def _write_sheet(wb: Workbook, sheet_name: str, df: pd.DataFrame, display_name: 
         cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
     ws.row_dimensions[3].height = 36
 
-    # ── Rows 4+: Data ────────────────────────────────────────────────────────
+    FIRST_DATA_ROW = 4
+    last_data_row  = FIRST_DATA_ROW + len(df) - 1
+
+    # ── Rows 4+: Data + cell-by-cell conditional formatting ──────────────────
     for row_offset, (_, data_row) in enumerate(df.iterrows()):
-        excel_row = 4 + row_offset
+        excel_row = FIRST_DATA_ROW + row_offset
         ws.row_dimensions[excel_row].height = 18
 
-        # Determine score for this row (used for colour coding)
+        # Composite score → used for Score/Remarks columns
         score_val = data_row.get("composite_score", None)
         try:
             score_f = float(score_val) if pd.notna(score_val) else None
@@ -282,63 +601,101 @@ def _write_sheet(wb: Workbook, sheet_name: str, df: pd.DataFrame, display_name: 
 
         for col_idx, (df_col, _header, _width) in enumerate(KPI_COLUMNS, start=1):
 
-            # Fetch value from dataframe row
+            # ── Fetch display value ──────────────────────────────────────
             if df_col in df.columns:
-                raw = data_row[df_col]
+                raw   = data_row[df_col]
                 value = None if pd.isna(raw) else (
                     str(raw).strip() if isinstance(raw, str) else raw
                 )
             else:
                 value = None
 
-            cell           = ws.cell(row=excel_row, column=col_idx, value=value)
-            cell.border    = _thin_border()
+            cell        = ws.cell(row=excel_row, column=col_idx, value=value)
+            cell.border = _thin_border()
 
-            # ── Column-specific formatting ────────────────────────────────
+            # ── Determine the CF evaluation value ────────────────────────
+            # For the ICR display column we use icr_numeric for CF logic
+            if df_col == "icr":
+                cf_eval_col = "icr_numeric"
+                cf_eval_val = data_row.get("icr_numeric", None)
+            else:
+                cf_eval_col = df_col
+                cf_eval_val = value
+
+            cf_result = _evaluate_cf(cf_eval_col, cf_eval_val)
+
+            # ── Apply fills & fonts ───────────────────────────────────────
             if col_idx == _COL_SCORE and score_f is not None:
-                # Score column: tier colour + bold
+                # Composite Score: tier-based 4-colour fill (overrides CF)
                 cell.fill  = _score_fill(score_f)
                 cell.font  = Font(bold=True, size=10, name="Calibri", color=_NAVY)
                 cell.alignment = Alignment(horizontal="center", vertical="center")
 
             elif col_idx == _COL_RANK:
-                # Rank column: centered, grey, bold
                 cell.fill  = base_fill
                 cell.font  = Font(bold=True, size=10, name="Calibri", color="475569")
                 cell.alignment = Alignment(horizontal="center", vertical="center")
 
             elif col_idx == _COL_REMARKS and score_f is not None:
-                # Remarks: tier-tinted fill, italic
                 cell.fill  = _remarks_fill(score_f)
                 cell.font  = Font(italic=True, size=9, name="Calibri", color=_NAVY)
                 cell.alignment = Alignment(horizontal="left", vertical="center")
 
             elif col_idx == _COL_COMPANY:
-                # Company name: left-aligned, slightly bold
                 cell.fill  = base_fill
                 cell.font  = Font(bold=True, size=10, name="Calibri")
                 cell.alignment = Alignment(horizontal="left", vertical="center")
 
+            elif cf_result == "pass":
+                # ── GREEN: condition passed ──────────────────────────────
+                cell.fill  = _CF_PASS_FILL
+                cell.font  = _CF_PASS_FONT
+                cell.alignment = Alignment(horizontal="right", vertical="center")
+
+            elif cf_result == "fail":
+                # ── RED: condition failed ────────────────────────────────
+                cell.fill  = _CF_FAIL_FILL
+                cell.font  = _CF_FAIL_FONT
+                cell.alignment = Alignment(horizontal="right", vertical="center")
+
             else:
+                # Neutral / text columns
                 cell.fill  = base_fill
                 cell.font  = Font(size=10, name="Calibri")
-                # Numbers right-aligned, text left-aligned
                 is_num = isinstance(value, (int, float))
                 cell.alignment = Alignment(
                     horizontal="right" if is_num else "left",
                     vertical="center",
                 )
 
+    # ── Register openpyxl ConditionalFormatting rules (Excel-native) ─────────
+    # Applied per numeric KPI column so rules survive re-open in Excel.
+    # Note: ICR display column contains strings ("∞ (Debt Free)", numbers);
+    #       we skip registering CF for the ICR display column because Excel
+    #       can't evaluate string cells — the Python cell-fill handles it.
+    if last_data_row >= FIRST_DATA_ROW:
+        for rule in CF_RULES:
+            df_col = rule["df_col"]
+            if df_col == "icr_numeric":
+                # Map back to the ICR display column index for Excel rules
+                # (icr_numeric is not a KPI column — skip Excel-side CF for ICR)
+                continue
+            if df_col not in col_idx_map:
+                continue
+            col_letter = get_column_letter(col_idx_map[df_col])
+            _apply_cf_openpyxl_rules(
+                ws, col_letter, FIRST_DATA_ROW, last_data_row, rule
+            )
+
     # ── Column widths ─────────────────────────────────────────────────────────
     for col_idx, (_df_col, _header, width) in enumerate(KPI_COLUMNS, start=1):
         ws.column_dimensions[get_column_letter(col_idx)].width = width
 
-    # ── Freeze panes at row 4 (keep title + header visible) ──────────────────
+    # ── Freeze panes at row 4 ────────────────────────────────────────────────
     ws.freeze_panes = ws.cell(row=4, column=1)
 
     # ── Autofilter on header row ──────────────────────────────────────────────
-    last_data_row = 3 + len(df)
-    if last_data_row >= 4:
+    if last_data_row >= FIRST_DATA_ROW:
         ws.auto_filter.ref = (
             f"A3:{get_column_letter(n_cols)}{last_data_row}"
         )
