@@ -9,14 +9,14 @@ class ScreenerScoring:
     """
 
     @staticmethod
-    def winsorize_metric(series: pd.Series, lower: float = 0.05, upper: float = 0.95) -> pd.Series:
+    def winsorize_metric(series: pd.Series, lower: float = 0.10, upper: float = 0.90) -> pd.Series:
         """
-        Winsorize a metric at the specified percentiles.
+        Winsorize a metric at the specified percentiles (default P10/P90).
         
         Args:
             series: Input pandas Series
-            lower: Lower percentile (default 0.05 = 5th)
-            upper: Upper percentile (default 0.95 = 95th)
+            lower: Lower percentile (default 0.10 = 10th)
+            upper: Upper percentile (default 0.90 = 90th)
         
         Returns:
             Winsorized pandas Series
@@ -107,33 +107,40 @@ class ScreenerScoring:
     @staticmethod
     def calculate_p10_p90_normalization(df: pd.DataFrame) -> pd.DataFrame:
         """
-        Applies P10/P90 normalization to key financial metrics.
+        Applies P10/P90 winsorization and normalization to key financial metrics.
         
         Args:
             df: DataFrame with financial data
         
         Returns:
-            DataFrame with normalized metrics added (_norm_p10p90 suffix)
+            DataFrame with winsorized and normalized metrics added
         """
-        metrics_to_normalize = [
-            "roe_percentage",
-            "roce_percentage",
-            "revenue_cagr_5y",
-            "pat_cagr_5y",
+        metrics_to_process = [
+            # Required metrics per sprint
+            "roe_percentage",          # ROE
+            "roce_percentage",         # ROCE
+            "opm_percentage",          # NPM (Operating Profit Margin as proxy)
+            "fcf",                     # FCF
+            "revenue_cagr_3y",         # CAGR (3yr)
+            "revenue_cagr_5y",         # CAGR (5yr)
+            "pat_cagr_3y",             # CAGR (3yr)
+            "pat_cagr_5y",             # CAGR (5yr)
+            "debt_equity",             # Debt
+            "icr",                     # ICR
+            # Existing metrics for backward compatibility
             "eps_cagr_5y",
             "cfo_quality_score",
-            "opm_percentage",
             "asset_turnover",
             "dividend_payout",
         ]
 
         result_df = df.copy()
 
-        for metric in metrics_to_normalize:
+        for metric in metrics_to_process:
             if metric not in result_df.columns:
                 continue
             
-            # Winsorize first
+            # Winsorize first at P10/P90
             result_df[f"{metric}_winsorized"] = ScreenerScoring.winsorize_metric(result_df[metric])
             # Then normalize
             normalized = ScreenerScoring.normalize_metric(result_df[f"{metric}_winsorized"])
@@ -159,12 +166,18 @@ class ScreenerScoring:
         sector_metrics = [
             "roe_percentage",
             "roce_percentage",
-            "revenue_cagr_5y",
-            "pat_cagr_5y",
-            "cfo_quality_score",
-            "debt_equity",
             "opm_percentage",
+            "fcf",
+            "revenue_cagr_3y",
+            "revenue_cagr_5y",
+            "pat_cagr_3y",
+            "pat_cagr_5y",
+            "debt_equity",
+            "icr",
+            "eps_cagr_5y",
+            "cfo_quality_score",
             "asset_turnover",
+            "dividend_payout",
         ]
 
         # Calculate sector aggregations

@@ -4,6 +4,15 @@ from pathlib import Path
 from typing import Optional
 
 
+def column_index_to_letter(index: int) -> str:
+    """Convert 0-based column index to Excel-style column letter (A, B, ..., Z, AA, AB, ...)."""
+    letters = ""
+    while index >= 0:
+        letters = chr(65 + (index % 26)) + letters
+        index = index // 26 - 1
+    return letters
+
+
 class ScreenerExporter:
     """
     Handles exporting screener results to Excel with formatting and multiple sheets.
@@ -73,10 +82,11 @@ class ScreenerExporter:
             # Auto-fit columns
             worksheet = writer.sheets["Screener Results"]
             for idx, col in enumerate(export_df.columns):
+                col_letter = column_index_to_letter(idx)
                 max_len = max(
-                    export_df[col].astype(str).map(len).max(),
+                    export_df[col].astype(str).map(len).max() if not export_df[col].isna().all() else len(str(col)),
                     len(str(col)),
                 ) + 2
-                worksheet.column_dimensions[chr(65 + idx)].width = min(max_len, 50)
+                worksheet.column_dimensions[col_letter].width = min(max_len, 50)
 
         return True
