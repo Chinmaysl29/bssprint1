@@ -78,6 +78,7 @@ class StockScreener:
             c.book_value,
             s.sector,
             s.cap,
+            fr.year as year,
             pl.sales,
             pl.net_profit as pat,
             pl.eps,
@@ -95,7 +96,8 @@ class StockScreener:
             fr.free_cash_flow_cr as fcf,
             fr.cfo_quality_score,
             mc.mc1 as market_cap,
-            mc.mc2 as market_cap_2
+            mc.mc2 as market_cap_2,
+            mc.val5 as dividend_yield
         FROM companies c
         LEFT JOIN sectors_dedup s ON c.id = s.company_id AND s.rn = 1
         LEFT JOIN fr_latest fr ON c.id = fr.company_id
