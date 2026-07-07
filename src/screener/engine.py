@@ -171,7 +171,92 @@ class StockScreener:
                 '5-Year_cagr_pct': 'eps_cagr_5y'
             })
 
-        # Calculate composite quality score (Day 1 temp version)
+        # Calculate P10/P90 Normalization for metrics
+        self._calculate_p10_p90_normalization()
+        
+        # Calculate Sector Comparison (peer metrics)
+        self._calculate_sector_comparison()
+        
+        # Calculate Advanced Composite Score Engine
+        self._calculate_advanced_composite_score()
+
+        return self.financial_data
+    
+    def _calculate_p10_p90_normalization(self):
+        """Calculate P10/P90 normalized scores for key metrics"""
+        metrics_to_normalize = [
+            'roe_percentage', 'roce_percentage', 'revenue_cagr_5y', 
+            'pat_cagr_5y', 'eps_cagr_5y', 'cfo_quality_score', 'opm_percentage',
+            'asset_turnover', 'dividend_payout'
+        ]
+        
+        for metric in metrics_to_normalize:
+            if metric in self.financial_data.columns:
+                # Calculate P10 and P90
+                p10 = self.financial_data[metric].quantile(0.10)
+                p90 = self.financial_data[metric].quantile(0.90)
+                
+                # Normalize to [0, 1] range, clamping outliers
+                self.financial_data[f'{metric}_norm_p10p90'] = self.financial_data[metric].apply(
+                    lambda x: max(0, min(1, (x - p10) / (p90 - p10) if (p90 - p10) != 0 else 0.5))
+                    if pd.notna(x) else 0.5
+                )
+    
+    def _calculate_sector_comparison(self):
+        """Calculate sector-level metrics and peer comparisons"""
+        if 'sector' not in self.financial_data.columns:
+            return
+            
+        # Calculate sector averages
+        sector_metrics = [
+            'roe_percentage', 'roce_percentage', 'revenue_cagr_5y', 'pat_cagr_5y',
+            'cfo_quality_score', 'debt_equity', 'opm_percentage', 'asset_turnover'
+        ]
+        
+        sector_agg = self.financial_data.groupby('sector')[sector_metrics].agg(['mean', 'median']).reset_index()
+        # Rename columns to include _sector_ prefix
+        new_columns = ['sector']
+        for col in sector_agg.columns[1:]:
+            metric, stat = col
+            new_columns.append(f"{metric}_sector_{stat}")
+        sector_agg.columns = new_columns
+        
+        # Merge sector averages back into main data
+        self.financial_data = self.financial_data.merge(
+            sector_agg, on='sector', how='left'
+        )
+        
+        # Calculate relative performance vs sector median
+        for metric in sector_metrics:
+            median_col = f'{metric}_sector_median'
+            if median_col in self.financial_data.columns:
+                self.financial_data[f'{metric}_vs_sector'] = self.financial_data.apply(
+                    lambda row: (row[metric] - row[median_col]) if pd.notna(row[metric]) and pd.notna(row[median_col]) else None,
+                    axis=1
+                )
+    
+    def _calculate_advanced_composite_score(self):
+        """Calculate advanced weighted composite score"""
+        # Define weights for each metric (sum to 100)
+        score_weights = {
+            'roe_percentage_norm_p10p90': 20,
+            'roce_percentage_norm_p10p90': 20,
+            'revenue_cagr_5y_norm_p10p90': 15,
+            'pat_cagr_5y_norm_p10p90': 15,
+            'cfo_quality_score_norm_p10p90': 15,
+            'opm_percentage_norm_p10p90': 10,
+            'asset_turnover_norm_p10p90': 5
+        }
+        
+        # Calculate weighted score
+        self.financial_data['advanced_composite_score'] = 0
+        for metric, weight in score_weights.items():
+            if metric in self.financial_data.columns:
+                self.financial_data['advanced_composite_score'] += (
+                    self.financial_data[metric] * weight
+                )
+        
+        # Keep the original simple score for backward compatibility
         self.financial_data['composite_quality_score'] = self.financial_data.apply(
             lambda row:
                 (row['roe_percentage'] if pd.notna(row['roe_percentage']) else 0) +
@@ -181,8 +266,6 @@ class StockScreener:
                 (row['debt_equity'] if pd.notna(row['debt_equity']) else 0),
             axis=1
         )
-
-        return self.financial_data
 
     def apply_filters(self, df, **kwargs):
         """
@@ -288,12 +371,14 @@ class StockScreener:
 
         return filtered_df
 
-    def run_screener(self, screen_name=None, **kwargs):
+    def run_screener(self, screen_name=None, export_to_excel=False, excel_filename='screener_output.xlsx', **kwargs):
         """
         Run the specified screen or apply custom filters and return filtered companies
 
         Args:
             screen_name: Name of predefined screen from config (optional)
+            export_to_excel: Whether to export results to Excel
+            excel_filename: Name of Excel file to export to
             **kwargs: Custom filters (e.g., roe_min=15, debt_equity_max=1)
 
         Returns:
@@ -320,13 +405,20 @@ class StockScreener:
 
         # Apply filters
         filtered_companies = self.apply_filters(filtered_df, **filters)
+        
+        # Export to Excel if requested
+        export_result = False
+        if export_to_excel:
+            export_result = self.export_to_excel(filtered_companies, excel_filename)
 
         return {
             'screen_name': screen_name or 'custom',
             'screen_display_name': display_name,
             'filters': filters,
             'companies': filtered_companies.to_dict('records'),
-            'count': len(filtered_companies)
+            'count': len(filtered_companies),
+            'excel_exported': export_result,
+            'excel_filename': excel_filename if export_result else None
         }
 
     def calculate_composite_score(self, df):
@@ -350,6 +442,45 @@ class StockScreener:
 
         return scored_df
 
+    def export_to_excel(self, df, filename='screener_output.xlsx'):
+        """Export screener results to Excel file"""
+        if df is None or df.empty:
+            return False
+        
+        # Sort by advanced composite score descending
+        sorted_df = df.sort_values('advanced_composite_score', ascending=False, na_position='last')
+        
+        # Select key columns for export
+        export_cols = [
+            'company_id', 'company_name', 'sector', 'market_cap',
+            'roe_percentage', 'roce_percentage', 'debt_equity',
+            'revenue_cagr_3y', 'revenue_cagr_5y', 'pat_cagr_3y', 'pat_cagr_5y',
+            'cfo_quality_score', 'opm_percentage', 'asset_turnover',
+            'advanced_composite_score', 'composite_quality_score'
+        ] + [col for col in sorted_df.columns if col.endswith('_vs_sector')]
+        
+        # Filter to only available columns
+        available_cols = [col for col in export_cols if col in sorted_df.columns]
+        export_df = sorted_df[available_cols].copy()
+        
+        # Export to Excel
+        output_path = Path(filename)
+        with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
+            export_df.to_excel(writer, sheet_name='Screener Results', index=False)
+            
+            # Get the worksheet for formatting
+            worksheet = writer.sheets['Screener Results']
+            
+            # Auto-fit columns (basic implementation)
+            for idx, col in enumerate(export_df.columns):
+                max_len = max(
+                    export_df[col].astype(str).map(len).max(),
+                    len(str(col))
+                ) + 2
+                worksheet.column_dimensions[chr(65 + idx)].width = min(max_len, 50)
+        
+        return True
+    
     def close(self):
         """Close the database connection"""
         if self.conn:

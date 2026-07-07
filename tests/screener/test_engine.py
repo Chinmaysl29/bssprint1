@@ -81,3 +81,57 @@ def test_output_sorting(screener):
     sorted_df = df.sort_values('composite_quality_score', ascending=False)
     assert len(sorted_df) == len(df)
     assert sorted_df.iloc[0]['composite_quality_score'] >= sorted_df.iloc[-1]['composite_quality_score']
+
+
+def test_p10_p90_normalization(screener):
+    """Test that P10/P90 normalization is calculated correctly"""
+    data = screener.load_financial_data()
+    assert 'roe_percentage_norm_p10p90' in data.columns
+    assert 'roce_percentage_norm_p10p90' in data.columns
+    # Check that normalized values are between 0 and 1
+    assert (data['roe_percentage_norm_p10p90'] >= 0).all()
+    assert (data['roe_percentage_norm_p10p90'] <= 1).all()
+
+
+def test_sector_comparison(screener):
+    """Test that sector comparison metrics are calculated"""
+    data = screener.load_financial_data()
+    assert 'roe_percentage_sector_mean' in data.columns
+    assert 'roe_percentage_sector_median' in data.columns
+    assert 'roe_percentage_vs_sector' in data.columns
+    assert 'sector' in data.columns
+
+
+def test_advanced_score_engine(screener):
+    """Test that advanced composite score is calculated"""
+    data = screener.load_financial_data()
+    assert 'advanced_composite_score' in data.columns
+    # Check that scores are between 0 and 100 (approx, given weights sum to 100)
+    assert (data['advanced_composite_score'] >= 0).all()
+    assert (data['advanced_composite_score'] <= 100).all()
+
+
+def test_excel_export(screener):
+    """Test that Excel export works correctly"""
+    import os
+    test_filename = 'test_screener_output.xlsx'
+    # Clean up any existing test file
+    if os.path.exists(test_filename):
+        os.remove(test_filename)
+    
+    # Run screener and export
+    result = screener.run_screener('quality_compounder', export_to_excel=True, excel_filename=test_filename)
+    
+    # Check export result
+    assert result['excel_exported'] is True
+    assert os.path.exists(test_filename)
+    
+    # Verify the file has content
+    exported_df = pd.read_excel(test_filename, sheet_name='Screener Results')
+    assert len(exported_df) > 0
+    assert 'company_name' in exported_df.columns
+    assert 'advanced_composite_score' in exported_df.columns
+    
+    # Clean up test file
+    if os.path.exists(test_filename):
+        os.remove(test_filename)
