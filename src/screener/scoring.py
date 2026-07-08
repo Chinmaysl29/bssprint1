@@ -333,18 +333,17 @@ class ScreenerScoring:
         # ------------------------------
         # 4. Leverage Score (15)
         # ------------------------------
-        # Debt Score (10): lower debt -> higher score
-        # Let's normalize debt_equity to 0-1 range, then invert it (1 - normalized)
+        # Debt Score (10): lower D/E → higher score
+        # Formula: D/E percentile rank = 1 - percentile_rank(D/E)
+        # i.e. a company at the 90th percentile of D/E (most indebted)
+        # receives only 10th-percentile score (least rewarded).
         if "debt_equity" in result_df.columns:
-            # Clamp debt_equity between 0 and 5.0
-            result_df["debt_clamped"] = result_df["debt_equity"].apply(
-                lambda x: min(max(x, 0), 5.0) if pd.notna(x) else 2.5
-            )
-            # Normalize to 0-1 (0: 0, 1:5.0)
-            result_df["debt_normalized"] = result_df["debt_clamped"] / 5.0
-            # Invert (low debt = high score)
-            result_df["debt_score_normalized"] = 1.0 - result_df["debt_normalized"]
-            result_df["score_debt"] = (result_df["debt_score_normalized"] * 10)
+            de_series = pd.to_numeric(result_df["debt_equity"], errors="coerce").fillna(2.5)
+            # percentile rank in [0, 1]  (higher D/E → higher raw rank → lower score)
+            de_pct_rank = de_series.rank(pct=True, method="average")
+            # invert: high-debt company gets low score
+            result_df["debt_score_normalized"] = (1.0 - de_pct_rank).clip(0.0, 1.0)
+            result_df["score_debt"] = result_df["debt_score_normalized"] * 10
         else:
             result_df["score_debt"] = 0.0
             

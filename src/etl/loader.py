@@ -160,6 +160,15 @@ def load_data():
         company_id TEXT NOT NULL,
         is_primary BOOLEAN
     );
+
+    CREATE TABLE IF NOT EXISTS peer_percentiles (
+        company_id INTEGER,
+        peer_group_name TEXT,
+        metric TEXT,
+        value REAL,
+        percentile_rank REAL,
+        year INTEGER
+    );
     """
     conn.executescript(create_tables_without_fk)
     print("Tables created successfully!")
