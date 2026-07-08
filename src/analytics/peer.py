@@ -9,6 +9,39 @@ def get_database_path():
     db_path = os.path.join(base_dir, "db", "nifty100.db")
     return db_path
 
+def get_peer_excel_path():
+    """Get path to peer_groups.xlsx"""
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    excel_path = os.path.join(base_dir, "data", "supporting", "peer_groups.xlsx")
+    return excel_path
+
+def populate_peer_groups():
+    """Load peer groups from peer_groups.xlsx into the database"""
+    conn = sqlite3.connect(get_database_path())
+    
+    # Load Excel data
+    excel_df = pd.read_excel(get_peer_excel_path())
+    excel_df = excel_df.rename(columns={
+        'peer_group_name': 'group_name',
+        'is_benchmark': 'is_primary'
+    })
+    
+    # Clear existing data from peer_groups table
+    conn.execute("DELETE FROM peer_groups")
+    
+    # Insert new data
+    for _, row in excel_df.iterrows():
+        conn.execute("""
+            INSERT INTO peer_groups (id, group_name, company_id, is_primary)
+            VALUES (?, ?, ?, ?)
+        """, (int(row['id']), row['group_name'], row['company_id'], bool(row['is_primary'])))
+    
+    conn.commit()
+    conn.close()
+    
+    print(f"Populated peer groups table with {len(excel_df)} rows from {get_peer_excel_path()}")
+    return excel_df
+
 def get_peer_groups():
     """Get all peer groups with company names and sectors
     
@@ -96,16 +129,18 @@ def get_all_peer_metrics():
     return df
 
 if __name__ == "__main__":
-    print("=== All Peer Groups ===")
-    peer_groups = get_peer_groups()
-    print(peer_groups.head(20))
+    # First populate peer groups from Excel
+    print("=== Populating Peer Groups ===")
+    populate_peer_groups()
     
-    print("\n=== Peer Comparison (Example: First Group) ===")
-    if len(peer_groups) > 0:
-        first_group = peer_groups['group_name'].iloc[0]
-        comparison = get_peer_comparison(first_group)
-        print(comparison)
+    print("\n=== All Peer Groups ===")
+    peer_groups = get_peer_groups()
+    print(peer_groups.head(30))
+    
+    print("\n=== Peer Comparison (Example: 'IT Services') ===")
+    comparison = get_peer_comparison('IT Services')
+    print(comparison)
     
     print("\n=== All Peer Metrics ===")
     all_metrics = get_all_peer_metrics()
-    print(all_metrics.head(20))
+    print(all_metrics.head(30))
