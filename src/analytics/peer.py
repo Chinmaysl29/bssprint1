@@ -63,6 +63,61 @@ def load_financial_metrics():
     
     return df
 
+
+def load_and_merge_companies_and_ratios():
+    """
+    Load companies and financial_ratios tables from nifty100.db and merge them.
+    Also includes sector from sectors table.
+    
+    Returns:
+        DataFrame with merged data (example columns: Company, ROE, ROCE, Sector, ...)
+    """
+    conn = sqlite3.connect(get_database_path())
+    
+    # Load companies table
+    companies_query = """
+    SELECT 
+        id as company_id,
+        company_name,
+        roe_percentage as ROE,
+        roce_percentage as ROCE
+    FROM companies
+    """
+    companies_df = pd.read_sql(companies_query, conn)
+    
+    # Load sectors table for sector info
+    sectors_query = """
+    SELECT company_id, sector
+    FROM sectors
+    """
+    sectors_df = pd.read_sql(sectors_query, conn)
+    
+    # Load latest financial ratios (since there are multiple years, pick one row per company)
+    financial_ratios_query = """
+    SELECT 
+        company_id,
+        free_cash_flow_cr,
+        cfo_quality_score,
+        capex_intensity_pct,
+        capex_label,
+        fcf_conversion_pct,
+        capital_allocation_pattern
+    FROM financial_ratios
+    """
+    ratios_df = pd.read_sql(financial_ratios_query, conn)
+    # Get latest year's data per company (if available)
+    latest_ratios = ratios_df.groupby('company_id').last().reset_index()
+    
+    # Merge all three DataFrames: companies + sectors + latest financial ratios
+    merged_df = pd.merge(companies_df, sectors_df, on='company_id', how='left')
+    merged_df = pd.merge(merged_df, latest_ratios, on='company_id', how='left')
+    
+    # Rename columns to match example (Company instead of company_name)
+    merged_df = merged_df.rename(columns={'company_name': 'Company'})
+    
+    conn.close()
+    return merged_df
+
 def calculate_percentile(value, series):
     """Calculate percentile of a value relative to a given series"""
     if pd.isna(value) or len(series.dropna()) == 0:
@@ -181,7 +236,12 @@ def generate_radar_chart(company_id, group_name):
     return output_path
 
 if __name__ == "__main__":
-    print("=== Saving Data to Database ===")
+    print("=== Loading and Merging Companies & Financial Ratios ===")
+    merged_data = load_and_merge_companies_and_ratios()
+    # Show first 5 rows with key columns as in example
+    print(merged_data[['Company', 'ROE', 'ROCE', 'sector']].head(10))
+    
+    print("\n=== Saving Data to Database ===")
     save_to_database()
     
     print("\n=== Calculating All Percentiles ===")
