@@ -9,6 +9,28 @@
 [![Testing](https://img.shields.io/badge/Testing-5E5E5E?style=for-the-badge&logo=pytest&logoColor=white)]()
 
 ---
+## Sprint Status
+
+**Sprint 3 — Completed**
+
+### Sprint Architecture
+
+```
+Sprint 1
+ETL Engine
+
+        ↓
+
+Sprint 2
+Financial Ratio Engine
+
+        ↓
+
+Sprint 3
+Screener + Peer Intelligence
+```
+
+---
 
 ## 📊 Project Overview
 
@@ -118,6 +140,16 @@ Enterprise-grade financial analytics platform built for NIFTY100 companies. The 
 
 ---
 
+## Sprint 3 — Completed
+
+### Screener + Peer Intelligence
+- Company screening workflow
+- Peer comparison intelligence
+- Dashboard-ready insights for NIFTY100 analysis
+
+**Status:** COMPLETED
+
+---
 ## 📦 Database Architecture
 
 ### Tables
@@ -194,4 +226,5 @@ Nifty100/
 |--------|--------|--------|
 | Sprint 1 | ETL Foundation | ✅ COMPLETE |
 | Sprint 2 | Financial Ratio Engine | ✅ COMPLETE |
+| Sprint 3 | Screener + Peer Intelligence | COMPLETE |
 
