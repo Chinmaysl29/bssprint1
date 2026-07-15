@@ -121,6 +121,29 @@ class StockScreener:
             axis=1,
         )
 
+        self.financial_data["pe"] = self.financial_data.apply(
+            lambda row: (
+                row["market_cap"] / row["pat"]
+                if pd.notna(row["market_cap"])
+                and pd.notna(row["pat"])
+                and row["pat"] != 0
+                else None
+            ),
+            axis=1,
+        )
+
+        self.financial_data["pb"] = self.financial_data.apply(
+            lambda row: (
+                row["market_cap"] / (row["equity_capital"] + row["reserves"])
+                if pd.notna(row["market_cap"])
+                and pd.notna(row["equity_capital"])
+                and pd.notna(row["reserves"])
+                and (row["equity_capital"] + row["reserves"]) != 0
+                else None
+            ),
+            axis=1,
+        )
+
         self.financial_data["asset_turnover"] = self.financial_data.apply(
             lambda row: (
                 row["sales"] / row["total_assets"]

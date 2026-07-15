@@ -39,12 +39,12 @@ sector_fig.update_layout(
     margin=dict(l=0, r=0, t=10, b=0),
     showlegend=True,
 )
-st.plotly_chart(sector_fig, use_container_width=True)
+st.plotly_chart(sector_fig, width="stretch")
 
 st.subheader("Top 5 Companies")
 top_companies = get_top_companies(selected_year)
 st.dataframe(
     top_companies,
     hide_index=True,
-    use_container_width=True,
+    width="stretch",
 )

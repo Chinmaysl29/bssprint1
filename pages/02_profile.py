@@ -123,7 +123,7 @@ else:
         yaxis_title="₹ Cr",
         margin=dict(l=0, r=0, t=10, b=0),
     )
-    st.plotly_chart(revenue_fig, use_container_width=True)
+    st.plotly_chart(revenue_fig, width="stretch")
 
 roe_roce = get_company_roe_roce_trend(ticker)
 if roe_roce.empty:
@@ -157,7 +157,7 @@ else:
         yaxis2=dict(title="ROCE %", overlaying="y", side="right", rangemode="tozero"),
         margin=dict(l=0, r=0, t=10, b=0),
     )
-    st.plotly_chart(trend_fig, use_container_width=True)
+    st.plotly_chart(trend_fig, width="stretch")
 
 st.subheader("Pros & Cons")
 pros_cons = get_company_pros_cons(ticker)
