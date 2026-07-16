@@ -14,6 +14,29 @@ This Power BI dashboard visualizes all Sprint 2 achievements, covering:
 
 ---
 
+## Architecture
+
+```text
+ETL
+  ↓
+Analytics
+  ↓
+Screener
+  ↓
+Dashboard
+  ↓
+Valuation
+```
+
+### Flow Summary
+- **ETL** loads raw and supporting datasets into `db/nifty100.db`.
+- **Analytics** calculates profitability, leverage, CAGR, cash flow, peer, and valuation metrics.
+- **Screener** ranks companies using configured quality, growth, value, dividend, and debt screens.
+- **Dashboard** presents company, sector, peer, trend, capital allocation, and report views.
+- **Valuation** exports `valuation_summary.xlsx` and `valuation_flags.csv` for dashboard cards, summary tables, and download workflows.
+
+---
+
 ## Data Sources
 1. **SQLite Database**: `db/nifty100.db`
    - Tables:
@@ -175,11 +198,13 @@ This Power BI dashboard visualizes all Sprint 2 achievements, covering:
 
 ## Screenshots
 Screenshot placeholders (to be filled later):
-1. `dashboard_screenshots/01_executive_overview.png`
-2. `dashboard_screenshots/02_profitability_analytics.png`
-3. `dashboard_screenshots/03_leverage_risk.png`
-4. `dashboard_screenshots/04_cagr_growth.png`
-5. `dashboard_screenshots/05_cash_flow.png`
-6. `dashboard_screenshots/06_capital_allocation.png`
-7. `dashboard_screenshots/07_quality_scoring.png`
-8. `dashboard_screenshots/08_data_quality.png`
+1. `dashboard_screenshots/01_home_valuation_summary.png`
+2. `dashboard_screenshots/02_company_profile_valuation_card.png`
+3. `dashboard_screenshots/03_executive_overview.png`
+4. `dashboard_screenshots/04_profitability_analytics.png`
+5. `dashboard_screenshots/05_leverage_risk.png`
+6. `dashboard_screenshots/06_cagr_growth.png`
+7. `dashboard_screenshots/07_cash_flow.png`
+8. `dashboard_screenshots/08_capital_allocation.png`
+9. `dashboard_screenshots/09_quality_scoring.png`
+10. `dashboard_screenshots/10_data_quality.png`

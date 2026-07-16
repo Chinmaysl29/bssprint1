@@ -30,6 +30,11 @@ def get_database_path() -> Path:
     return project_root / "db" / "nifty100.db"
 
 
+def get_project_root() -> Path:
+    """Return the NIFTY100 project root."""
+    return Path(__file__).resolve().parents[3]
+
+
 def get_connection() -> sqlite3.Connection:
     """Open a read-only SQLite connection to the warehouse."""
     db_path = get_database_path()
@@ -253,20 +258,41 @@ def get_peers(group: str) -> pd.DataFrame:
     return run_query(query, (group,))
 
 
-@st.cache_data(ttl=CACHE_TTL_SECONDS)
-def get_valuation(ticker: str) -> pd.DataFrame:
-    """Return market-cap and valuation history for one company."""
-    query = """
-        SELECT
-            mc.*,
-            c.company_name
-        FROM market_cap mc
-        JOIN companies c
-            ON mc.company_id = c.id
-        WHERE mc.company_id = ?
-        ORDER BY mc.year
-    """
-    return run_query(query, (_normalize_ticker(ticker),))
+@st.cache_data(ttl=600)
+def get_valuation(ticker: str | None = None) -> pd.DataFrame:
+    """Return exported valuation summary data, optionally filtered by ticker."""
+    output_dir = get_project_root() / "output"
+    xlsx_path = output_dir / "valuation_summary.xlsx"
+    csv_path = output_dir / "valuation_summary.csv"
+
+    if xlsx_path.exists():
+        df = pd.read_excel(xlsx_path)
+    elif csv_path.exists():
+        df = pd.read_csv(csv_path)
+    else:
+        return pd.DataFrame(
+            columns=[
+                "company_id",
+                "company_name",
+                "sector",
+                "PE",
+                "PB",
+                "EV/EBITDA",
+                "FCF Yield %",
+                "5 Year Median PE",
+                "PE vs Sector",
+                "Flag",
+            ]
+        )
+
+    if "company_id" in df.columns:
+        df["company_id"] = df["company_id"].astype(str).str.strip().str.upper()
+
+    if ticker is None:
+        return df.fillna("N/A")
+
+    normalized_ticker = _normalize_ticker(ticker)
+    return df[df["company_id"] == normalized_ticker].reset_index(drop=True).fillna("N/A")
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS)

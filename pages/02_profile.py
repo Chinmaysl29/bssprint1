@@ -8,7 +8,30 @@ from src.dashboard.utils.db import (
     get_company_pros_cons,
     get_company_revenue_profit,
     get_company_roe_roce_trend,
+    get_valuation,
 )
+
+
+def _format_number_value(value):
+    if value is None or value == "N/A":
+        return "N/A"
+    try:
+        if value != value:
+            return "N/A"
+        return f"{float(value):.2f}"
+    except (TypeError, ValueError):
+        return str(value)
+
+
+def _format_percent_value(value):
+    if value is None or value == "N/A":
+        return "N/A"
+    try:
+        if value != value:
+            return "N/A"
+        return f"{float(value):.2f}%"
+    except (TypeError, ValueError):
+        return str(value)
 
 
 st.title("Company Profile")
@@ -98,6 +121,27 @@ kpi_columns = st.columns(6)
 for column, (label, value) in zip(kpi_columns, kpis.items()):
     with column:
         st.metric(label=label, value=value)
+
+valuation = get_valuation(ticker)
+if not valuation.empty:
+    valuation_row = valuation.iloc[0]
+    st.subheader("Valuation")
+    valuation_columns = st.columns(4)
+    valuation_metrics = [
+        ("PE", valuation_row.get("PE")),
+        ("PB", valuation_row.get("PB")),
+        ("FCF Yield", valuation_row.get("FCF Yield %")),
+        ("Valuation Flag", valuation_row.get("Flag")),
+    ]
+    for column, (label, value) in zip(valuation_columns, valuation_metrics):
+        with column:
+            if label == "FCF Yield":
+                display_value = _format_percent_value(value)
+            elif label == "Valuation Flag":
+                display_value = "N/A" if value is None or value == "N/A" else str(value)
+            else:
+                display_value = _format_number_value(value)
+            st.metric(label=label, value=display_value)
 
 revenue_profit = get_company_revenue_profit(ticker)
 if revenue_profit.empty:

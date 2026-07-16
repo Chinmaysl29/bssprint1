@@ -5,6 +5,7 @@ from src.dashboard.utils.db import (
     get_home_kpis,
     get_sector_counts,
     get_top_companies,
+    get_valuation,
 )
 
 
@@ -48,3 +49,45 @@ st.dataframe(
     hide_index=True,
     width="stretch",
 )
+
+st.subheader("Valuation Summary")
+valuation = get_valuation()
+if valuation.empty:
+    st.warning("Valuation summary is not available.")
+else:
+    valuation_display = valuation.fillna("N/A")
+    flag_counts = valuation["Flag"].value_counts()
+    valuation_columns = st.columns(4)
+    valuation_metrics = [
+        ("Companies", len(valuation)),
+        ("Discount", int(flag_counts.get("Discount", 0))),
+        ("Caution", int(flag_counts.get("Caution", 0))),
+        ("Fair", int(flag_counts.get("Fair", 0))),
+    ]
+    for column, (label, value) in zip(valuation_columns, valuation_metrics):
+        with column:
+            st.metric(label=label, value=value)
+
+    st.download_button(
+        label="Download Valuation CSV",
+        data=valuation_display.to_csv(index=False).encode("utf-8"),
+        file_name="valuation_summary.csv",
+        mime="text/csv",
+    )
+
+    st.dataframe(
+        valuation_display[
+            [
+                "company_id",
+                "company_name",
+                "sector",
+                "PE",
+                "PB",
+                "EV/EBITDA",
+                "FCF Yield %",
+                "Flag",
+            ]
+        ],
+        hide_index=True,
+        width="stretch",
+    )
