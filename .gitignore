@@ -1,0 +1,22 @@
+node_modules/
+.next/
+data-backup/
+homiepg-admin/data-backup/
+*.log
+
+# Environment files — never commit secrets
+.env
+.env.local
+.env*.local
+.env.production
+.env.development
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+out/
+build/
+
