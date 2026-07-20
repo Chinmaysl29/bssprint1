@@ -1,0 +1,112 @@
+Company ID,Company Name,CFO Value,CFF Value,Latest PAT,Distress Flag
+AXISBANK,Axis Bank Ltd,-5555.0,22341.0,24861,Yes
+BAJAJFINSV,Bajaj Finserv Ltd,-68674.0,82709.0,15595,Yes
+BAJFINANCE,Bajaj Finance Ltd,-72760.0,82415.0,14451,Yes
+BANKBARODA,Bank of Baroda,-6274.0,5476.0,18869,Yes
+BHEL,"Bharat Heavy Electricals Limited
+",-3713.0,2656.0,282,Yes
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,-35683.0,38471.0,3420,Yes
+GRASIM,Grasim Industries Ltd,-10719.0,33908.0,9926,Yes
+M&M,"Mahindra & Mahindra Ltd
+",-5630.0,12281.0,12270,Yes
+PFC,Power Finance Corporation Ltd,-97820.0,101261.0,26461,Yes
+PNB,Punjab National Bank,-27939.0,3518.0,9157,Yes
+RECLTD,REC Ltd,-57723.0,59588.0,14145,Yes
+SHRIRAMFIN,"Shriram Finance Ltd
+",-31101.0,27609.0,7399,Yes
+TVSMOTOR,TVS Motor Company Ltd,-1253.0,2759.0,1779,Yes
+ABB,Abbott India Ltd,1213.0,-745.0,1201,No
+ABB,Abbott India Ltd,6038.0,-543.0,1201,No
+ADANIENSOL,Adani Energy Solutions Ltd,6038.0,-543.0,1196,No
+ADANIENT,Adani Enterprises Ltd,10312.0,8879.0,3335,No
+ADANIGREEN,Adani Green Energy Ltd,7713.0,13953.0,1260,No
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",15018.0,-7800.0,8104,No
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",15018.0,-7800.0,8104,No
+ADANIPOWER,Adani Power Ltd,14170.0,-16864.0,20829,No
+AMBUJACEM,Ambuja Cements Ltd,5646.0,5689.0,4738,No
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",1920.0,-311.0,935,No
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",6104.0,-2982.0,5558,No
+BAJAJ-AUTO,Bajaj Auto Ltd,6558.0,-6167.0,7708,No
+BAJAJ-AUTO,Bajaj Auto Ltd,6558.0,-6167.0,7708,No
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,1941.0,-1455.0,7365,No
+BEL,Bharat Electronics Ltd,4659.0,-1475.0,3985,No
+BHARTIARTL,Bharti Airtel Ltd,78898.0,-27778.0,8558,No
+BOSCHLTD,Bosch Ltd,1253.0,-1452.0,2490,No
+BPCL,Bharat Petroleum Corporation Ltd,35936.0,-25427.0,26859,No
+BRITANNIA,Britannia Industries Ltd,2573.0,-2830.0,2134,No
+CANBK,Canara Bank,15046.0,-3834.0,15401,No
+CIPLA,"Cipla Ltd
+",4134.0,-1200.0,4154,No
+COALINDIA,Coal India Ltd,18103.0,-13899.0,37369,No
+DABUR,Dabur India Ltd,2013.0,-1161.0,1811,No
+DIVISLAB,Divis Laboratories Ltd,1261.0,-799.0,1600,No
+DLF,DLF Ltd,2539.0,177.0,2724,No
+DMART,Avenue Supermarts Ltd,2746.0,-148.0,2536,No
+DRREDDY,Dr Reddys Laboratories Ltd,4543.0,-376.0,5578,No
+EICHERMOT,Eicher Motors Ltd,3724.0,-844.0,4001,No
+GAIL,GAIL (India) Ltd,12586.0,-3457.0,9903,No
+GODREJCP,Godrej Consumer Products Ltd,2070.0,1406.0,-561,No
+HAL,Hindustan Aeronautics Ltd,8226.0,-1999.0,7595,No
+HAVELLS,Havells India Ltd,1953.0,-534.0,1271,No
+HCLTECH,HCL Technologies Ltd,22448.0,-15464.0,15710,No
+HDFCBANK,HDFC Bank Ltd,19069.0,-3983.0,65446,No
+HDFCLIFE,HDFC Life Insurance Company Ltd,10721.0,-403.0,1574,No
+HEROMOTOCO,"Hero MotoCorp Ltd
+",4923.0,-2717.0,3742,No
+HINDALCO,Hindalco Industries Ltd,24056.0,-10817.0,10155,No
+HINDUNILVR,"Hindustan Unilever Ltd
+",15469.0,-10034.0,10282,No
+ICICIBANK,ICICI Bank Ltd,157284.0,13765.0,46081,No
+ICICIGI,ICICI Lombard General Insurance Company Ltd,2407.0,-355.0,1919,No
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,-7315.0,-88.0,851,No
+INDIGO,Interglobe Aviation Ltd,21183.0,-9979.0,8167,No
+INDUSINDBK,IndusInd Bank Ltd,-16843.0,-2242.0,8950,No
+INFY,Infosys Ltd,25210.0,-17504.0,26248,No
+IOC,"Indian Oil Corporation
+",71099.0,-39385.0,43161,No
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,882.0,-404.0,1111,No
+IRFC,Indian Railway Finance Corporation Ltd,7914.0,-8046.0,6412,No
+ITC,"ITC Ltd
+",17179.0,-18551.0,20751,No
+JINDALSTEL,Jindal Steel & Power Ltd,6008.0,1381.0,5943,No
+JIOFIN,Jio Financial Services Ltd,-678.0,-753.0,1605,No
+JSWENERGY,JSW Energy Ltd,6234.0,1675.0,1725,No
+JSWSTEEL,JSW Steel Ltd,12078.0,-5005.0,8973,No
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",15685.0,15515.0,18213,No
+LICI,Life Insurance Corporation of India,26122.0,-4427.0,40916,No
+LODHA,Macrotech Developers Ltd,2512.0,951.0,1554,No
+LT,Larsen & Toubro Ltd,18266.0,-25413.0,15547,No
+LTIM,LTIMindtree Ltd,5670.0,-2269.0,4585,No
+MARUTI,Maruti Suzuki India Ltd,16801.0,-4062.0,13488,No
+MOTHERSON,Samvardhana Motherson International Ltd,7569.0,1281.0,3020,No
+NAUKRI,Info Edge (India) Ltd,702.0,120.0,595,No
+NESTLEIND,Nestle India Ltd,4175.0,-3135.0,3933,No
+NHPC,"NHPC Ltd
+",6938.0,-581.0,4028,No
+NTPC,NTPC Ltd,40785.0,-8246.0,21332,No
+ONGC,Oil & Natural Gas Corpn Ltd,99263.0,-45650.0,57101,No
+PIDILITIND,Pidilite Industries Ltd,2724.0,-742.0,1747,No
+POWERGRID,Power Grid Corporation of India Ltd,37290.0,-25903.0,15573,No
+RELIANCE,"Reliance Industries Ltd
+",158788.0,-16646.0,79020,No
+SBILIFE,SBI Life Insurance Company Ltd,29122.0,-227.0,1894,No
+SBIN,State Bank of India,21632.0,-9896.0,69543,No
+SHREECEM,Shree Cement Ltd,3347.0,-1710.0,1733,No
+SIEMENS,Siemens Ltd,1670.0,-523.0,2718,No
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,12135.0,-6710.0,9610,No
+TATACONSUM,Tata Consumer Products Ltd,1937.0,256.0,1215,No
+TATAMOTORS,Tata Motors Ltd,67915.0,-37006.0,31807,No
+TATAPOWER,"Tata Power Company Ltd
+",12596.0,-4497.0,4280,No
+TATASTEEL,"Tata Steel Ltd
+",20301.0,-11097.0,-4910,No
+TECHM,Tech Mahindra Ltd,6376.0,-4767.0,2397,No
+TITAN,"Titan Company Ltd
+",1695.0,-1329.0,3496,No
+TORNTPHARM,Torrent Pharmaceuticals Ltd,3266.0,-2780.0,1656,No
+TRENT,Trent Ltd,1349.0,-629.0,1477,No

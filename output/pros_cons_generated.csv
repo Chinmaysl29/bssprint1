@@ -1,0 +1,730 @@
+company_id,type,rule_id,text,confidence_pct
+ABB,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+ABB,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+ABB,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+ABB,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+ABB,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+ABB,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+ABB,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+ABB,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+ABB,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+ABB,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+ADANIENSOL,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+ADANIENSOL,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,65
+ADANIENSOL,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+ADANIENSOL,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+ADANIENSOL,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+ADANIENSOL,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+ADANIENSOL,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+ADANIENSOL,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+ADANIENT,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+ADANIENT,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+ADANIENT,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+ADANIENT,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+ADANIENT,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+ADANIENT,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+ADANIGREEN,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+ADANIGREEN,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+ADANIGREEN,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+ADANIGREEN,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+ADANIGREEN,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,80
+ADANIGREEN,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+ADANIGREEN,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,95
+ADANIGREEN,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+ADANIGREEN,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+ADANIPORTS,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+ADANIPORTS,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,65
+ADANIPORTS,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,65
+ADANIPORTS,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+ADANIPORTS,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+ADANIPORTS,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+ADANIPOWER,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+ADANIPOWER,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+ADANIPOWER,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+ADANIPOWER,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+ADANIPOWER,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+ADANIPOWER,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,65
+ADANIPOWER,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+ADANIPOWER,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,65
+ADANIPOWER,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+ADANIPOWER,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+AMBUJACEM,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,80
+AMBUJACEM,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+AMBUJACEM,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+AMBUJACEM,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+AMBUJACEM,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+AMBUJACEM,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+AMBUJACEM,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+AMBUJACEM,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+AMBUJACEM,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+APOLLOHOSP,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+APOLLOHOSP,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+APOLLOHOSP,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+APOLLOHOSP,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+APOLLOHOSP,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,80
+APOLLOHOSP,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+APOLLOHOSP,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+APOLLOHOSP,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+ASIANPAINT,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+ASIANPAINT,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+ASIANPAINT,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+ASIANPAINT,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+ASIANPAINT,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+ASIANPAINT,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+ASIANPAINT,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+ASIANPAINT,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+AXISBANK,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+AXISBANK,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+AXISBANK,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,80
+AXISBANK,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+AXISBANK,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+AXISBANK,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+AXISBANK,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+AXISBANK,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,65
+AXISBANK,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+BAJAJ-AUTO,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+BAJAJ-AUTO,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+BAJAJ-AUTO,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+BAJAJ-AUTO,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+BAJAJ-AUTO,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+BAJAJ-AUTO,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+BAJAJ-AUTO,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+BAJAJ-AUTO,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+BAJAJFINSV,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+BAJAJFINSV,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+BAJAJFINSV,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+BAJAJFINSV,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+BAJAJFINSV,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,80
+BAJAJFINSV,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+BAJAJFINSV,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+BAJAJFINSV,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+BAJAJHLDNG,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+BAJAJHLDNG,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+BAJAJHLDNG,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+BAJAJHLDNG,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+BAJAJHLDNG,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+BAJAJHLDNG,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+BAJAJHLDNG,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+BAJAJHLDNG,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+BAJFINANCE,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+BAJFINANCE,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+BAJFINANCE,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+BAJFINANCE,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+BAJFINANCE,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+BAJFINANCE,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,95
+BAJFINANCE,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+BAJFINANCE,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+BAJFINANCE,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+BANKBARODA,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+BANKBARODA,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+BANKBARODA,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,65
+BANKBARODA,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+BANKBARODA,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+BANKBARODA,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+BANKBARODA,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+BANKBARODA,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,65
+BEL,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+BEL,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+BEL,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+BEL,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+BEL,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+BEL,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+BEL,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+BEL,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+BEL,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+BEL,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+BEL,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+BHARTIARTL,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+BHARTIARTL,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+BHARTIARTL,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+BHARTIARTL,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+BHARTIARTL,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+BHARTIARTL,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,80
+BHARTIARTL,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+BHEL,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+BHEL,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+BHEL,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+BHEL,Con,C05,Operating margin below 5% shows weak operational efficiency and pricing power.,95
+BHEL,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+BHEL,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,65
+BHEL,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+BOSCHLTD,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+BOSCHLTD,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+BOSCHLTD,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+BOSCHLTD,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+BOSCHLTD,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+BOSCHLTD,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+BOSCHLTD,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+BOSCHLTD,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+BPCL,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+BPCL,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+BPCL,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+BPCL,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+BPCL,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,65
+BPCL,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+BPCL,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+BRITANNIA,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+BRITANNIA,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+BRITANNIA,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+BRITANNIA,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+BRITANNIA,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+BRITANNIA,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+BRITANNIA,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+BRITANNIA,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+BRITANNIA,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+CANBK,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+CANBK,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+CANBK,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,65
+CANBK,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+CANBK,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+CANBK,Con,C05,Operating margin below 5% shows weak operational efficiency and pricing power.,95
+CANBK,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+CANBK,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,80
+CHOLAFIN,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+CHOLAFIN,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+CHOLAFIN,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+CHOLAFIN,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+CHOLAFIN,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,80
+CHOLAFIN,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,95
+CHOLAFIN,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+CHOLAFIN,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+CHOLAFIN,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+CIPLA,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+CIPLA,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+CIPLA,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+CIPLA,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+CIPLA,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+CIPLA,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+CIPLA,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+CIPLA,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+CIPLA,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+COALINDIA,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+COALINDIA,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+COALINDIA,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+COALINDIA,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+COALINDIA,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+COALINDIA,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+COALINDIA,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+COALINDIA,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+COALINDIA,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+DABUR,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+DABUR,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+DABUR,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+DABUR,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+DABUR,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+DABUR,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+DABUR,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+DIVISLAB,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+DIVISLAB,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+DIVISLAB,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+DIVISLAB,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,65
+DIVISLAB,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+DIVISLAB,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+DIVISLAB,Con,C03,Negative revenue compounded annual growth signals business contraction.,95
+DIVISLAB,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+DLF,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+DLF,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+DLF,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+DLF,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+DLF,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+DLF,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+DLF,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+DLF,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+DMART,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+DMART,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+DMART,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+DMART,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+DMART,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+DMART,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+DMART,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+DMART,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+DRREDDY,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+DRREDDY,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+DRREDDY,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+DRREDDY,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+DRREDDY,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+DRREDDY,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+DRREDDY,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+DRREDDY,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+DRREDDY,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+DRREDDY,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+DRREDDY,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+EICHERMOT,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+EICHERMOT,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+EICHERMOT,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+EICHERMOT,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+EICHERMOT,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+EICHERMOT,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+EICHERMOT,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+EICHERMOT,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+EICHERMOT,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+EICHERMOT,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+GAIL,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+GAIL,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+GAIL,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+GAIL,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+GAIL,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+GODREJCP,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+GODREJCP,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+GODREJCP,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+GODREJCP,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+GODREJCP,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+GODREJCP,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+GODREJCP,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+GODREJCP,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+GRASIM,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+GRASIM,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+GRASIM,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+GRASIM,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+GRASIM,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+GRASIM,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+GRASIM,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+HAL,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+HAL,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+HAL,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+HAL,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+HAL,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+HAL,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+HAL,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+HAL,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+HAL,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+HAL,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+HAVELLS,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+HAVELLS,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+HAVELLS,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+HAVELLS,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+HAVELLS,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+HAVELLS,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+HAVELLS,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+HAVELLS,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+HCLTECH,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+HCLTECH,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+HCLTECH,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+HCLTECH,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+HCLTECH,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+HCLTECH,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+HCLTECH,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+HCLTECH,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+HCLTECH,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+HDFCBANK,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+HDFCBANK,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,65
+HDFCBANK,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+HDFCBANK,Con,C05,Operating margin below 5% shows weak operational efficiency and pricing power.,65
+HDFCBANK,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+HDFCBANK,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,95
+HDFCBANK,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+HDFCLIFE,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+HDFCLIFE,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+HDFCLIFE,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+HDFCLIFE,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+HDFCLIFE,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+HDFCLIFE,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+HDFCLIFE,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+HDFCLIFE,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+HDFCLIFE,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+HEROMOTOCO,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+HEROMOTOCO,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+HEROMOTOCO,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+HEROMOTOCO,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+HEROMOTOCO,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+HEROMOTOCO,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+HEROMOTOCO,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+HEROMOTOCO,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+HEROMOTOCO,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+HEROMOTOCO,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+HINDALCO,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+HINDALCO,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+HINDALCO,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+HINDALCO,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,65
+HINDALCO,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,80
+HINDALCO,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+HINDALCO,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+HINDUNILVR,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+HINDUNILVR,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+HINDUNILVR,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+HINDUNILVR,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+HINDUNILVR,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+HINDUNILVR,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+HINDUNILVR,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+HINDUNILVR,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+HINDUNILVR,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+ICICIBANK,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+ICICIBANK,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+ICICIBANK,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+ICICIBANK,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+ICICIBANK,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+ICICIBANK,Con,C05,Operating margin below 5% shows weak operational efficiency and pricing power.,95
+ICICIBANK,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+ICICIBANK,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,95
+ICICIBANK,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+ICICIGI,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+ICICIGI,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+ICICIGI,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+ICICIGI,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+ICICIGI,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+ICICIGI,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+ICICIGI,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+ICICIGI,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+ICICIGI,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+ICICIPRULI,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+ICICIPRULI,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,65
+ICICIPRULI,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,65
+ICICIPRULI,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+ICICIPRULI,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+ICICIPRULI,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+ICICIPRULI,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+ICICIPRULI,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+ICICIPRULI,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+INDIGO,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+INDIGO,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+INDIGO,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,80
+INDIGO,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+INDIGO,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+INDIGO,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+INDIGO,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+INDIGO,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+INDIGO,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+INDUSINDBK,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+INDUSINDBK,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+INDUSINDBK,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,65
+INDUSINDBK,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+INDUSINDBK,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+INDUSINDBK,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+INDUSINDBK,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+INDUSINDBK,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,65
+INFY,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+INFY,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+INFY,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+INFY,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+INFY,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+INFY,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+INFY,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+INFY,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+IOC,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+IOC,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+IOC,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+IOC,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+IOC,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,65
+IOC,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+IOC,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+IOC,Con,C05,Operating margin below 5% shows weak operational efficiency and pricing power.,65
+IRCTC,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+IRCTC,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+IRCTC,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+IRCTC,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+IRCTC,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+IRCTC,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,65
+IRCTC,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+IRCTC,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+IRCTC,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+IRFC,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+IRFC,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,65
+IRFC,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+IRFC,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+IRFC,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,95
+IRFC,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+ITC,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+ITC,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+ITC,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+ITC,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+ITC,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+ITC,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+ITC,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+ITC,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+JINDALSTEL,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+JINDALSTEL,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,65
+JINDALSTEL,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,80
+JINDALSTEL,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+JINDALSTEL,Con,C03,Negative revenue compounded annual growth signals business contraction.,95
+JINDALSTEL,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+JINDALSTEL,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+JINDALSTEL,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+JINDALSTEL,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+JIOFIN,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,80
+JIOFIN,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+JIOFIN,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,80
+JIOFIN,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+JIOFIN,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,80
+JIOFIN,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,80
+JIOFIN,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,80
+JIOFIN,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+JSWENERGY,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+JSWENERGY,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+JSWENERGY,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+JSWENERGY,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+JSWENERGY,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+JSWENERGY,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+JSWENERGY,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+JSWSTEEL,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+JSWSTEEL,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+JSWSTEEL,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+JSWSTEEL,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+JSWSTEEL,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+KOTAKBANK,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+KOTAKBANK,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+KOTAKBANK,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,65
+KOTAKBANK,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+KOTAKBANK,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+KOTAKBANK,Con,C05,Operating margin below 5% shows weak operational efficiency and pricing power.,95
+KOTAKBANK,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+KOTAKBANK,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,95
+KOTAKBANK,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+LICI,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+LICI,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+LICI,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+LICI,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+LICI,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,80
+LICI,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+LICI,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+LICI,Con,C05,Operating margin below 5% shows weak operational efficiency and pricing power.,65
+LODHA,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+LODHA,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+LODHA,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+LODHA,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,65
+LODHA,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+LODHA,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+LODHA,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+LODHA,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+LT,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+LT,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+LT,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+LT,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+LT,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+LT,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+LT,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+LTIM,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+LTIM,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+LTIM,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+LTIM,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+LTIM,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+LTIM,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+LTIM,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+LTIM,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+LTIM,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+LTIM,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+LTIM,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+M&M,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+M&M,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+M&M,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+M&M,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,80
+M&M,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,65
+M&M,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+M&M,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,80
+MARUTI,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+MARUTI,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+MARUTI,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+MARUTI,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+MARUTI,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+MARUTI,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+MARUTI,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+MARUTI,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+MARUTI,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+MOTHERSON,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+MOTHERSON,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+MOTHERSON,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+MOTHERSON,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+MOTHERSON,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,80
+MOTHERSON,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+MOTHERSON,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+NAUKRI,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+NAUKRI,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,65
+NAUKRI,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+NAUKRI,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,80
+NAUKRI,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+NAUKRI,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+NAUKRI,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+NAUKRI,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+NAUKRI,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+NAUKRI,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+NESTLEIND,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+NESTLEIND,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+NESTLEIND,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+NESTLEIND,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+NESTLEIND,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+NESTLEIND,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+NESTLEIND,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+NESTLEIND,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+NESTLEIND,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+NHPC,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+NHPC,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+NHPC,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+NHPC,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+NHPC,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+NHPC,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+NHPC,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+NHPC,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+NHPC,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+NTPC,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+NTPC,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+NTPC,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+NTPC,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+NTPC,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+NTPC,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+ONGC,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+ONGC,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+ONGC,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+ONGC,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+ONGC,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+ONGC,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+ONGC,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+ONGC,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+ONGC,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+PFC,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+PFC,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+PFC,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+PFC,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,80
+PFC,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+PFC,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,95
+PFC,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+PIDILITIND,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+PIDILITIND,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+PIDILITIND,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+PIDILITIND,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+PIDILITIND,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+PIDILITIND,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+PIDILITIND,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+PIDILITIND,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+PIDILITIND,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+PIDILITIND,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+PNB,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+PNB,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+PNB,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+PNB,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+PNB,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+PNB,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+PNB,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+PNB,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+POWERGRID,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+POWERGRID,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+POWERGRID,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+POWERGRID,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+POWERGRID,Con,C12,High capital expenditure intensity may pressure short-term profitability.,80
+RECLTD,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+RECLTD,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+RECLTD,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+RECLTD,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,95
+RECLTD,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+RECLTD,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,95
+RECLTD,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+RELIANCE,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+RELIANCE,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+RELIANCE,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,65
+RELIANCE,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+RELIANCE,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+RELIANCE,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+RELIANCE,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+RELIANCE,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+RELIANCE,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+RELIANCE,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+SBILIFE,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+SBILIFE,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+SBILIFE,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+SBILIFE,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+SBILIFE,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+SBILIFE,Con,C05,Operating margin below 5% shows weak operational efficiency and pricing power.,65
+SBILIFE,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,65
+SBILIFE,Con,C12,High capital expenditure intensity may pressure short-term profitability.,95
+SHREECEM,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+SHREECEM,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+SHREECEM,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+SHREECEM,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+SHREECEM,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+SHREECEM,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+SHREECEM,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+SHRIRAMFIN,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+SHRIRAMFIN,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+SHRIRAMFIN,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+SHRIRAMFIN,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,95
+SHRIRAMFIN,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+SHRIRAMFIN,Con,C08,Interest coverage ratio below 2x suggests difficulty in servicing debt obligations.,95
+SHRIRAMFIN,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
+SIEMENS,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+SIEMENS,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+SIEMENS,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+SIEMENS,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+SIEMENS,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+SIEMENS,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+SIEMENS,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+SUNPHARMA,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+SUNPHARMA,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+SUNPHARMA,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+SUNPHARMA,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,65
+SUNPHARMA,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+SUNPHARMA,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+SUNPHARMA,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+SUNPHARMA,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+TATACONSUM,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+TATACONSUM,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+TATACONSUM,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+TATACONSUM,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+TATACONSUM,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+TATACONSUM,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+TATACONSUM,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+TATAMOTORS,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+TATAMOTORS,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+TATAMOTORS,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+TATAMOTORS,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+TATAMOTORS,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+TATAMOTORS,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+TATAMOTORS,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+TATAPOWER,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+TATAPOWER,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+TATAPOWER,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,80
+TATAPOWER,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+TATAPOWER,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+TATAPOWER,Con,C12,High capital expenditure intensity may pressure short-term profitability.,65
+TATASTEEL,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+TATASTEEL,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+TATASTEEL,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,65
+TATASTEEL,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+TATASTEEL,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+TATASTEEL,Con,C02,Return on capital employed below 10% suggests inefficient use of capital resources.,95
+TATASTEEL,Con,C03,Negative revenue compounded annual growth signals business contraction.,95
+TATASTEEL,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+TCS,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+TCS,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+TCS,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+TCS,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+TCS,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+TCS,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+TCS,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+TCS,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+TECHM,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+TECHM,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+TECHM,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,95
+TECHM,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+TECHM,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+TECHM,Con,C01,Return on equity below 10% indicates subpar profitability and capital allocation.,95
+TECHM,Con,C04,Declining earnings per share indicates falling profitability over time.,95
+TITAN,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+TITAN,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+TITAN,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+TITAN,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+TITAN,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+TITAN,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,65
+TITAN,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+TORNTPHARM,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+TORNTPHARM,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+TORNTPHARM,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+TORNTPHARM,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,95
+TORNTPHARM,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+TORNTPHARM,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,95
+TORNTPHARM,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,80
+TORNTPHARM,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,95
+TORNTPHARM,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+TRENT,Pro,P01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency.,95
+TRENT,Pro,P02,Strong return on capital employed above 15% indicates efficient use of both debt and equity.,95
+TRENT,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+TRENT,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+TRENT,Pro,P05,Operating margin above 15% highlights strong operational efficiency and pricing power.,65
+TRENT,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,80
+TRENT,Pro,P07,Consistently positive free cash flow provides financial flexibility for growth and dividends.,80
+TRENT,Pro,P08,Debt-to-equity ratio below 1 reflects a strong balance sheet with conservative leverage.,65
+TRENT,Pro,P09,Interest coverage ratio above 5x shows strong ability to service debt obligations.,65
+TRENT,Pro,P11,High cash flow from operations quality indicates sustainable core business performance.,95
+TVSMOTOR,Pro,P03,Double-digit revenue compounded annual growth reflects robust business expansion.,95
+TVSMOTOR,Pro,P04,Earnings per share growing above 10% annually shows increasing profitability per share.,95
+TVSMOTOR,Pro,P06,Asset turnover ratio above 0.5x indicates efficient utilization of company assets.,95
+TVSMOTOR,Con,C06,Consistently negative free cash flow raises concerns about financial sustainability.,80
+TVSMOTOR,Con,C07,Debt-to-equity ratio above 2 indicates high leverage and increased financial risk.,95
+TVSMOTOR,Con,C10,Low cash flow quality suggests potential issues with core business operations.,95
