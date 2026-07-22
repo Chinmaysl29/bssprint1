@@ -1,230 +1,77 @@
+# Nifty 100 Analytics Engine
 
-# NIFTY100 Financial Intelligence Platform
+An automated data processing, analytics, and reporting engine designed to extract, analyze, and visualize financial data for the Nifty 100 companies.
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
-[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![Data Engineering](https://img.shields.io/badge/Data_Engineering-FF6F00?style=for-the-badge&logo=apachespark&logoColor=white)]()
-[![Financial Analytics](https://img.shields.io/badge/Financial_Analytics-00A4E4?style=for-the-badge&logo=quickbooks&logoColor=white)]()
-[![Testing](https://img.shields.io/badge/Testing-5E5E5E?style=for-the-badge&logo=pytest&logoColor=white)]()
+## Sprint 5 Overview
 
----
-## Sprint Status
+In Sprint 5, we integrated advanced analytics, Natural Language Processing (NLP) for qualitative insights, and a highly automated reporting suite to generate professional-grade financial PDFs. 
 
-**Sprint 3 — Completed**
+### Key Features Delivered:
+1. **Cash Flow Intelligence**: Analyzed Operating, Investing, and Financing cash flows to flag distress, deleveraging, and high-quality CFO companies.
+2. **NLP Engine**: Implemented an automated Pros & Cons generator that aggregates peer percentiles, financial margins, and historical CAGRs to write qualitative insights with a >60% confidence score.
+3. **Report Generation Suite**: 
+   - **Tearsheets**: 92 individual company PDFs featuring dual-axis charts and KPI grids.
+   - **Sector Reports**: 10 sector-level PDFs aggregating financial trends and highlighting top/bottom performers.
+   - **Portfolio Summary**: A master PDF report featuring distribution histograms, pie charts, and portfolio-wide rankings.
 
-### Sprint Architecture
+## Folder Structure
 
-```
-Sprint 1
-ETL Engine
-
-        ↓
-
-Sprint 2
-Financial Ratio Engine
-
-        ↓
-
-Sprint 3
-Screener + Peer Intelligence
-```
-
----
-
-## 📊 Project Overview
-
-Enterprise-grade financial analytics platform built for NIFTY100 companies. The system performs:
-
-- ✅ **ETL Processing** - Extract, Transform, Load of 12 financial datasets
-- ✅ **Data Validation** - 16 quality rules enforced
-- ✅ **Financial Ratio Calculation** - Profitability, Leverage, ROE, ROCE
-- ✅ **Growth Analytics** - 3/5/10 year CAGR calculations
-- ✅ **Cash Flow Intelligence** - Free Cash Flow, CFO Quality, Capital Allocation
-- ✅ **Quality Scoring** - Edge case detection and logging
-- ✅ **Dashboard Visualization** - Web and Power BI dashboards
-
----
-
-## 🏗️ Architecture Diagram
-
-```
-┌─────────────────────────────────────┐
-│     Raw Financial Data (12 Files)   │
-└────────────────┬────────────────────┘
-                 ↓
-┌─────────────────────────────────────┐
-│     ETL Layer                       │
-│     (loader.py, validator.py)       │
-└────────────────┬────────────────────┘
-                 ↓
-┌─────────────────────────────────────┐
-│     Normalization Engine            │
-└────────────────┬────────────────────┘
-                 ↓
-┌─────────────────────────────────────┐
-│     Data Quality Engine             │
-│     (16 Validation Rules)           │
-└────────────────┬────────────────────┘
-                 ↓
-┌─────────────────────────────────────┐
-│     SQLite Warehouse                │
-│     (nifty100.db)                   │
-└────────────────┬────────────────────┘
-                 ↓
-┌─────────────────────────────────────┐
-│     Financial Analytics Engine      │
-│     (ratios.py, cagr.py, cashflow)  │
-└────────────────┬────────────────────┘
-                 ↓
-┌─────────────────────────────────────┐
-│     Dashboard Layer                 │
-│     (HTML + Power BI)               │
-└─────────────────────────────────────┘
-```
-
----
-
-## 🚀 Sprint 1 — Data Engineering Foundation
-
-### Input
-- 12 Financial Datasets
-
-### Processing Modules
-- [loader.py](file:///d:/bssprint1/Nifty100/src/etl/loader.py)
-- [data_quality.py](file:///d:/bssprint1/Nifty100/src/etl/data_quality.py)
-- [validator.py](file:///d:/bssprint1/Nifty100/src/etl/validator.py)
-
-### Outputs
-- ✅ [nifty100.db](file:///d:/bssprint1/Nifty100/db/nifty100.db)
-- ✅ [schema.sql](file:///d:/bssprint1/Nifty100/db/schema.sql)
-- ✅ [validation_failures.csv](file:///d:/bssprint1/Nifty100/output/validation_failures.csv)
-- ✅ [load_audit.csv](file:///d:/bssprint1/Nifty100/output/load_audit.csv)
-- ✅ [exploratory_queries.sql](file:///d:/bssprint1/Nifty100/db/exploratory_queries.sql)
-
-### Testing
-- 35+ ETL tests
-
-**Status:** ✅ COMPLETED
-
----
-
-## 📈 Sprint 2 — Financial Ratio Engine
-
-### Analytics Modules
-
-#### 💰 Profitability (ratios.py)
-- ROE (Return on Equity)
-- ROCE (Return on Capital Employed)
-- ROA (Return on Assets)
-- Net Profit Margin
-
-#### 📊 Growth Analytics (cagr.py)
-- Revenue CAGR
-- PAT CAGR
-- EPS CAGR
-- 3/5/10 year growth calculations
-
-**Edge Cases Handled:**
-- TURNAROUND
-- DECLINE_TO_LOSS
-- ZERO_BASE
-
-#### 💸 Cashflow Intelligence (cashflow_kpis.py)
-- Free Cash Flow
-- CFO Quality Score
-- CapEx Intensity
-- Capital Allocation Pattern
-
-**Status:** ✅ COMPLETED
-
----
-
-## Sprint 3 — Completed
-
-### Screener + Peer Intelligence
-- Company screening workflow
-- Peer comparison intelligence
-- Dashboard-ready insights for NIFTY100 analysis
-
-**Status:** COMPLETED
-
----
-## 📦 Database Architecture
-
-### Tables
-| Table | Description |
-|-------|-------------|
-| [companies](file:///d:/bssprint1/Nifty100/db/schema.sql) | Company master data |
-| [profitandloss](file:///d:/bssprint1/Nifty100/db/schema.sql) | Income statement data |
-| [balancesheet](file:///d:/bssprint1/Nifty100/db/schema.sql) | Balance sheet data |
-| [cashflow](file:///d:/bssprint1/Nifty100/db/schema.sql) | Cash flow statement data |
-| [financial_ratios](file:///d:/bssprint1/Nifty100/db/schema.sql) | Calculated financial ratios |
-| [sectors](file:///d:/bssprint1/Nifty100/db/schema.sql) | Sector classification |
-
-### Relationships
-```
-companies
-    ↓
-financial_ratios
-```
-
----
-
-## ✅ Testing Section
-
-### Testing Results
-| Metric | Value |
-|--------|-------|
-| **Total Tests** | 139+ |
-| **Status** | PASSED |
-| **Failures** | 0 |
-
-### Testing Includes
-- ETL Tests
-- Financial Ratio Tests
-- CAGR Tests
-- Cashflow KPIs Tests
-
----
-
-## 📊 Dashboard Section
-
-### Available Dashboards
-- **HTML Dashboard** - Vanilla JS/Chart.js interactive web interface
-- **Power BI Dashboard** - Professional financial analytics dashboard
-
-### Features
-- 🎯 Executive View
-- 📊 Financial KPIs
-- 📈 Growth Analytics
-- ⚠️ Risk Analytics
-- 💰 Cashflow Intelligence
-
----
-
-## 📁 Project Structure
-
-```
+```text
 Nifty100/
+│
+├── data/                  # Raw and intermediate CSVs
+├── db/                    # SQLite database (nifty100.db)
+├── reports/               # Generated PDFs 
+│   ├── tearsheets/        # 92 Company PDFs
+│   ├── sector/            # 10 Sector PDFs
+│   └── portfolio/         # Portfolio Summary PDF
+│
+├── output/
+│   ├── peer_charts/       # Peer comparison visualizations
+│   └── *.csv              # Analytics outputs (Valuation, Cashflow, NLP)
+│
 ├── src/
-│   ├── etl/          # ETL pipeline modules
-│   └── analytics/    # Financial analytics engine
-├── db/               # SQLite database & schema
-├── tests/            # Pytest test suite
-├── output/           # Generated reports & logs
-├── dashboard/        # HTML + Power BI dashboards
-├── reports/          # Sprint reports & documentation
-└── data/             # Raw & supporting data files
+│   ├── analytics/         # CAGR, Cash Flow, and Valuation modules
+│   ├── nlp/               # Pros & Cons generation logic
+│   └── reports/           # PDF Generation (tearsheet, sector_report, portfolio_summary)
+│
+└── tests/                 # Validation and QA scripts
 ```
 
----
+## Installation
 
-## 📋 Final Status Table
+1. Clone the repository.
+2. Ensure you have Python 3.10+ installed.
+3. Install the required dependencies:
+```bash
+pip install pandas numpy matplotlib sqlite3
+```
 
-| Sprint | Module | Status |
-|--------|--------|--------|
-| Sprint 1 | ETL Foundation | ✅ COMPLETE |
-| Sprint 2 | Financial Ratio Engine | ✅ COMPLETE |
-| Sprint 3 | Screener + Peer Intelligence | COMPLETE |
+## Usage
 
+**1. Run Analytics Modules**
+Generate the base KPIs and CSV outputs:
+```bash
+python src/analytics/cagr.py
+python src/analytics/cashflow_kpis.py
+```
+
+**2. Generate NLP Pros & Cons**
+```bash
+python src/nlp/pros_cons_generator.py
+```
+
+**3. Generate PDF Reports**
+```bash
+# Generate all 92 Company Tearsheets
+python src/reports/batch_generator.py
+
+# Generate 10 Sector Reports
+python src/reports/sector_report.py
+
+# Generate the master Portfolio Summary
+python src/reports/portfolio_summary.py
+```
+
+## Outputs
+All final data and reports are saved to the `output/` directory. PDFs are cleanly formatted with `seaborn-v0_8-whitegrid` styling, robust text-wrapping, and dynamic handling of missing data.

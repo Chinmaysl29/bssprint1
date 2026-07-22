@@ -217,6 +217,12 @@ def generate_pros_cons_for_company_detailed(company_id, company_row, all_data):
     company_cf = all_data["cashflow"][all_data["cashflow"]["company_id"] == company_id].copy()
     company_fr = all_data["financial_ratios"][all_data["financial_ratios"]["company_id"] == company_id].copy()
     company_sector = all_data["sectors"][all_data["sectors"]["company_id"] == company_id]
+    
+    company_peers = all_data["peer_percentiles"][all_data["peer_percentiles"]["company_id"] == company_id]
+    if not company_peers.empty:
+        yearly_peer_pct = dict(zip(company_peers["year"], company_peers["percentile_rank"]))
+    else:
+        yearly_peer_pct = {}
 
     # Calculate company metrics
     metrics = calculate_company_metrics(company_id, company_pnl, company_cf)
@@ -399,6 +405,12 @@ def generate_pros_cons_for_company(company_id, company_row, all_data):
     company_cf = all_data["cashflow"][all_data["cashflow"]["company_id"] == company_id].copy()
     company_fr = all_data["financial_ratios"][all_data["financial_ratios"]["company_id"] == company_id].copy()
     company_sector = all_data["sectors"][all_data["sectors"]["company_id"] == company_id]
+    
+    company_peers = all_data["peer_percentiles"][all_data["peer_percentiles"]["company_id"] == company_id]
+    if not company_peers.empty:
+        yearly_peer_pct = dict(zip(company_peers["year"], company_peers["percentile_rank"]))
+    else:
+        yearly_peer_pct = {}
 
     # Calculate company metrics
     metrics = calculate_company_metrics(company_id, company_pnl, company_cf)

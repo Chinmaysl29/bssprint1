@@ -4,6 +4,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 import sys
+
+try:
+    plt.style.use('seaborn-v0_8-whitegrid')
+except:
+    try:
+        plt.style.use('seaborn-whitegrid')
+    except:
+        pass # fallback to default
 import textwrap
 
 # Add src to path so we can import cagr
@@ -77,27 +85,53 @@ def fetch_company_data(company_id):
         if not match.empty:
             pat_cagr_val = match.iloc[0]['net_profit_cagr_pct']
 
+    # Fetch Valuation Data
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    val_csv = os.path.join(base_dir, "output", "valuation_summary.csv")
+    val_data = None
+    if os.path.exists(val_csv):
+        val_df = pd.read_csv(val_csv)
+        val_match = val_df[val_df['company_id'] == company_id]
+        if not val_match.empty:
+            val_data = val_match.iloc[-1].to_dict()
+
     return {
         'header': header_df.iloc[0],
         'kpis': kpi_df.iloc[0] if not kpi_df.empty else None,
         'financials': fin_df,
         'sales_cagr': sales_cagr_val,
-        'pat_cagr': pat_cagr_val
+        'pat_cagr': pat_cagr_val,
+        'valuation': val_data
     }
 
 
-def generate_company_tearsheet(company_id: str):
+def generate_company_tearsheet(company_id: str, out_dir: str = None):
     """
     Generate a reusable 2-page company tearsheet.
-    Currently implements Page 1.
     """
     print(f"Generating tearsheet for {company_id}...")
     data = fetch_company_data(company_id)
     if not data:
-        print(f"Company {company_id} not found.")
-        return
+        raise ValueError("Company not found in database")
         
-    output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "output", "reports", "sample_tearsheets")
+    # VALIDATION CHECKS
+    fin_df = data['financials']
+    if len(fin_df) < 3:
+        raise ValueError("Less than 3 years of data")
+        
+    # Check for missing cash flow (if all cash flow data is empty)
+    if fin_df['operating_activity'].dropna().empty and fin_df['investing_activity'].dropna().empty:
+        raise ValueError("Missing cash flow")
+        
+    # Check for missing ratios
+    if data['kpis'] is None or (pd.isna(data['kpis']['roe']) and pd.isna(data['kpis']['roce'])):
+        raise ValueError("Missing ratios")
+        
+    if out_dir is None:
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "reports", "sample_tearsheets")
+    else:
+        output_dir = out_dir
+        
     os.makedirs(output_dir, exist_ok=True)
     pdf_path = os.path.join(output_dir, f"{company_id}.pdf")
     
@@ -111,8 +145,15 @@ def generate_company_tearsheet(company_id: str):
         ticker = header['ticker']
         sector = textwrap.fill(header['sector'] if pd.notna(header['sector']) else "Unknown Sector", width=40)
         
+        val_data = data.get('valuation', {})
+        if not val_data:
+            val_data = {}
+            
+        mcap = val_data.get('market_cap_crore', "N/A")
+        mcap_str = f"₹{mcap:,.0f} Cr" if isinstance(mcap, (int, float)) and pd.notna(mcap) else "N/A"
+        
         fig.text(0.5, 0.95, f"{name} ({ticker})", ha='center', va='top', fontsize=18, fontweight='bold')
-        fig.text(0.5, 0.90, f"Sector: {sector}", ha='center', va='top', fontsize=12, color='gray')
+        fig.text(0.5, 0.90, f"Sector: {sector} | Market Cap: {mcap_str}", ha='center', va='top', fontsize=12, color='gray')
         
         # 2. KPI Cards (2x3 grid)
         fin_df = data['financials']
@@ -122,7 +163,8 @@ def generate_company_tearsheet(company_id: str):
         if latest_fin is not None and pd.notna(latest_fin['borrowings']) and pd.notna(latest_fin['equity_capital']) and latest_fin['equity_capital'] != 0:
             debt_equity = f"{latest_fin['borrowings'] / latest_fin['equity_capital']:.2f}"
             
-        fcf_yield = "N/A" # Placeholder until market cap source is identified
+        fcf_yield_val = val_data.get('fcf_yield_pct', "N/A")
+        fcf_yield = f"{fcf_yield_val}%" if isinstance(fcf_yield_val, (int, float)) and pd.notna(fcf_yield_val) else "N/A"
         
         kpi_vals = {
             "ROE": f"{data['kpis']['roe']}%" if data['kpis'] is not None and pd.notna(data['kpis']['roe']) else "N/A",
@@ -155,38 +197,39 @@ def generate_company_tearsheet(company_id: str):
             
             # 10-Year Revenue Bar Chart
             ax1 = fig.add_subplot(gs[0, 0])
-            ax1.bar(years, chart_df['sales'], color='skyblue')
-            ax1.set_title("10-Year Revenue", fontweight='bold')
+            ax1.bar(years, chart_df['sales'], color='#3498DB', label='Revenue')
+            ax1.set_title("10-Year Revenue Trend", fontweight='bold', color='#2C3E50')
             ax1.tick_params(axis='x', rotation=45)
             
-            # 10-Year Net Profit Bar Chart
+            # Profit Chart
             ax2 = fig.add_subplot(gs[0, 1])
-            ax2.bar(years, chart_df['net_profit'], color='lightgreen')
-            ax2.set_title("10-Year Net Profit", fontweight='bold')
+            ax2.bar(years, chart_df['net_profit'], color='#27AE60', label='Net Profit')
+            ax2.set_title("10-Year Profit Trend", fontweight='bold', color='#2C3E50')
             ax2.tick_params(axis='x', rotation=45)
             
             # ROE vs ROCE Dual-Axis Line Chart
             chart_df['calc_roe'] = chart_df.apply(
                 lambda row: (row['net_profit'] / row['equity_capital'] * 100) 
-                if pd.notna(row['equity_capital']) and row['equity_capital'] != 0 else None, 
+                if pd.notna(row['net_profit']) and pd.notna(row['equity_capital']) and row['equity_capital'] != 0 else None, 
                 axis=1
             )
             chart_df['calc_roce'] = chart_df.apply(
                 lambda row: (row['operating_profit'] / (row['equity_capital'] + row['reserves'] + row['borrowings']) * 100)
-                if pd.notna(row['equity_capital']) and pd.notna(row['reserves']) and pd.notna(row['borrowings']) 
+                if pd.notna(row['operating_profit']) and pd.notna(row['equity_capital']) and pd.notna(row['reserves']) and pd.notna(row['borrowings']) 
                 and (row['equity_capital'] + row['reserves'] + row['borrowings']) != 0 else None,
                 axis=1
             )
             
             ax3 = fig.add_subplot(gs[1, :])
-            ax3.plot(years, chart_df['calc_roe'], marker='o', color='blue', label='ROE')
-            ax3.set_ylabel("ROE (%)", color='blue')
-            ax3.tick_params(axis='y', labelcolor='blue')
+            ax3.plot(years, chart_df['calc_roe'], marker='o', color='#2C3E50', label='ROE (%)', linewidth=2)
+            ax3.set_ylabel("ROE (%)", color='#2C3E50', fontweight='bold')
+            ax3.tick_params(axis='y', labelcolor='#2C3E50')
+            ax3.set_title("ROE & ROCE Trend", fontweight='bold', color='#2C3E50')
             
             ax3_twin = ax3.twinx()
-            ax3_twin.plot(years, chart_df['calc_roce'], marker='s', color='orange', label='ROCE')
-            ax3_twin.set_ylabel("ROCE (%)", color='orange')
-            ax3_twin.tick_params(axis='y', labelcolor='orange')
+            ax3_twin.plot(years, chart_df['calc_roce'], marker='s', color='#E74C3C', label='ROCE (%)', linewidth=2)
+            ax3_twin.set_ylabel("ROCE (%)", color='#E74C3C', fontweight='bold')
+            ax3_twin.tick_params(axis='y', labelcolor='#E74C3C')
             
             ax3.set_title("ROE vs ROCE Dual-Axis", fontweight='bold')
             ax3.tick_params(axis='x', rotation=45)
@@ -205,8 +248,6 @@ def generate_company_tearsheet(company_id: str):
         fig2.text(0.5, 0.95, f"{name} ({ticker}) - Page 2", ha='center', va='top', fontsize=18, fontweight='bold')
         
         # Capital Allocation Badge
-        # Need to point to output_dir which is two levels up from output/reports/sample_tearsheets/
-        # base_dir is easier to use here
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         allocation_csv = os.path.join(base_dir, "output", "capital_allocation.csv")
         badge_text = "Unknown Strategy"
@@ -220,8 +261,8 @@ def generate_company_tearsheet(company_id: str):
         fig2.text(0.5, 0.90, f"Capital Allocation: {badge_text}", ha='center', va='top', fontsize=14, 
                   bbox=dict(facecolor='gold', alpha=0.5, edgecolor='black', boxstyle='round,pad=0.5'))
                   
-        # We use GridSpec for Layout Optimization on Page 2
-        gs2 = fig2.add_gridspec(2, 2, left=0.1, right=0.9, top=0.82, bottom=0.05, hspace=0.3, wspace=0.3)
+        # GridSpec for Page 2
+        gs2 = fig2.add_gridspec(3, 2, left=0.1, right=0.9, top=0.82, bottom=0.05, hspace=0.4, wspace=0.3)
                   
         # 2. Balance Sheet Composition (Stacked Bar Chart)
         if not fin_df.empty:
@@ -233,13 +274,13 @@ def generate_company_tearsheet(company_id: str):
             borrowings = bs_df['borrowings'].fillna(0)
             other_liabilities = bs_df['other_liabilities'].fillna(0)
             
-            ax_bs = fig2.add_subplot(gs2[0, :])
+            ax_bs = fig2.add_subplot(gs2[0, 0])
             ax_bs.bar(years2, equity, label='Equity', color='lightblue')
             ax_bs.bar(years2, borrowings, bottom=equity, label='Borrowings', color='salmon')
-            ax_bs.bar(years2, other_liabilities, bottom=equity+borrowings, label='Other Liabilities', color='lightgray')
-            ax_bs.set_title("Balance Sheet Composition (10-Year)", fontweight='bold')
-            ax_bs.legend()
-            ax_bs.tick_params(axis='x', rotation=45)
+            ax_bs.bar(years2, other_liabilities, bottom=equity+borrowings, label='Other Liabs', color='lightgray')
+            ax_bs.set_title("Balance Sheet Composition", fontweight='bold')
+            ax_bs.legend(fontsize=8)
+            ax_bs.tick_params(axis='x', rotation=45, labelsize=8)
             
         # 3. Cash Flow Waterfall (Latest year)
         if not fin_df.empty:
@@ -249,10 +290,10 @@ def generate_company_tearsheet(company_id: str):
             cff = latest_cf['financing_activity'] if pd.notna(latest_cf['financing_activity']) else 0
             ncf = cfo + cfi + cff
             
-            categories = ['CFO', 'CFI', 'CFF', 'Net Cash Flow']
+            categories = ['CFO', 'CFI', 'CFF', 'Net CF']
             values = [cfo, cfi, cff, ncf]
             
-            ax_cf = fig2.add_subplot(gs2[1, 0])
+            ax_cf = fig2.add_subplot(gs2[0, 1])
             
             bottoms = [0, cfo, cfo + cfi, 0]
             colors = ['green' if v > 0 else 'red' for v in values[:-1]] + ['blue']
@@ -263,13 +304,35 @@ def generate_company_tearsheet(company_id: str):
             ax_cf.bar(categories[3], values[3], bottom=0, color=colors[3])
             
             ax_cf.set_title(f"Cash Flow Waterfall ({latest_cf['year']})", fontweight='bold')
+            ax_cf.tick_params(axis='x', rotation=45, labelsize=8)
             
-            # Add value labels slightly offset
-            for i, v in enumerate(values):
-                ax_cf.text(i, bottoms[i] + v/2, f"{v:,.0f}", ha='center', va='center', color='white', fontweight='bold', fontsize=8)
-                ax_cf.tick_params(axis='x', rotation=45)
-                
-        # 4. Pros & Cons
+        # 4. Valuation Summary
+        ax_val = fig2.add_subplot(gs2[1, :])
+        ax_val.axis('tight')
+        ax_val.axis('off')
+        
+        ax_val.set_title("Valuation Summary", fontweight='bold', fontsize=12, pad=10)
+        
+        if val_data:
+            cols = ["Metric", "Value"]
+            cell_text = [
+                ["P/E Ratio", f"{val_data.get('pe_ratio', 'N/A')}"],
+                ["Sector Median P/E", f"{val_data.get('sector_median_pe', 'N/A')}"],
+                ["P/E vs Sector", f"{val_data.get('pe_vs_sector_median', 'N/A')}x"],
+                ["EV/EBITDA", f"{val_data.get('ev_ebitda', 'N/A')}"],
+                ["P/B Ratio", f"{val_data.get('pb_ratio', 'N/A')}"],
+                ["Dividend Yield", f"{val_data.get('dividend_yield_pct', 'N/A')}%"],
+                ["Valuation Flag", f"{val_data.get('valuation_flag', 'N/A')}"]
+            ]
+            # Create table
+            table = ax_val.table(cellText=cell_text, colLabels=cols, cellLoc='center', loc='center', bbox=[0.2, 0.1, 0.6, 0.8])
+            table.auto_set_font_size(False)
+            table.set_fontsize(10)
+            table.scale(1, 1.5)
+        else:
+            ax_val.text(0.5, 0.5, "No Valuation Data Available", ha='center', va='center', fontsize=10, color='gray')
+
+        # 5. Pros & Cons
         pros_cons_csv = os.path.join(base_dir, "output", "pros_cons_generated.csv")
         pros = []
         cons = []
@@ -279,27 +342,30 @@ def generate_company_tearsheet(company_id: str):
             pros = pc_match[pc_match['type'] == 'Pro']['text'].tolist()
             cons = pc_match[pc_match['type'] == 'Con']['text'].tolist()
             
-        ax_txt = fig2.add_subplot(gs2[1, 1])
-        ax_txt.axis('off')
+        ax_pros = fig2.add_subplot(gs2[2, 0])
+        ax_pros.axis('off')
         
         y_pos = 1.0
-        line_height = 0.05
+        line_height = 0.08
         
-        ax_txt.text(0, y_pos, "Pros:", color='green', fontweight='bold', fontsize=12, transform=ax_txt.transAxes)
+        ax_pros.text(0, y_pos, "Pros:", color='green', fontweight='bold', fontsize=12, transform=ax_pros.transAxes)
         y_pos -= line_height * 1.5
         for p in pros[:5]: # limit to top 5
             wrapped_text = "\n".join(textwrap.wrap(p, width=45))
             num_lines = len(wrapped_text.split('\n'))
-            ax_txt.text(0.02, y_pos, f"• {wrapped_text}", color='green', fontsize=9, va='top', transform=ax_txt.transAxes)
+            ax_pros.text(0.02, y_pos, f"• {wrapped_text}", color='green', fontsize=9, va='top', transform=ax_pros.transAxes)
             y_pos -= line_height * (num_lines + 0.5)
             
-        y_pos -= line_height * 1.0
-        ax_txt.text(0, y_pos, "Cons:", color='red', fontweight='bold', fontsize=12, transform=ax_txt.transAxes)
+        ax_cons = fig2.add_subplot(gs2[2, 1])
+        ax_cons.axis('off')
+        
+        y_pos = 1.0
+        ax_cons.text(0, y_pos, "Cons:", color='red', fontweight='bold', fontsize=12, transform=ax_cons.transAxes)
         y_pos -= line_height * 1.5
         for c in cons[:5]: # limit to top 5
             wrapped_text = "\n".join(textwrap.wrap(c, width=45))
             num_lines = len(wrapped_text.split('\n'))
-            ax_txt.text(0.02, y_pos, f"• {wrapped_text}", color='red', fontsize=9, va='top', transform=ax_txt.transAxes)
+            ax_cons.text(0.02, y_pos, f"• {wrapped_text}", color='red', fontsize=9, va='top', transform=ax_cons.transAxes)
             y_pos -= line_height * (num_lines + 0.5)
 
         pdf.savefig(fig2)
