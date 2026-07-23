@@ -1,0 +1,79 @@
+/* NIFTY100 Streamlit dashboard theme */
+
+:root {
+  --bg: #020617;
+  --surface: #0f172a;
+  --surface2: #1e293b;
+  --primary: #2563eb;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+.stApp {
+  background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  color: var(--text);
+}
+
+section[data-testid="stSidebar"] {
+  background: var(--surface);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+section[data-testid="stSidebar"] .sidebar-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 1rem;
+}
+
+.brand-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.brand-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+}
+
+div[data-testid="stMetric"] {
+  background: var(--surface2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+}
+
+div[data-testid="stMetricLabel"] {
+  color: var(--text-muted);
+}
+
+div[data-testid="stMetricValue"] {
+  color: var(--text);
+}
+
+.stButton > button {
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  border: none;
+}
+
+.stButton > button:hover {
+  background: #1d4ed8;
+}
+
+.stSelectbox label,
+.stTextInput label,
+.stSlider label {
+  color: var(--text-muted);
+}

@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nifty100 Obtained Outputs</title>
+  <style>
+    :root { --ink:#111827; --muted:#64748b; --line:#d8dee9; --bg:#f8fafc; --panel:#ffffff; --blue:#2563eb; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:var(--bg); }
+    header { padding:28px 32px; background:#0f172a; color:white; }
+    h1 { margin:0 0 8px; font-size:28px; }
+    h2 { margin:0; font-size:20px; }
+    main { padding:24px 32px 48px; }
+    .muted { color:var(--muted); margin:6px 0 0; }
+    .grid { display:grid; gap:16px; }
+    .summary { grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); margin-bottom:20px; }
+    .card, .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px; }
+    .card strong { display:block; font-size:28px; margin-bottom:4px; }
+    .panel { margin:18px 0; }
+    .section-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:12px; }
+    .link { color:var(--blue); text-decoration:none; font-weight:700; }
+    .table-wrap { overflow:auto; border:1px solid var(--line); border-radius:6px; }
+    table { width:100%; border-collapse:collapse; font-size:13px; background:white; }
+    th, td { padding:8px 10px; border-bottom:1px solid #e5e7eb; text-align:left; white-space:nowrap; }
+    th { background:#eef2f7; font-weight:700; }
+    .charts { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:14px; }
+    .chart-card { background:white; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+    .chart-card img { display:block; width:100%; aspect-ratio:1/1; object-fit:contain; background:#f8fafc; }
+    .chart-label { padding:10px 12px; font-weight:700; border-top:1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nifty100 Obtained Outputs</h1>
+    <p class="muted">Generated 2026-07-08 23:13 | Graphs, labels, database tables, and output files collected in one index.</p>
+  </header>
+  <main>
+    <section class="grid summary">
+      <div class="card"><strong>92</strong><span>Radar chart PNGs</span></div>
+      <div class="card"><strong>1</strong><span>Peer chart PNGs</span></div>
+      <div class="card"><strong>7061</strong><span>peer_percentiles rows</span></div>
+      <div class="card"><strong>6</strong><span>Output folder files</span></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>Output Files</h2></div>
+      <div class="table-wrap"><table><thead><tr><th>File</th><th>Relative path</th><th>Size</th><th>Modified</th></tr></thead><tbody><tr><td>capital_allocation.csv</td><td>capital_allocation.csv</td><td>40.8 KB</td><td>2026-07-03 18:58</td></tr><tr><td>load_audit.csv</td><td>load_audit.csv</td><td>629 B</td><td>2026-07-03 18:57</td></tr><tr><td>TCS_IT Services_radar.png</td><td>peer_charts/TCS_IT Services_radar.png</td><td>769.5 KB</td><td>2026-07-08 22:55</td></tr><tr><td>ratio_edge_cases.log</td><td>ratio_edge_cases.log</td><td>246.9 KB</td><td>2026-07-03 19:14</td></tr><tr><td>screener_output.xlsx</td><td>screener_output.xlsx</td><td>42.3 KB</td><td>2026-07-08 23:05</td></tr><tr><td>validation_failures.csv</td><td>validation_failures.csv</td><td>117.2 KB</td><td>2026-07-08 23:06</td></tr></tbody></table></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>Database Tables</h2></div>
+      <div class="table-wrap"><table><thead><tr><th>Table</th><th>Rows</th></tr></thead><tbody><tr><td>analysis</td><td>20</td></tr><tr><td>balancesheet</td><td>1312</td></tr><tr><td>cashflow</td><td>1187</td></tr><tr><td>companies</td><td>92</td></tr><tr><td>documents</td><td>1585</td></tr><tr><td>financial_ratios</td><td>1184</td></tr><tr><td>market_cap</td><td>552</td></tr><tr><td>peer_groups</td><td>56</td></tr><tr><td>peer_percentiles</td><td>7061</td></tr><tr><td>peer_percentiles_wide_backup</td><td>56</td></tr><tr><td>profitandloss</td><td>1276</td></tr><tr><td>prosandcons</td><td>16</td></tr><tr><td>sectors</td><td>92</td></tr><tr><td>stock_prices</td><td>5520</td></tr></tbody></table></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>peer_percentiles Metric Row Counts</h2></div>
+      <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Rows</th></tr></thead><tbody><tr><td>Asset_Turnover</td><td>646</td></tr><tr><td>Book_Value</td><td>646</td></tr><tr><td>D/E</td><td>646</td></tr><tr><td>Dividend_Payout</td><td>644</td></tr><tr><td>EPS</td><td>644</td></tr><tr><td>FCF</td><td>644</td></tr><tr><td>Interest_Coverage</td><td>619</td></tr><tr><td>Net_Profit_Margin</td><td>646</td></tr><tr><td>ROCE</td><td>634</td></tr><tr><td>ROE</td><td>646</td></tr><tr><td>Total_Debt</td><td>646</td></tr></tbody></table></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>peer_percentiles Sample</h2></div>
+      <div class="table-wrap"><table><thead><tr><th>Company</th><th>Peer Group</th><th>Metric</th><th>Value</th><th>Percentile Rank</th><th>Year</th></tr></thead><tbody><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Asset_Turnover</td><td>0.0815</td><td>14.29</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Book_Value</td><td>0.0944</td><td>28.57</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>D/E</td><td>3.6135</td><td>28.57</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Dividend_Payout</td><td>0.0</td><td>21.43</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>EPS</td><td>0.0</td><td>28.57</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>FCF</td><td>-1483.0</td><td>42.86</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Interest_Coverage</td><td>1.4461</td><td>28.57</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Net_Profit_Margin</td><td>-9.36</td><td>28.57</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>ROCE</td><td>8.7</td><td>28.57</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>ROE</td><td>-3.91</td><td>28.57</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Total_Debt</td><td>4347.0</td><td>14.29</td><td>2017</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Asset_Turnover</td><td>0.0942</td><td>14.29</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Book_Value</td><td>0.0857</td><td>28.57</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>D/E</td><td>7.3557</td><td>14.29</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Dividend_Payout</td><td>0.0</td><td>28.57</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>EPS</td><td>-1.0</td><td>28.57</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>FCF</td><td>-3779.0</td><td>14.29</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Interest_Coverage</td><td>1.6033</td><td>28.57</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Net_Profit_Margin</td><td>-9.32</td><td>28.57</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>ROCE</td><td>7.9</td><td>14.29</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>ROE</td><td>-10.29</td><td>28.57</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Total_Debt</td><td>9864.0</td><td>14.29</td><td>2018</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Asset_Turnover</td><td>0.1404</td><td>28.57</td><td>2019</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Book_Value</td><td>0.1236</td><td>14.29</td><td>2019</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>D/E</td><td>5.7641</td><td>14.29</td><td>2019</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Dividend_Payout</td><td>0.0</td><td>21.43</td><td>2019</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>EPS</td><td>-3.0</td><td>21.43</td><td>2019</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>FCF</td><td>-1041.0</td><td>28.57</td><td>2019</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Interest_Coverage</td><td>1.4264</td><td>28.57</td><td>2019</td></tr><tr><td>ADANIGREEN</td><td>Power &amp; Utilities</td><td>Net_Profit_Margin</td><td>-23.08</td><td>14.29</td><td>2019</td></tr></tbody></table></div>
+    </section>
+
+    
+      <section class="panel">
+        <div class="section-head">
+          <h2>load_audit.csv</h2>
+          <a class="link" href="load_audit.csv" target="_blank">Open file</a>
+        </div>
+        <p class="muted">Preview: first 12 of 12 rows.</p>
+        <div class="table-wrap"><table><thead><tr><th>Table</th><th>Rows in</th><th>Rows loaded</th><th>Rejected</th><th>Runtime (s)</th><th>Timestamp</th></tr></thead><tbody><tr><td>companies</td><td>92</td><td>92</td><td>0</td><td>1.26</td><td>2026-07-03 18:57:48</td></tr><tr><td>profitandloss</td><td>1276</td><td>1276</td><td>0</td><td>0.26</td><td>2026-07-03 18:57:48</td></tr><tr><td>balancesheet</td><td>1312</td><td>1312</td><td>0</td><td>0.22</td><td>2026-07-03 18:57:48</td></tr><tr><td>cashflow</td><td>1187</td><td>1187</td><td>0</td><td>0.17</td><td>2026-07-03 18:57:48</td></tr><tr><td>analysis</td><td>20</td><td>20</td><td>0</td><td>0.04</td><td>2026-07-03 18:57:48</td></tr><tr><td>documents</td><td>1585</td><td>1585</td><td>0</td><td>0.16</td><td>2026-07-03 18:57:49</td></tr><tr><td>prosandcons</td><td>16</td><td>16</td><td>0</td><td>0.06</td><td>2026-07-03 18:57:49</td></tr><tr><td>sectors</td><td>92</td><td>92</td><td>0</td><td>0.07</td><td>2026-07-03 18:57:49</td></tr><tr><td>stock_prices</td><td>5520</td><td>5520</td><td>0</td><td>0.7</td><td>2026-07-03 18:57:49</td></tr><tr><td>market_cap</td><td>552</td><td>552</td><td>0</td><td>0.13</td><td>2026-07-03 18:57:50</td></tr><tr><td>financial_ratios</td><td>1184</td><td>1184</td><td>0</td><td>0.28</td><td>2026-07-03 18:57:50</td></tr><tr><td>peer_groups</td><td>56</td><td>56</td><td>0</td><td>0.05</td><td>2026-07-03 18:57:50</td></tr></tbody></table></div>
+      </section>
+    
+      <section class="panel">
+        <div class="section-head">
+          <h2>capital_allocation.csv</h2>
+          <a class="link" href="capital_allocation.csv" target="_blank">Open file</a>
+        </div>
+        <p class="muted">Preview: first 15 of 1053 rows.</p>
+        <div class="table-wrap"><table><thead><tr><th>company_id</th><th>year</th><th>cfo_sign</th><th>cfi_sign</th><th>cff_sign</th><th>pattern_label</th></tr></thead><tbody><tr><td>ABB</td><td>Mar 2024</td><td>+</td><td>-</td><td>-</td><td>Shareholder Returns</td></tr><tr><td>ABB</td><td>Mar 2023</td><td>+</td><td>-</td><td>+</td><td>Mixed</td></tr><tr><td>ABB</td><td>Mar 2022</td><td>+</td><td>-</td><td>-</td><td>Shareholder Returns</td></tr><tr><td>ABB</td><td>Mar 2021</td><td>+</td><td>-</td><td>-</td><td>Shareholder Returns</td></tr><tr><td>ABB</td><td>Mar 2020</td><td>+</td><td>-</td><td>+</td><td>Mixed</td></tr><tr><td>ABB</td><td>Mar 2019</td><td>+</td><td>-</td><td>+</td><td>Mixed</td></tr><tr><td>ABB</td><td>Mar 2018</td><td>+</td><td>-</td><td>+</td><td>Mixed</td></tr><tr><td>ABB</td><td>Mar 2017</td><td>+</td><td>-</td><td>-</td><td>Shareholder Returns</td></tr><tr><td>ABB</td><td>Mar 2016</td><td>+</td><td>-</td><td>-</td><td>Shareholder Returns</td></tr><tr><td>ABB</td><td>Mar 2015</td><td>-</td><td>-</td><td>+</td><td>Growth Funded by Debt</td></tr><tr><td>ABB</td><td>Mar 2014</td><td></td><td></td><td></td><td></td></tr><tr><td>ABB</td><td>Dec 2012</td><td>+</td><td>-</td><td>-</td><td>Shareholder Returns</td></tr><tr><td>ADANIENSOL</td><td>Mar 2024</td><td>+</td><td>-</td><td>-</td><td>Shareholder Returns</td></tr><tr><td>ADANIENSOL</td><td>Mar 2023</td><td>+</td><td>-</td><td>+</td><td>Mixed</td></tr><tr><td>ADANIENSOL</td><td>Mar 2022</td><td>+</td><td>-</td><td>-</td><td>Shareholder Returns</td></tr></tbody></table></div>
+      </section>
+    
+      <section class="panel">
+        <div class="section-head">
+          <h2>validation_failures.csv</h2>
+          <a class="link" href="validation_failures.csv" target="_blank">Open file</a>
+        </div>
+        <p class="muted">Preview: first 15 of 1947 rows.</p>
+        <div class="table-wrap"><table><thead><tr><th>rule</th><th>table</th><th>record_id</th><th>message</th></tr></thead><tbody><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2013</td><td>Duplicate company/year combination: ASIANPAINT Mar 2013</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2014</td><td>Duplicate company/year combination: ASIANPAINT Mar 2014</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2015</td><td>Duplicate company/year combination: ASIANPAINT Mar 2015</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2016</td><td>Duplicate company/year combination: ASIANPAINT Mar 2016</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2017</td><td>Duplicate company/year combination: ASIANPAINT Mar 2017</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2018</td><td>Duplicate company/year combination: ASIANPAINT Mar 2018</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2019</td><td>Duplicate company/year combination: ASIANPAINT Mar 2019</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2020</td><td>Duplicate company/year combination: ASIANPAINT Mar 2020</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2021</td><td>Duplicate company/year combination: ASIANPAINT Mar 2021</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2022</td><td>Duplicate company/year combination: ASIANPAINT Mar 2022</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2023</td><td>Duplicate company/year combination: ASIANPAINT Mar 2023</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2024</td><td>Duplicate company/year combination: ASIANPAINT Mar 2024</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Sep 2024</td><td>Duplicate company/year combination: ASIANPAINT Sep 2024</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2013</td><td>Duplicate company/year combination: ASIANPAINT Mar 2013</td></tr><tr><td>DQ02</td><td>balancesheet</td><td>ASIANPAINT_Mar 2014</td><td>Duplicate company/year combination: ASIANPAINT Mar 2014</td></tr></tbody></table></div>
+      </section>
+    
+
+    <section class="panel">
+      <div class="section-head"><h2>Peer Chart Images</h2></div>
+      <div class="charts">
+      <article class="chart-card">
+        <a href="peer_charts/TCS_IT Services_radar.png" target="_blank"><img src="peer_charts/TCS_IT Services_radar.png" alt="TCS IT Services radar chart"></a>
+        <div class="chart-label">TCS IT Services radar</div>
+      </article>
+    </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>Radar Charts and Labels</h2></div>
+      <p class="muted">Each card is labeled by company ticker. Click any chart to open the PNG.</p>
+      <div class="charts">
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ABB_radar.png" target="_blank"><img src="../reports/radar_charts/ABB_radar.png" alt="ABB radar chart"></a>
+        <div class="chart-label">ABB</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ADANIENSOL_radar.png" target="_blank"><img src="../reports/radar_charts/ADANIENSOL_radar.png" alt="ADANIENSOL radar chart"></a>
+        <div class="chart-label">ADANIENSOL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ADANIENT_radar.png" target="_blank"><img src="../reports/radar_charts/ADANIENT_radar.png" alt="ADANIENT radar chart"></a>
+        <div class="chart-label">ADANIENT</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ADANIGREEN_radar.png" target="_blank"><img src="../reports/radar_charts/ADANIGREEN_radar.png" alt="ADANIGREEN radar chart"></a>
+        <div class="chart-label">ADANIGREEN</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ADANIPORTS_radar.png" target="_blank"><img src="../reports/radar_charts/ADANIPORTS_radar.png" alt="ADANIPORTS radar chart"></a>
+        <div class="chart-label">ADANIPORTS</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ADANIPOWER_radar.png" target="_blank"><img src="../reports/radar_charts/ADANIPOWER_radar.png" alt="ADANIPOWER radar chart"></a>
+        <div class="chart-label">ADANIPOWER</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/AMBUJACEM_radar.png" target="_blank"><img src="../reports/radar_charts/AMBUJACEM_radar.png" alt="AMBUJACEM radar chart"></a>
+        <div class="chart-label">AMBUJACEM</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/APOLLOHOSP_radar.png" target="_blank"><img src="../reports/radar_charts/APOLLOHOSP_radar.png" alt="APOLLOHOSP radar chart"></a>
+        <div class="chart-label">APOLLOHOSP</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ASIANPAINT_radar.png" target="_blank"><img src="../reports/radar_charts/ASIANPAINT_radar.png" alt="ASIANPAINT radar chart"></a>
+        <div class="chart-label">ASIANPAINT</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ATGL_radar.png" target="_blank"><img src="../reports/radar_charts/ATGL_radar.png" alt="ATGL radar chart"></a>
+        <div class="chart-label">ATGL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/AXISBANK_radar.png" target="_blank"><img src="../reports/radar_charts/AXISBANK_radar.png" alt="AXISBANK radar chart"></a>
+        <div class="chart-label">AXISBANK</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BAJAJ-AUTO_radar.png" target="_blank"><img src="../reports/radar_charts/BAJAJ-AUTO_radar.png" alt="BAJAJ-AUTO radar chart"></a>
+        <div class="chart-label">BAJAJ-AUTO</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BAJAJFINSV_radar.png" target="_blank"><img src="../reports/radar_charts/BAJAJFINSV_radar.png" alt="BAJAJFINSV radar chart"></a>
+        <div class="chart-label">BAJAJFINSV</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BAJAJHLDNG_radar.png" target="_blank"><img src="../reports/radar_charts/BAJAJHLDNG_radar.png" alt="BAJAJHLDNG radar chart"></a>
+        <div class="chart-label">BAJAJHLDNG</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BAJFINANCE_radar.png" target="_blank"><img src="../reports/radar_charts/BAJFINANCE_radar.png" alt="BAJFINANCE radar chart"></a>
+        <div class="chart-label">BAJFINANCE</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BANKBARODA_radar.png" target="_blank"><img src="../reports/radar_charts/BANKBARODA_radar.png" alt="BANKBARODA radar chart"></a>
+        <div class="chart-label">BANKBARODA</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BEL_radar.png" target="_blank"><img src="../reports/radar_charts/BEL_radar.png" alt="BEL radar chart"></a>
+        <div class="chart-label">BEL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BHARTIARTL_radar.png" target="_blank"><img src="../reports/radar_charts/BHARTIARTL_radar.png" alt="BHARTIARTL radar chart"></a>
+        <div class="chart-label">BHARTIARTL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BHEL_radar.png" target="_blank"><img src="../reports/radar_charts/BHEL_radar.png" alt="BHEL radar chart"></a>
+        <div class="chart-label">BHEL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BOSCHLTD_radar.png" target="_blank"><img src="../reports/radar_charts/BOSCHLTD_radar.png" alt="BOSCHLTD radar chart"></a>
+        <div class="chart-label">BOSCHLTD</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BPCL_radar.png" target="_blank"><img src="../reports/radar_charts/BPCL_radar.png" alt="BPCL radar chart"></a>
+        <div class="chart-label">BPCL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/BRITANNIA_radar.png" target="_blank"><img src="../reports/radar_charts/BRITANNIA_radar.png" alt="BRITANNIA radar chart"></a>
+        <div class="chart-label">BRITANNIA</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/CANBK_radar.png" target="_blank"><img src="../reports/radar_charts/CANBK_radar.png" alt="CANBK radar chart"></a>
+        <div class="chart-label">CANBK</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/CHOLAFIN_radar.png" target="_blank"><img src="../reports/radar_charts/CHOLAFIN_radar.png" alt="CHOLAFIN radar chart"></a>
+        <div class="chart-label">CHOLAFIN</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/CIPLA_radar.png" target="_blank"><img src="../reports/radar_charts/CIPLA_radar.png" alt="CIPLA radar chart"></a>
+        <div class="chart-label">CIPLA</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/COALINDIA_radar.png" target="_blank"><img src="../reports/radar_charts/COALINDIA_radar.png" alt="COALINDIA radar chart"></a>
+        <div class="chart-label">COALINDIA</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/DABUR_radar.png" target="_blank"><img src="../reports/radar_charts/DABUR_radar.png" alt="DABUR radar chart"></a>
+        <div class="chart-label">DABUR</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/DIVISLAB_radar.png" target="_blank"><img src="../reports/radar_charts/DIVISLAB_radar.png" alt="DIVISLAB radar chart"></a>
+        <div class="chart-label">DIVISLAB</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/DLF_radar.png" target="_blank"><img src="../reports/radar_charts/DLF_radar.png" alt="DLF radar chart"></a>
+        <div class="chart-label">DLF</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/DMART_radar.png" target="_blank"><img src="../reports/radar_charts/DMART_radar.png" alt="DMART radar chart"></a>
+        <div class="chart-label">DMART</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/DRREDDY_radar.png" target="_blank"><img src="../reports/radar_charts/DRREDDY_radar.png" alt="DRREDDY radar chart"></a>
+        <div class="chart-label">DRREDDY</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/EICHERMOT_radar.png" target="_blank"><img src="../reports/radar_charts/EICHERMOT_radar.png" alt="EICHERMOT radar chart"></a>
+        <div class="chart-label">EICHERMOT</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/GAIL_radar.png" target="_blank"><img src="../reports/radar_charts/GAIL_radar.png" alt="GAIL radar chart"></a>
+        <div class="chart-label">GAIL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/GODREJCP_radar.png" target="_blank"><img src="../reports/radar_charts/GODREJCP_radar.png" alt="GODREJCP radar chart"></a>
+        <div class="chart-label">GODREJCP</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/GRASIM_radar.png" target="_blank"><img src="../reports/radar_charts/GRASIM_radar.png" alt="GRASIM radar chart"></a>
+        <div class="chart-label">GRASIM</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/HAL_radar.png" target="_blank"><img src="../reports/radar_charts/HAL_radar.png" alt="HAL radar chart"></a>
+        <div class="chart-label">HAL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/HAVELLS_radar.png" target="_blank"><img src="../reports/radar_charts/HAVELLS_radar.png" alt="HAVELLS radar chart"></a>
+        <div class="chart-label">HAVELLS</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/HCLTECH_radar.png" target="_blank"><img src="../reports/radar_charts/HCLTECH_radar.png" alt="HCLTECH radar chart"></a>
+        <div class="chart-label">HCLTECH</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/HDFCBANK_radar.png" target="_blank"><img src="../reports/radar_charts/HDFCBANK_radar.png" alt="HDFCBANK radar chart"></a>
+        <div class="chart-label">HDFCBANK</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/HDFCLIFE_radar.png" target="_blank"><img src="../reports/radar_charts/HDFCLIFE_radar.png" alt="HDFCLIFE radar chart"></a>
+        <div class="chart-label">HDFCLIFE</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/HEROMOTOCO_radar.png" target="_blank"><img src="../reports/radar_charts/HEROMOTOCO_radar.png" alt="HEROMOTOCO radar chart"></a>
+        <div class="chart-label">HEROMOTOCO</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/HINDALCO_radar.png" target="_blank"><img src="../reports/radar_charts/HINDALCO_radar.png" alt="HINDALCO radar chart"></a>
+        <div class="chart-label">HINDALCO</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/HINDUNILVR_radar.png" target="_blank"><img src="../reports/radar_charts/HINDUNILVR_radar.png" alt="HINDUNILVR radar chart"></a>
+        <div class="chart-label">HINDUNILVR</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ICICIBANK_radar.png" target="_blank"><img src="../reports/radar_charts/ICICIBANK_radar.png" alt="ICICIBANK radar chart"></a>
+        <div class="chart-label">ICICIBANK</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ICICIGI_radar.png" target="_blank"><img src="../reports/radar_charts/ICICIGI_radar.png" alt="ICICIGI radar chart"></a>
+        <div class="chart-label">ICICIGI</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ICICIPRULI_radar.png" target="_blank"><img src="../reports/radar_charts/ICICIPRULI_radar.png" alt="ICICIPRULI radar chart"></a>
+        <div class="chart-label">ICICIPRULI</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/INDIGO_radar.png" target="_blank"><img src="../reports/radar_charts/INDIGO_radar.png" alt="INDIGO radar chart"></a>
+        <div class="chart-label">INDIGO</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/INDUSINDBK_radar.png" target="_blank"><img src="../reports/radar_charts/INDUSINDBK_radar.png" alt="INDUSINDBK radar chart"></a>
+        <div class="chart-label">INDUSINDBK</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/INFY_radar.png" target="_blank"><img src="../reports/radar_charts/INFY_radar.png" alt="INFY radar chart"></a>
+        <div class="chart-label">INFY</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/IOC_radar.png" target="_blank"><img src="../reports/radar_charts/IOC_radar.png" alt="IOC radar chart"></a>
+        <div class="chart-label">IOC</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/IRCTC_radar.png" target="_blank"><img src="../reports/radar_charts/IRCTC_radar.png" alt="IRCTC radar chart"></a>
+        <div class="chart-label">IRCTC</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/IRFC_radar.png" target="_blank"><img src="../reports/radar_charts/IRFC_radar.png" alt="IRFC radar chart"></a>
+        <div class="chart-label">IRFC</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ITC_radar.png" target="_blank"><img src="../reports/radar_charts/ITC_radar.png" alt="ITC radar chart"></a>
+        <div class="chart-label">ITC</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/JINDALSTEL_radar.png" target="_blank"><img src="../reports/radar_charts/JINDALSTEL_radar.png" alt="JINDALSTEL radar chart"></a>
+        <div class="chart-label">JINDALSTEL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/JIOFIN_radar.png" target="_blank"><img src="../reports/radar_charts/JIOFIN_radar.png" alt="JIOFIN radar chart"></a>
+        <div class="chart-label">JIOFIN</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/JSWENERGY_radar.png" target="_blank"><img src="../reports/radar_charts/JSWENERGY_radar.png" alt="JSWENERGY radar chart"></a>
+        <div class="chart-label">JSWENERGY</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/JSWSTEEL_radar.png" target="_blank"><img src="../reports/radar_charts/JSWSTEEL_radar.png" alt="JSWSTEEL radar chart"></a>
+        <div class="chart-label">JSWSTEEL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/KOTAKBANK_radar.png" target="_blank"><img src="../reports/radar_charts/KOTAKBANK_radar.png" alt="KOTAKBANK radar chart"></a>
+        <div class="chart-label">KOTAKBANK</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/LICI_radar.png" target="_blank"><img src="../reports/radar_charts/LICI_radar.png" alt="LICI radar chart"></a>
+        <div class="chart-label">LICI</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/LODHA_radar.png" target="_blank"><img src="../reports/radar_charts/LODHA_radar.png" alt="LODHA radar chart"></a>
+        <div class="chart-label">LODHA</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/LT_radar.png" target="_blank"><img src="../reports/radar_charts/LT_radar.png" alt="LT radar chart"></a>
+        <div class="chart-label">LT</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/LTIM_radar.png" target="_blank"><img src="../reports/radar_charts/LTIM_radar.png" alt="LTIM radar chart"></a>
+        <div class="chart-label">LTIM</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/M&amp;M_radar.png" target="_blank"><img src="../reports/radar_charts/M&amp;M_radar.png" alt="M&amp;M radar chart"></a>
+        <div class="chart-label">M&amp;M</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/MARUTI_radar.png" target="_blank"><img src="../reports/radar_charts/MARUTI_radar.png" alt="MARUTI radar chart"></a>
+        <div class="chart-label">MARUTI</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/MOTHERSON_radar.png" target="_blank"><img src="../reports/radar_charts/MOTHERSON_radar.png" alt="MOTHERSON radar chart"></a>
+        <div class="chart-label">MOTHERSON</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/NAUKRI_radar.png" target="_blank"><img src="../reports/radar_charts/NAUKRI_radar.png" alt="NAUKRI radar chart"></a>
+        <div class="chart-label">NAUKRI</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/NESTLEIND_radar.png" target="_blank"><img src="../reports/radar_charts/NESTLEIND_radar.png" alt="NESTLEIND radar chart"></a>
+        <div class="chart-label">NESTLEIND</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/NHPC_radar.png" target="_blank"><img src="../reports/radar_charts/NHPC_radar.png" alt="NHPC radar chart"></a>
+        <div class="chart-label">NHPC</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/NTPC_radar.png" target="_blank"><img src="../reports/radar_charts/NTPC_radar.png" alt="NTPC radar chart"></a>
+        <div class="chart-label">NTPC</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/ONGC_radar.png" target="_blank"><img src="../reports/radar_charts/ONGC_radar.png" alt="ONGC radar chart"></a>
+        <div class="chart-label">ONGC</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/PFC_radar.png" target="_blank"><img src="../reports/radar_charts/PFC_radar.png" alt="PFC radar chart"></a>
+        <div class="chart-label">PFC</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/PIDILITIND_radar.png" target="_blank"><img src="../reports/radar_charts/PIDILITIND_radar.png" alt="PIDILITIND radar chart"></a>
+        <div class="chart-label">PIDILITIND</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/PNB_radar.png" target="_blank"><img src="../reports/radar_charts/PNB_radar.png" alt="PNB radar chart"></a>
+        <div class="chart-label">PNB</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/POWERGRID_radar.png" target="_blank"><img src="../reports/radar_charts/POWERGRID_radar.png" alt="POWERGRID radar chart"></a>
+        <div class="chart-label">POWERGRID</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/RECLTD_radar.png" target="_blank"><img src="../reports/radar_charts/RECLTD_radar.png" alt="RECLTD radar chart"></a>
+        <div class="chart-label">RECLTD</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/RELIANCE_radar.png" target="_blank"><img src="../reports/radar_charts/RELIANCE_radar.png" alt="RELIANCE radar chart"></a>
+        <div class="chart-label">RELIANCE</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/SBILIFE_radar.png" target="_blank"><img src="../reports/radar_charts/SBILIFE_radar.png" alt="SBILIFE radar chart"></a>
+        <div class="chart-label">SBILIFE</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/SBIN_radar.png" target="_blank"><img src="../reports/radar_charts/SBIN_radar.png" alt="SBIN radar chart"></a>
+        <div class="chart-label">SBIN</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/SHREECEM_radar.png" target="_blank"><img src="../reports/radar_charts/SHREECEM_radar.png" alt="SHREECEM radar chart"></a>
+        <div class="chart-label">SHREECEM</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/SHRIRAMFIN_radar.png" target="_blank"><img src="../reports/radar_charts/SHRIRAMFIN_radar.png" alt="SHRIRAMFIN radar chart"></a>
+        <div class="chart-label">SHRIRAMFIN</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/SIEMENS_radar.png" target="_blank"><img src="../reports/radar_charts/SIEMENS_radar.png" alt="SIEMENS radar chart"></a>
+        <div class="chart-label">SIEMENS</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/SUNPHARMA_radar.png" target="_blank"><img src="../reports/radar_charts/SUNPHARMA_radar.png" alt="SUNPHARMA radar chart"></a>
+        <div class="chart-label">SUNPHARMA</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TATACONSUM_radar.png" target="_blank"><img src="../reports/radar_charts/TATACONSUM_radar.png" alt="TATACONSUM radar chart"></a>
+        <div class="chart-label">TATACONSUM</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TATAMOTORS_radar.png" target="_blank"><img src="../reports/radar_charts/TATAMOTORS_radar.png" alt="TATAMOTORS radar chart"></a>
+        <div class="chart-label">TATAMOTORS</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TATAPOWER_radar.png" target="_blank"><img src="../reports/radar_charts/TATAPOWER_radar.png" alt="TATAPOWER radar chart"></a>
+        <div class="chart-label">TATAPOWER</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TATASTEEL_radar.png" target="_blank"><img src="../reports/radar_charts/TATASTEEL_radar.png" alt="TATASTEEL radar chart"></a>
+        <div class="chart-label">TATASTEEL</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TCS_radar.png" target="_blank"><img src="../reports/radar_charts/TCS_radar.png" alt="TCS radar chart"></a>
+        <div class="chart-label">TCS</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TECHM_radar.png" target="_blank"><img src="../reports/radar_charts/TECHM_radar.png" alt="TECHM radar chart"></a>
+        <div class="chart-label">TECHM</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TITAN_radar.png" target="_blank"><img src="../reports/radar_charts/TITAN_radar.png" alt="TITAN radar chart"></a>
+        <div class="chart-label">TITAN</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TORNTPHARM_radar.png" target="_blank"><img src="../reports/radar_charts/TORNTPHARM_radar.png" alt="TORNTPHARM radar chart"></a>
+        <div class="chart-label">TORNTPHARM</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TRENT_radar.png" target="_blank"><img src="../reports/radar_charts/TRENT_radar.png" alt="TRENT radar chart"></a>
+        <div class="chart-label">TRENT</div>
+      </article>
+    
+      <article class="chart-card">
+        <a href="../reports/radar_charts/TVSMOTOR_radar.png" target="_blank"><img src="../reports/radar_charts/TVSMOTOR_radar.png" alt="TVSMOTOR radar chart"></a>
+        <div class="chart-label">TVSMOTOR</div>
+      </article>
+    </div>
+    </section>
+  </main>
+</body>
+</html>

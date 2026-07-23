@@ -1,0 +1,5294 @@
+{
+  "sectors": [
+    {
+      "sector": "Financials",
+      "count": 23
+    },
+    {
+      "sector": "Energy",
+      "count": 14
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "count": 14
+    },
+    {
+      "sector": "Industrials",
+      "count": 10
+    },
+    {
+      "sector": "Materials",
+      "count": 9
+    },
+    {
+      "sector": "Consumer Staples",
+      "count": 7
+    },
+    {
+      "sector": "Healthcare",
+      "count": 6
+    },
+    {
+      "sector": "Information Technology",
+      "count": 5
+    },
+    {
+      "sector": "Real Estate",
+      "count": 2
+    },
+    {
+      "sector": "Communication Services",
+      "count": 2
+    }
+  ],
+  "top_roe_companies": [
+    {
+      "id": "NESTLEIND",
+      "company_name": "Nestle India Ltd",
+      "roe_percentage": 135.61,
+      "roce_percentage": 185.43,
+      "book_value": 41.0,
+      "sector": "Consumer Staples",
+      "score": 0.94,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "LICI",
+      "company_name": "Life Insurance Corporation of India",
+      "roe_percentage": 63.61,
+      "roce_percentage": 63.79,
+      "book_value": 154.0,
+      "sector": "Financials",
+      "score": 2.18,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ADANIPOWER",
+      "company_name": "Adani Power Ltd",
+      "roe_percentage": 57.1,
+      "roce_percentage": 32.2,
+      "book_value": 145.0,
+      "sector": "Energy",
+      "score": 3.01,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BRITANNIA",
+      "company_name": "Britannia Industries Ltd",
+      "roe_percentage": 57.1,
+      "roce_percentage": 48.9,
+      "book_value": 133.0,
+      "sector": "Consumer Staples",
+      "score": 0.66,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "COALINDIA",
+      "company_name": "Coal India Ltd",
+      "roe_percentage": 52.0,
+      "roce_percentage": 63.6,
+      "book_value": 156.0,
+      "sector": "Materials",
+      "score": 2.46,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TATAMOTORS",
+      "company_name": "Tata Motors Ltd",
+      "roe_percentage": 49.4,
+      "roce_percentage": 20.1,
+      "book_value": 275.0,
+      "sector": "Consumer Discretionary",
+      "score": 0.91,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BPCL",
+      "company_name": "Bharat Petroleum Corporation Ltd",
+      "roe_percentage": 41.9,
+      "roce_percentage": 32.1,
+      "book_value": 178.0,
+      "sector": "Energy",
+      "score": 2.57,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "IRCTC",
+      "company_name": "Indian Railway Catering & Tourism Corporation Ltd",
+      "roe_percentage": 40.4,
+      "roce_percentage": 53.8,
+      "book_value": 44.0,
+      "sector": "Consumer Discretionary",
+      "score": 3.97,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "ABB",
+      "company_name": "Abbott India Ltd",
+      "roe_percentage": 34.9,
+      "roce_percentage": 46.0,
+      "book_value": 1657.0,
+      "sector": "Industrials",
+      "score": 0.81,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TITAN",
+      "company_name": "Titan Company Ltd\n",
+      "roe_percentage": 32.9,
+      "roce_percentage": 22.7,
+      "book_value": 110.0,
+      "sector": "Consumer Discretionary",
+      "score": 2.38,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "INFY",
+      "company_name": "Infosys Ltd",
+      "roe_percentage": 31.8,
+      "roce_percentage": 40.0,
+      "book_value": 218.0,
+      "sector": "Information Technology",
+      "score": 3.37,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ASIANPAINT",
+      "company_name": "Asian Paints\nIndian Multi-National Paint and Coating Manufacturing Company",
+      "roe_percentage": 31.45,
+      "roce_percentage": 41.75,
+      "book_value": 188.0,
+      "sector": "Materials",
+      "score": 1.13,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ITC",
+      "company_name": "ITC Ltd\n",
+      "roe_percentage": 29.47,
+      "roce_percentage": 34.76,
+      "book_value": 60.0,
+      "sector": "Consumer Staples",
+      "score": 1.39,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "HAL",
+      "company_name": "Hindustan Aeronautics Ltd",
+      "roe_percentage": 28.9,
+      "roce_percentage": 38.9,
+      "book_value": 465.0,
+      "sector": "Industrials",
+      "score": 1.6,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TRENT",
+      "company_name": "Trent Ltd",
+      "roe_percentage": 27.2,
+      "roce_percentage": 23.8,
+      "book_value": 132.0,
+      "sector": "Consumer Discretionary",
+      "score": 0.73,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BAJAJ-AUTO",
+      "company_name": "Bajaj Auto Ltd",
+      "roe_percentage": 26.5,
+      "roce_percentage": 33.5,
+      "book_value": 1109.0,
+      "sector": "Consumer Discretionary",
+      "score": 3.9,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BEL",
+      "company_name": "Bharat Electronics Ltd",
+      "roe_percentage": 26.3,
+      "roce_percentage": 34.6,
+      "book_value": 24.0,
+      "sector": "Industrials",
+      "score": 3.65,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "LTIM",
+      "company_name": "LTIMindtree Ltd",
+      "roe_percentage": 26.04,
+      "roce_percentage": 34.1,
+      "book_value": 711.0,
+      "sector": "Information Technology",
+      "score": 2.64,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "IOC",
+      "company_name": "Indian Oil Corporation\n",
+      "roe_percentage": 25.44,
+      "roce_percentage": 21.31,
+      "book_value": 129.0,
+      "sector": "Energy",
+      "score": 0.27,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "EICHERMOT",
+      "company_name": "Eicher Motors Ltd",
+      "roe_percentage": 24.2,
+      "roce_percentage": 31.1,
+      "book_value": 693.0,
+      "sector": "Consumer Discretionary",
+      "score": 3.13,
+      "cap": "Large Cap"
+    }
+  ],
+  "companies": [
+    {
+      "id": "ABB",
+      "company_name": "Abbott India Ltd",
+      "sector": "Industrials",
+      "industry": "Capital Goods",
+      "score": 0.81,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ADANIENSOL",
+      "company_name": "Adani Energy Solutions Ltd",
+      "sector": "Energy",
+      "industry": "Power & Utilities",
+      "score": 0.65,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ADANIENT",
+      "company_name": "Adani Enterprises Ltd",
+      "sector": "Industrials",
+      "industry": "Conglomerates",
+      "score": 1.5,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ADANIGREEN",
+      "company_name": "Adani Green Energy Ltd",
+      "sector": "Energy",
+      "industry": "Renewable Energy",
+      "score": 1.23,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ADANIPORTS",
+      "company_name": "Adani Ports & Special Economic Zone Ltd\n",
+      "sector": "Industrials",
+      "industry": "Infrastructure",
+      "score": 2.12,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ADANIPOWER",
+      "company_name": "Adani Power Ltd",
+      "sector": "Energy",
+      "industry": "Power & Utilities",
+      "score": 3.01,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ATGL",
+      "company_name": "Adani Total Gas Ltd",
+      "sector": "Energy",
+      "industry": "Gas Distribution",
+      "score": 0.6,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "AMBUJACEM",
+      "company_name": "Ambuja Cements Ltd",
+      "sector": "Materials",
+      "industry": "Cement",
+      "score": 2.82,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "APOLLOHOSP",
+      "company_name": "Apollo Hospitals\nChain of Indian private hospitals",
+      "sector": "Healthcare",
+      "industry": "Healthcare",
+      "score": 0.62,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ASIANPAINT",
+      "company_name": "Asian Paints\nIndian Multi-National Paint and Coating Manufacturing Company",
+      "sector": "Materials",
+      "industry": "Paints & Coatings",
+      "score": 1.13,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "DMART",
+      "company_name": "Avenue Supermarts Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "score": 3.07,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "AXISBANK",
+      "company_name": "Axis Bank Ltd",
+      "sector": "Financials",
+      "industry": "Private Banks",
+      "score": 2.97,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BAJAJ-AUTO",
+      "company_name": "Bajaj Auto Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Two Wheelers",
+      "score": 3.9,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BAJFINANCE",
+      "company_name": "Bajaj Finance Ltd",
+      "sector": "Financials",
+      "industry": "Consumer Finance",
+      "score": 1.78,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BAJAJFINSV",
+      "company_name": "Bajaj Finserv Ltd",
+      "sector": "Financials",
+      "industry": "Diversified Financials",
+      "score": 2.12,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BAJAJHLDNG",
+      "company_name": "Bajaj Holdings & Investment Ltd",
+      "sector": "Financials",
+      "industry": "Holding Companies",
+      "score": 3.36,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BANKBARODA",
+      "company_name": "Bank of Baroda",
+      "sector": "Financials",
+      "industry": "Public Sector Banks",
+      "score": 1.27,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BEL",
+      "company_name": "Bharat Electronics Ltd",
+      "sector": "Industrials",
+      "industry": "Defence Electronics",
+      "score": 3.65,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BHEL",
+      "company_name": "Bharat Heavy Electricals Limited\n",
+      "sector": "Industrials",
+      "industry": "Capital Goods",
+      "score": 1.24,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BPCL",
+      "company_name": "Bharat Petroleum Corporation Ltd",
+      "sector": "Energy",
+      "industry": "Oil & Gas Refining",
+      "score": 2.57,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BHARTIARTL",
+      "company_name": "Bharti Airtel Ltd",
+      "sector": "Communication Services",
+      "industry": "Telecommunications",
+      "score": 1.13,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BOSCHLTD",
+      "company_name": "Bosch Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Auto Ancillaries",
+      "score": 2.82,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "BRITANNIA",
+      "company_name": "Britannia Industries Ltd",
+      "sector": "Consumer Staples",
+      "industry": "Food Products",
+      "score": 0.66,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "CANBK",
+      "company_name": "Canara Bank",
+      "sector": "Financials",
+      "industry": "Public Sector Banks",
+      "score": 2.96,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "CHOLAFIN",
+      "company_name": "Cholamandalam Investment & Finance Company Ltd",
+      "sector": "Financials",
+      "industry": "Consumer Finance",
+      "score": 3.94,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "CIPLA",
+      "company_name": "Cipla Ltd\n",
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "score": 0.95,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "COALINDIA",
+      "company_name": "Coal India Ltd",
+      "sector": "Materials",
+      "industry": "Mining & Metals",
+      "score": 2.46,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "DLF",
+      "company_name": "DLF Ltd",
+      "sector": "Real Estate",
+      "industry": "Real Estate",
+      "score": 2.86,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "DABUR",
+      "company_name": "Dabur India Ltd",
+      "sector": "Consumer Staples",
+      "industry": "Personal Products",
+      "score": 2.4,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "DIVISLAB",
+      "company_name": "Divis Laboratories Ltd",
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "score": 3.75,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "DRREDDY",
+      "company_name": "Dr Reddys Laboratories Ltd",
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "score": 1.01,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "EICHERMOT",
+      "company_name": "Eicher Motors Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Two Wheelers",
+      "score": 3.13,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "GAIL",
+      "company_name": "GAIL (India) Ltd",
+      "sector": "Energy",
+      "industry": "Gas Distribution",
+      "score": 3.12,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "GODREJCP",
+      "company_name": "Godrej Consumer Products Ltd",
+      "sector": "Consumer Staples",
+      "industry": "Personal Products",
+      "score": 0.89,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "GRASIM",
+      "company_name": "Grasim Industries Ltd",
+      "sector": "Industrials",
+      "industry": "Diversified Industrials",
+      "score": 2.61,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "HCLTECH",
+      "company_name": "HCL Technologies Ltd",
+      "sector": "Information Technology",
+      "industry": "IT Services",
+      "score": 2.5,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "sector": "Financials",
+      "industry": "Private Banks",
+      "score": 1.06,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "HDFCLIFE",
+      "company_name": "HDFC Life Insurance Company Ltd",
+      "sector": "Financials",
+      "industry": "Life Insurance",
+      "score": 0.93,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "HAVELLS",
+      "company_name": "Havells India Ltd",
+      "sector": "Industrials",
+      "industry": "Consumer Electricals",
+      "score": 1.44,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "HEROMOTOCO",
+      "company_name": "Hero MotoCorp Ltd\n",
+      "sector": "Consumer Discretionary",
+      "industry": "Two Wheelers",
+      "score": 0.26,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "HINDALCO",
+      "company_name": "Hindalco Industries Ltd",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "score": 0.64,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "HAL",
+      "company_name": "Hindustan Aeronautics Ltd",
+      "sector": "Industrials",
+      "industry": "Defence & Aerospace",
+      "score": 1.6,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "HINDUNILVR",
+      "company_name": "Hindustan Unilever Ltd\n",
+      "sector": "Consumer Staples",
+      "industry": "FMCG",
+      "score": 1.11,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "ICICIBANK",
+      "company_name": "ICICI Bank Ltd",
+      "sector": "Financials",
+      "industry": "Private Banks",
+      "score": 3.87,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ICICIGI",
+      "company_name": "ICICI Lombard General Insurance Company Ltd",
+      "sector": "Financials",
+      "industry": "General Insurance",
+      "score": 3.51,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ICICIPRULI",
+      "company_name": "ICICI Prudential Life Insurance Company Ltd",
+      "sector": "Financials",
+      "industry": "Life Insurance",
+      "score": 2.47,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ITC",
+      "company_name": "ITC Ltd\n",
+      "sector": "Consumer Staples",
+      "industry": "Diversified FMCG",
+      "score": 1.39,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "IOC",
+      "company_name": "Indian Oil Corporation\n",
+      "sector": "Energy",
+      "industry": "Oil & Gas Refining",
+      "score": 0.27,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "IRCTC",
+      "company_name": "Indian Railway Catering & Tourism Corporation Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Travel & Tourism",
+      "score": 3.97,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "IRFC",
+      "company_name": "Indian Railway Finance Corporation Ltd",
+      "sector": "Financials",
+      "industry": "Speciality Finance",
+      "score": 4.33,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "INDUSINDBK",
+      "company_name": "IndusInd Bank Ltd",
+      "sector": "Financials",
+      "industry": "Private Banks",
+      "score": 2.54,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "NAUKRI",
+      "company_name": "Info Edge (India) Ltd",
+      "sector": "Communication Services",
+      "industry": "Internet & Platforms",
+      "score": 4.44,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "INFY",
+      "company_name": "Infosys Ltd",
+      "sector": "Information Technology",
+      "industry": "IT Services",
+      "score": 3.37,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "INDIGO",
+      "company_name": "Interglobe Aviation Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Airlines",
+      "score": 3.03,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "JSWENERGY",
+      "company_name": "JSW Energy Ltd",
+      "sector": "Energy",
+      "industry": "Power & Utilities",
+      "score": 1.14,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "JSWSTEEL",
+      "company_name": "JSW Steel Ltd",
+      "sector": "Materials",
+      "industry": "Steel",
+      "score": 4.49,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "JINDALSTEL",
+      "company_name": "Jindal Steel & Power Ltd",
+      "sector": "Materials",
+      "industry": "Steel",
+      "score": 1.41,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "JIOFIN",
+      "company_name": "Jio Financial Services Ltd",
+      "sector": "Financials",
+      "industry": "Diversified Financials",
+      "score": 0.38,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "KOTAKBANK",
+      "company_name": "Kotak Mahindra Bank Ltd\n",
+      "sector": "Financials",
+      "industry": "Private Banks",
+      "score": 3.47,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "LTIM",
+      "company_name": "LTIMindtree Ltd",
+      "sector": "Information Technology",
+      "industry": "IT Services",
+      "score": 2.64,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "LT",
+      "company_name": "Larsen & Toubro Ltd",
+      "sector": "Industrials",
+      "industry": "Engineering & Construction",
+      "score": 3.03,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "LICI",
+      "company_name": "Life Insurance Corporation of India",
+      "sector": "Financials",
+      "industry": "Life Insurance",
+      "score": 2.18,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "LODHA",
+      "company_name": "Macrotech Developers Ltd",
+      "sector": "Real Estate",
+      "industry": "Real Estate",
+      "score": 1.59,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "M&M",
+      "company_name": "Mahindra & Mahindra Ltd\n",
+      "sector": "Consumer Discretionary",
+      "industry": "Automobiles",
+      "score": 3.95,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "MARUTI",
+      "company_name": "Maruti Suzuki India Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Automobiles",
+      "score": 1.36,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "NHPC",
+      "company_name": "NHPC Ltd\n",
+      "sector": "Energy",
+      "industry": "Power & Utilities",
+      "score": 0.33,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "NTPC",
+      "company_name": "NTPC Ltd",
+      "sector": "Energy",
+      "industry": "Power & Utilities",
+      "score": 4.04,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "NESTLEIND",
+      "company_name": "Nestle India Ltd",
+      "sector": "Consumer Staples",
+      "industry": "Food Products",
+      "score": 0.94,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "ONGC",
+      "company_name": "Oil & Natural Gas Corpn Ltd",
+      "sector": "Energy",
+      "industry": "Oil & Gas Exploration",
+      "score": 4.49,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "PIDILITIND",
+      "company_name": "Pidilite Industries Ltd",
+      "sector": "Materials",
+      "industry": "Specialty Chemicals",
+      "score": 2.15,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "PFC",
+      "company_name": "Power Finance Corporation Ltd",
+      "sector": "Financials",
+      "industry": "Speciality Finance",
+      "score": 2.15,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "sector": "Energy",
+      "industry": "Power Transmission",
+      "score": 4.12,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "PNB",
+      "company_name": "Punjab National Bank",
+      "sector": "Financials",
+      "industry": "Public Sector Banks",
+      "score": 3.82,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "RECLTD",
+      "company_name": "REC Ltd",
+      "sector": "Financials",
+      "industry": "Speciality Finance",
+      "score": 1.78,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "RELIANCE",
+      "company_name": "Reliance Industries Ltd\n",
+      "sector": "Energy",
+      "industry": "Conglomerates",
+      "score": 4.24,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "SBILIFE",
+      "company_name": "SBI Life Insurance Company Ltd",
+      "sector": "Financials",
+      "industry": "Life Insurance",
+      "score": 3.16,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "MOTHERSON",
+      "company_name": "Samvardhana Motherson International Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Auto Ancillaries",
+      "score": 3.39,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "SHREECEM",
+      "company_name": "Shree Cement Ltd",
+      "sector": "Materials",
+      "industry": "Cement",
+      "score": 2.86,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "SHRIRAMFIN",
+      "company_name": "Shriram Finance Ltd\n",
+      "sector": "Financials",
+      "industry": "Consumer Finance",
+      "score": 1.15,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "SIEMENS",
+      "company_name": "Siemens Ltd",
+      "sector": "Industrials",
+      "industry": "Capital Goods",
+      "score": 0.99,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "SBIN",
+      "company_name": "State Bank of India",
+      "sector": "Financials",
+      "industry": "Public Sector Banks",
+      "score": 3.6,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "SUNPHARMA",
+      "company_name": "Sun Pharmaceuticals Industries Ltd",
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "score": 0.3,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TVSMOTOR",
+      "company_name": "TVS Motor Company Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Two Wheelers",
+      "score": 2.16,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "sector": "Information Technology",
+      "industry": "IT Services",
+      "score": 1.1,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TATACONSUM",
+      "company_name": "Tata Consumer Products Ltd",
+      "sector": "Consumer Staples",
+      "industry": "Food & Beverages",
+      "score": 0.33,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TATAMOTORS",
+      "company_name": "Tata Motors Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Automobiles",
+      "score": 0.91,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TATAPOWER",
+      "company_name": "Tata Power Company Ltd\n",
+      "sector": "Energy",
+      "industry": "Power & Utilities",
+      "score": 4.19,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "TATASTEEL",
+      "company_name": "Tata Steel Ltd\n",
+      "sector": "Materials",
+      "industry": "Steel",
+      "score": 1.01,
+      "cap": "Mid Cap"
+    },
+    {
+      "id": "TECHM",
+      "company_name": "Tech Mahindra Ltd",
+      "sector": "Information Technology",
+      "industry": "IT Services",
+      "score": 2.39,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TITAN",
+      "company_name": "Titan Company Ltd\n",
+      "sector": "Consumer Discretionary",
+      "industry": "Gems & Jewellery",
+      "score": 2.38,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TORNTPHARM",
+      "company_name": "Torrent Pharmaceuticals Ltd",
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "score": 0.24,
+      "cap": "Large Cap"
+    },
+    {
+      "id": "TRENT",
+      "company_name": "Trent Ltd",
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "score": 0.73,
+      "cap": "Large Cap"
+    }
+  ],
+  "capital_allocation_summary": [
+    {
+      "pattern_label": "Shareholder Returns",
+      "count": 468
+    },
+    {
+      "pattern_label": "Mixed",
+      "count": 243
+    },
+    {
+      "pattern_label": "Reinvestor",
+      "count": 171
+    },
+    {
+      "pattern_label": "Growth Funded by Debt",
+      "count": 117
+    },
+    {
+      "pattern_label": "Liquidating Assets",
+      "count": 109
+    },
+    {
+      "pattern_label": "Distress Signal",
+      "count": 41
+    },
+    {
+      "pattern_label": "Other",
+      "count": 16
+    },
+    {
+      "pattern_label": "Pre-Revenue",
+      "count": 15
+    },
+    {
+      "pattern_label": "Cash Accumulator",
+      "count": 2
+    }
+  ],
+  "capital_allocation_companies": [
+    {
+      "company_id": "ABB",
+      "company_name": "Abbott India Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Industrials",
+      "cfo_quality_score": 4.63,
+      "free_cash_flow_cr": 1095.0
+    },
+    {
+      "company_id": "ABB",
+      "company_name": "Abbott India Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Industrials",
+      "cfo_quality_score": 4.63,
+      "free_cash_flow_cr": 1095.0
+    },
+    {
+      "company_id": "ADANIENSOL",
+      "company_name": "Adani Energy Solutions Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Energy",
+      "cfo_quality_score": 4.39,
+      "free_cash_flow_cr": 1095.0
+    },
+    {
+      "company_id": "ADANIENT",
+      "company_name": "Adani Enterprises Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Industrials",
+      "cfo_quality_score": 3.67,
+      "free_cash_flow_cr": -8455.0
+    },
+    {
+      "company_id": "ADANIGREEN",
+      "company_name": "Adani Green Energy Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Energy",
+      "cfo_quality_score": -0.02,
+      "free_cash_flow_cr": -13347.0
+    },
+    {
+      "company_id": "ADANIPORTS",
+      "company_name": "Adani Ports & Special Economic Zone Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Industrials",
+      "cfo_quality_score": 2.04,
+      "free_cash_flow_cr": 8250.0
+    },
+    {
+      "company_id": "ADANIPORTS",
+      "company_name": "Adani Ports & Special Economic Zone Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Industrials",
+      "cfo_quality_score": 2.04,
+      "free_cash_flow_cr": 8250.0
+    },
+    {
+      "company_id": "ADANIPOWER",
+      "company_name": "Adani Power Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Liquidating Assets",
+      "sector": "Energy",
+      "cfo_quality_score": 1.32,
+      "free_cash_flow_cr": 17651.0
+    },
+    {
+      "company_id": "AMBUJACEM",
+      "company_name": "Ambuja Cements Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Materials",
+      "cfo_quality_score": 1.29,
+      "free_cash_flow_cr": -3295.0
+    },
+    {
+      "company_id": "APOLLOHOSP",
+      "company_name": "Apollo Hospitals\nChain of Indian private hospitals",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Healthcare",
+      "cfo_quality_score": 3.49,
+      "free_cash_flow_cr": 383.0
+    },
+    {
+      "company_id": "ASIANPAINT",
+      "company_name": "Asian Paints\nIndian Multi-National Paint and Coating Manufacturing Company",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Materials",
+      "cfo_quality_score": 0.9,
+      "free_cash_flow_cr": 3556.0
+    },
+    {
+      "company_id": "ASIANPAINT",
+      "company_name": "Asian Paints\nIndian Multi-National Paint and Coating Manufacturing Company",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Materials",
+      "cfo_quality_score": 0.9,
+      "free_cash_flow_cr": 3556.0
+    },
+    {
+      "company_id": "DMART",
+      "company_name": "Avenue Supermarts Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 1.07,
+      "free_cash_flow_cr": 278.0
+    },
+    {
+      "company_id": "AXISBANK",
+      "company_name": "Axis Bank Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": 4.97,
+      "free_cash_flow_cr": -14556.0
+    },
+    {
+      "company_id": "BAJAJ-AUTO",
+      "company_name": "Bajaj Auto Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 0.82,
+      "free_cash_flow_cr": 6486.0
+    },
+    {
+      "company_id": "BAJAJ-AUTO",
+      "company_name": "Bajaj Auto Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 0.82,
+      "free_cash_flow_cr": 6486.0
+    },
+    {
+      "company_id": "BAJFINANCE",
+      "company_name": "Bajaj Finance Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -3.76,
+      "free_cash_flow_cr": -79931.0
+    },
+    {
+      "company_id": "BAJAJFINSV",
+      "company_name": "Bajaj Finserv Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -2.99,
+      "free_cash_flow_cr": -79634.0
+    },
+    {
+      "company_id": "BAJAJHLDNG",
+      "company_name": "Bajaj Holdings & Investment Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Financials",
+      "cfo_quality_score": 0.34,
+      "free_cash_flow_cr": 1469.0
+    },
+    {
+      "company_id": "BANKBARODA",
+      "company_name": "Bank of Baroda",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": 3.47,
+      "free_cash_flow_cr": -7559.0
+    },
+    {
+      "company_id": "BEL",
+      "company_name": "Bharat Electronics Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Industrials",
+      "cfo_quality_score": 1.43,
+      "free_cash_flow_cr": -1265.0
+    },
+    {
+      "company_id": "BHEL",
+      "company_name": "Bharat Heavy Electricals Limited\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Distress Signal",
+      "sector": "Industrials",
+      "cfo_quality_score": -2.21,
+      "free_cash_flow_cr": -2382.0
+    },
+    {
+      "company_id": "BPCL",
+      "company_name": "Bharat Petroleum Corporation Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Energy",
+      "cfo_quality_score": 2.49,
+      "free_cash_flow_cr": 25415.0
+    },
+    {
+      "company_id": "BHARTIARTL",
+      "company_name": "Bharti Airtel Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Communication Services",
+      "cfo_quality_score": 3.33,
+      "free_cash_flow_cr": 27809.0
+    },
+    {
+      "company_id": "BOSCHLTD",
+      "company_name": "Bosch Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Liquidating Assets",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 1.07,
+      "free_cash_flow_cr": 1536.0
+    },
+    {
+      "company_id": "BRITANNIA",
+      "company_name": "Britannia Industries Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Liquidating Assets",
+      "sector": "Consumer Staples",
+      "cfo_quality_score": 1.05,
+      "free_cash_flow_cr": 3050.0
+    },
+    {
+      "company_id": "CANBK",
+      "company_name": "Canara Bank",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Financials",
+      "cfo_quality_score": 4.07,
+      "free_cash_flow_cr": 13296.0
+    },
+    {
+      "company_id": "CHOLAFIN",
+      "company_name": "Cholamandalam Investment & Finance Company Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -6.2,
+      "free_cash_flow_cr": -38538.0
+    },
+    {
+      "company_id": "CIPLA",
+      "company_name": "Cipla Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Healthcare",
+      "cfo_quality_score": 1.41,
+      "free_cash_flow_cr": 1152.0
+    },
+    {
+      "company_id": "COALINDIA",
+      "company_name": "Coal India Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Materials",
+      "cfo_quality_score": 1.02,
+      "free_cash_flow_cr": 13617.0
+    },
+    {
+      "company_id": "DLF",
+      "company_name": "DLF Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Real Estate",
+      "cfo_quality_score": 0.95,
+      "free_cash_flow_cr": 1010.0
+    },
+    {
+      "company_id": "DABUR",
+      "company_name": "Dabur India Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Consumer Staples",
+      "cfo_quality_score": 1.08,
+      "free_cash_flow_cr": 1042.0
+    },
+    {
+      "company_id": "DIVISLAB",
+      "company_name": "Divis Laboratories Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Healthcare",
+      "cfo_quality_score": 0.93,
+      "free_cash_flow_cr": 992.0
+    },
+    {
+      "company_id": "DRREDDY",
+      "company_name": "Dr Reddys Laboratories Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Healthcare",
+      "cfo_quality_score": 1.34,
+      "free_cash_flow_cr": 509.0
+    },
+    {
+      "company_id": "EICHERMOT",
+      "company_name": "Eicher Motors Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 1.0,
+      "free_cash_flow_cr": 890.0
+    },
+    {
+      "company_id": "GAIL",
+      "company_name": "GAIL (India) Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Energy",
+      "cfo_quality_score": 0.99,
+      "free_cash_flow_cr": 4360.0
+    },
+    {
+      "company_id": "GODREJCP",
+      "company_name": "Godrej Consumer Products Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Consumer Staples",
+      "cfo_quality_score": 0.13,
+      "free_cash_flow_cr": -1365.0
+    },
+    {
+      "company_id": "GRASIM",
+      "company_name": "Grasim Industries Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Industrials",
+      "cfo_quality_score": 0.61,
+      "free_cash_flow_cr": -33833.0
+    },
+    {
+      "company_id": "HCLTECH",
+      "company_name": "HCL Technologies Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Information Technology",
+      "cfo_quality_score": 1.37,
+      "free_cash_flow_cr": 15840.0
+    },
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Liquidating Assets",
+      "sector": "Financials",
+      "cfo_quality_score": 0.23,
+      "free_cash_flow_cr": 35669.0
+    },
+    {
+      "company_id": "HDFCLIFE",
+      "company_name": "HDFC Life Insurance Company Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Financials",
+      "cfo_quality_score": 5.83,
+      "free_cash_flow_cr": -2893.0
+    },
+    {
+      "company_id": "HAVELLS",
+      "company_name": "Havells India Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Industrials",
+      "cfo_quality_score": 1.05,
+      "free_cash_flow_cr": 335.0
+    },
+    {
+      "company_id": "HEROMOTOCO",
+      "company_name": "Hero MotoCorp Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 1.21,
+      "free_cash_flow_cr": 3095.0
+    },
+    {
+      "company_id": "HINDALCO",
+      "company_name": "Hindalco Industries Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Materials",
+      "cfo_quality_score": 2.77,
+      "free_cash_flow_cr": 9789.0
+    },
+    {
+      "company_id": "HAL",
+      "company_name": "Hindustan Aeronautics Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Industrials",
+      "cfo_quality_score": 1.96,
+      "free_cash_flow_cr": 1814.0
+    },
+    {
+      "company_id": "HINDUNILVR",
+      "company_name": "Hindustan Unilever Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Consumer Staples",
+      "cfo_quality_score": 1.16,
+      "free_cash_flow_cr": 10145.0
+    },
+    {
+      "company_id": "ICICIBANK",
+      "company_name": "ICICI Bank Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Financials",
+      "cfo_quality_score": 3.87,
+      "free_cash_flow_cr": 12547.0
+    },
+    {
+      "company_id": "ICICIGI",
+      "company_name": "ICICI Lombard General Insurance Company Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Financials",
+      "cfo_quality_score": 1.46,
+      "free_cash_flow_cr": 486.0
+    },
+    {
+      "company_id": "ICICIPRULI",
+      "company_name": "ICICI Prudential Life Insurance Company Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Other",
+      "sector": "Financials",
+      "cfo_quality_score": 1.93,
+      "free_cash_flow_cr": 105.0
+    },
+    {
+      "company_id": "ITC",
+      "company_name": "ITC Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Liquidating Assets",
+      "sector": "Consumer Staples",
+      "cfo_quality_score": 0.94,
+      "free_cash_flow_cr": 18742.0
+    },
+    {
+      "company_id": "IOC",
+      "company_name": "Indian Oil Corporation\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Energy",
+      "cfo_quality_score": 0.73,
+      "free_cash_flow_cr": 39635.0
+    },
+    {
+      "company_id": "IRCTC",
+      "company_name": "Indian Railway Catering & Tourism Corporation Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 0.9,
+      "free_cash_flow_cr": 667.0
+    },
+    {
+      "company_id": "IRFC",
+      "company_name": "Indian Railway Finance Corporation Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Financials",
+      "cfo_quality_score": -10.8,
+      "free_cash_flow_cr": 7906.0
+    },
+    {
+      "company_id": "INDUSINDBK",
+      "company_name": "IndusInd Bank Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Pre-Revenue",
+      "sector": "Financials",
+      "cfo_quality_score": 2.61,
+      "free_cash_flow_cr": -17468.0
+    },
+    {
+      "company_id": "NAUKRI",
+      "company_name": "Info Edge (India) Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Communication Services",
+      "cfo_quality_score": -1.46,
+      "free_cash_flow_cr": -150.0
+    },
+    {
+      "company_id": "INFY",
+      "company_name": "Infosys Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Information Technology",
+      "cfo_quality_score": 1.04,
+      "free_cash_flow_cr": 20117.0
+    },
+    {
+      "company_id": "INDIGO",
+      "company_name": "Interglobe Aviation Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": -14.34,
+      "free_cash_flow_cr": 9424.0
+    },
+    {
+      "company_id": "JSWENERGY",
+      "company_name": "JSW Energy Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Energy",
+      "cfo_quality_score": 2.63,
+      "free_cash_flow_cr": -1963.0
+    },
+    {
+      "company_id": "JSWSTEEL",
+      "company_name": "JSW Steel Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Materials",
+      "cfo_quality_score": 2.78,
+      "free_cash_flow_cr": -2389.0
+    },
+    {
+      "company_id": "JINDALSTEL",
+      "company_name": "Jindal Steel & Power Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Materials",
+      "cfo_quality_score": -2.8,
+      "free_cash_flow_cr": -2336.0
+    },
+    {
+      "company_id": "JIOFIN",
+      "company_name": "Jio Financial Services Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Other",
+      "sector": "Financials",
+      "cfo_quality_score": 32.93,
+      "free_cash_flow_cr": 763.0
+    },
+    {
+      "company_id": "KOTAKBANK",
+      "company_name": "Kotak Mahindra Bank Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Financials",
+      "cfo_quality_score": 1.48,
+      "free_cash_flow_cr": 6766.0
+    },
+    {
+      "company_id": "LTIM",
+      "company_name": "LTIMindtree Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Information Technology",
+      "cfo_quality_score": 1.02,
+      "free_cash_flow_cr": 1752.0
+    },
+    {
+      "company_id": "LT",
+      "company_name": "Larsen & Toubro Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Liquidating Assets",
+      "sector": "Industrials",
+      "cfo_quality_score": 1.45,
+      "free_cash_flow_cr": 20445.0
+    },
+    {
+      "company_id": "LICI",
+      "company_name": "Life Insurance Corporation of India",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Financials",
+      "cfo_quality_score": 9.68,
+      "free_cash_flow_cr": 853.0
+    },
+    {
+      "company_id": "LODHA",
+      "company_name": "Macrotech Developers Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Real Estate",
+      "cfo_quality_score": 13.31,
+      "free_cash_flow_cr": -435.0
+    },
+    {
+      "company_id": "M&M",
+      "company_name": "Mahindra & Mahindra Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 3.32,
+      "free_cash_flow_cr": -11245.0
+    },
+    {
+      "company_id": "MARUTI",
+      "company_name": "Maruti Suzuki India Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 1.13,
+      "free_cash_flow_cr": 4936.0
+    },
+    {
+      "company_id": "NHPC",
+      "company_name": "NHPC Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Energy",
+      "cfo_quality_score": 1.27,
+      "free_cash_flow_cr": 970.0
+    },
+    {
+      "company_id": "NTPC",
+      "company_name": "NTPC Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Energy",
+      "cfo_quality_score": 2.26,
+      "free_cash_flow_cr": 8644.0
+    },
+    {
+      "company_id": "NESTLEIND",
+      "company_name": "Nestle India Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Consumer Staples",
+      "cfo_quality_score": 1.11,
+      "free_cash_flow_cr": 2938.0
+    },
+    {
+      "company_id": "ONGC",
+      "company_name": "Oil & Natural Gas Corpn Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Energy",
+      "cfo_quality_score": 2.86,
+      "free_cash_flow_cr": 42060.0
+    },
+    {
+      "company_id": "PIDILITIND",
+      "company_name": "Pidilite Industries Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Materials",
+      "cfo_quality_score": 1.19,
+      "free_cash_flow_cr": 955.0
+    },
+    {
+      "company_id": "PFC",
+      "company_name": "Power Finance Corporation Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -3.03,
+      "free_cash_flow_cr": -101229.0
+    },
+    {
+      "company_id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Energy",
+      "cfo_quality_score": 2.31,
+      "free_cash_flow_cr": 24176.0
+    },
+    {
+      "company_id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Energy",
+      "cfo_quality_score": 2.31,
+      "free_cash_flow_cr": 24176.0
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -3.05,
+      "free_cash_flow_cr": -29445.0
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -3.05,
+      "free_cash_flow_cr": -29445.0
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -3.05,
+      "free_cash_flow_cr": -29445.0
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -3.05,
+      "free_cash_flow_cr": -29445.0
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -3.05,
+      "free_cash_flow_cr": -29445.0
+    },
+    {
+      "company_id": "RECLTD",
+      "company_name": "REC Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -3.86,
+      "free_cash_flow_cr": -59554.0
+    },
+    {
+      "company_id": "RELIANCE",
+      "company_name": "Reliance Industries Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Energy",
+      "cfo_quality_score": 1.61,
+      "free_cash_flow_cr": 45207.0
+    },
+    {
+      "company_id": "SBILIFE",
+      "company_name": "SBI Life Insurance Company Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Financials",
+      "cfo_quality_score": 15.3,
+      "free_cash_flow_cr": -2099.0
+    },
+    {
+      "company_id": "MOTHERSON",
+      "company_name": "Samvardhana Motherson International Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 3.1,
+      "free_cash_flow_cr": 925.0
+    },
+    {
+      "company_id": "SHREECEM",
+      "company_name": "Shree Cement Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Materials",
+      "cfo_quality_score": 1.9,
+      "free_cash_flow_cr": 1929.0
+    },
+    {
+      "company_id": "SHRIRAMFIN",
+      "company_name": "Shriram Finance Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Financials",
+      "cfo_quality_score": -2.61,
+      "free_cash_flow_cr": -31359.0
+    },
+    {
+      "company_id": "SIEMENS",
+      "company_name": "Siemens Ltd",
+      "year": "Sep 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Industrials",
+      "cfo_quality_score": 0.84,
+      "free_cash_flow_cr": 1168.0
+    },
+    {
+      "company_id": "SUNPHARMA",
+      "company_name": "Sun Pharmaceuticals Industries Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Healthcare",
+      "cfo_quality_score": 1.76,
+      "free_cash_flow_cr": 11372.0
+    },
+    {
+      "company_id": "TVSMOTOR",
+      "company_name": "TVS Motor Company Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Growth Funded by Debt",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": -0.75,
+      "free_cash_flow_cr": -2254.0
+    },
+    {
+      "company_id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Liquidating Assets",
+      "sector": "Information Technology",
+      "cfo_quality_score": 1.04,
+      "free_cash_flow_cr": 50429.0
+    },
+    {
+      "company_id": "TATACONSUM",
+      "company_name": "Tata Consumer Products Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Mixed",
+      "sector": "Consumer Staples",
+      "cfo_quality_score": 1.67,
+      "free_cash_flow_cr": 26.0
+    },
+    {
+      "company_id": "TATAMOTORS",
+      "company_name": "Tata Motors Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 1.93,
+      "free_cash_flow_cr": 45133.0
+    },
+    {
+      "company_id": "TATAPOWER",
+      "company_name": "Tata Power Company Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Energy",
+      "cfo_quality_score": 3.87,
+      "free_cash_flow_cr": 3569.0
+    },
+    {
+      "company_id": "TATASTEEL",
+      "company_name": "Tata Steel Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Materials",
+      "cfo_quality_score": 4.44,
+      "free_cash_flow_cr": 6048.0
+    },
+    {
+      "company_id": "TECHM",
+      "company_name": "Tech Mahindra Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Information Technology",
+      "cfo_quality_score": 1.71,
+      "free_cash_flow_cr": 5058.0
+    },
+    {
+      "company_id": "TECHM",
+      "company_name": "Tech Mahindra Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Information Technology",
+      "cfo_quality_score": 1.71,
+      "free_cash_flow_cr": 5058.0
+    },
+    {
+      "company_id": "TITAN",
+      "company_name": "Titan Company Ltd\n",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Reinvestor",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 0.92,
+      "free_cash_flow_cr": 1506.0
+    },
+    {
+      "company_id": "TORNTPHARM",
+      "company_name": "Torrent Pharmaceuticals Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Healthcare",
+      "cfo_quality_score": 1.83,
+      "free_cash_flow_cr": 3106.0
+    },
+    {
+      "company_id": "TRENT",
+      "company_name": "Trent Ltd",
+      "year": "Mar 2024",
+      "capital_allocation_pattern": "Shareholder Returns",
+      "sector": "Consumer Discretionary",
+      "cfo_quality_score": 1.18,
+      "free_cash_flow_cr": 841.0
+    }
+  ],
+  "profitability": [
+    {
+      "company_id": "BAJAJHLDNG",
+      "company_name": "Bajaj Holdings & Investment Ltd",
+      "year": "TTM",
+      "npm": 431.97,
+      "opm": 90.0,
+      "eps": 666.0,
+      "sales": 1733,
+      "net_profit": 7486,
+      "operating_profit": 1554.0
+    },
+    {
+      "company_id": "JIOFIN",
+      "company_name": "Jio Financial Services Ltd",
+      "year": "TTM",
+      "npm": 81.66,
+      "opm": 78.0,
+      "eps": 3.0,
+      "sales": 1968,
+      "net_profit": 1607,
+      "operating_profit": 1531.0
+    },
+    {
+      "company_id": "DLF",
+      "company_name": "DLF Ltd",
+      "year": "TTM",
+      "npm": 57.19,
+      "opm": 27.0,
+      "eps": 16.0,
+      "sales": 7001,
+      "net_profit": 4004,
+      "operating_profit": 1885.0
+    },
+    {
+      "company_id": "NHPC",
+      "company_name": "NHPC Ltd\n",
+      "year": "TTM",
+      "npm": 35.26,
+      "opm": 52.0,
+      "eps": 3.0,
+      "sales": 9690,
+      "net_profit": 3417,
+      "operating_profit": 5015.0
+    },
+    {
+      "company_id": "KOTAKBANK",
+      "company_name": "Kotak Mahindra Bank Ltd\n",
+      "year": "TTM",
+      "npm": 35.17,
+      "opm": -14146.0,
+      "eps": 113.0,
+      "sales": 64053,
+      "net_profit": 22530,
+      "operating_profit": 50872.0
+    },
+    {
+      "company_id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "year": "TTM",
+      "npm": 34.3,
+      "opm": 86.0,
+      "eps": 17.0,
+      "sales": 45812,
+      "net_profit": 15712,
+      "operating_profit": 39235.0
+    },
+    {
+      "company_id": "ADANIPORTS",
+      "company_name": "Adani Ports & Special Economic Zone Ltd\n",
+      "year": "TTM",
+      "npm": 34.25,
+      "opm": 60.0,
+      "eps": 45.0,
+      "sales": 28443,
+      "net_profit": 9743,
+      "operating_profit": 17165.0
+    },
+    {
+      "company_id": "ADANIPORTS",
+      "company_name": "Adani Ports & Special Economic Zone Ltd\n",
+      "year": "TTM",
+      "npm": 34.25,
+      "opm": 60.0,
+      "eps": 45.0,
+      "sales": 28443,
+      "net_profit": 9743,
+      "operating_profit": 17165.0
+    },
+    {
+      "company_id": "ICICIBANK",
+      "company_name": "ICICI Bank Ltd",
+      "year": "TTM",
+      "npm": 29.03,
+      "opm": -31575.0,
+      "eps": 70.0,
+      "sales": 180551,
+      "net_profit": 52416,
+      "operating_profit": 125722.0
+    },
+    {
+      "company_id": "RECLTD",
+      "company_name": "REC Ltd",
+      "year": "TTM",
+      "npm": 28.91,
+      "opm": 99.0,
+      "eps": 57.0,
+      "sales": 51490,
+      "net_profit": 14885,
+      "operating_profit": 50860.0
+    },
+    {
+      "company_id": "PFC",
+      "company_name": "Power Finance Corporation Ltd",
+      "year": "TTM",
+      "npm": 28.78,
+      "opm": 36.0,
+      "eps": 64.0,
+      "sales": 98152,
+      "net_profit": 28248,
+      "operating_profit": 35764.0
+    },
+    {
+      "company_id": "ITC",
+      "company_name": "ITC Ltd\n",
+      "year": "TTM",
+      "npm": 27.72,
+      "opm": 35.0,
+      "eps": 16.0,
+      "sales": 75135,
+      "net_profit": 20829,
+      "operating_profit": 26640.0
+    },
+    {
+      "company_id": "HAL",
+      "company_name": "Hindustan Aeronautics Ltd",
+      "year": "TTM",
+      "npm": 27.19,
+      "opm": 32.0,
+      "eps": 127.0,
+      "sales": 31154,
+      "net_profit": 8472,
+      "operating_profit": 9954.0
+    },
+    {
+      "company_id": "IRCTC",
+      "company_name": "Indian Railway Catering & Tourism Corporation Ltd",
+      "year": "TTM",
+      "npm": 26.94,
+      "opm": 34.0,
+      "eps": 15.0,
+      "sales": 4455,
+      "net_profit": 1200,
+      "operating_profit": 1505.0
+    },
+    {
+      "company_id": "EICHERMOT",
+      "company_name": "Eicher Motors Ltd",
+      "year": "TTM",
+      "npm": 24.97,
+      "opm": 26.0,
+      "eps": 156.0,
+      "sales": 17091,
+      "net_profit": 4268,
+      "operating_profit": 4472.0
+    },
+    {
+      "company_id": "BAJFINANCE",
+      "company_name": "Bajaj Finance Ltd",
+      "year": "TTM",
+      "npm": 24.71,
+      "opm": 21417.0,
+      "eps": 248.0,
+      "sales": 62279,
+      "net_profit": 15389,
+      "operating_profit": 18943.0
+    },
+    {
+      "company_id": "COALINDIA",
+      "company_name": "Coal India Ltd",
+      "year": "TTM",
+      "npm": 24.48,
+      "opm": 46610.0,
+      "eps": 56.0,
+      "sales": 140328,
+      "net_profit": 34350,
+      "operating_profit": 93717.0
+    },
+    {
+      "company_id": "IRFC",
+      "company_name": "Indian Railway Finance Corporation Ltd",
+      "year": "TTM",
+      "npm": 24.3,
+      "opm": 99.0,
+      "eps": 5.0,
+      "sales": 26902,
+      "net_profit": 6537,
+      "operating_profit": 26758.0
+    },
+    {
+      "company_id": "SHRIRAMFIN",
+      "company_name": "Shriram Finance Ltd\n",
+      "year": "TTM",
+      "npm": 23.72,
+      "opm": 29.0,
+      "eps": 50.0,
+      "sales": 39864,
+      "net_profit": 9454,
+      "operating_profit": 11416.0
+    },
+    {
+      "company_id": "ADANIPOWER",
+      "company_name": "Adani Power Ltd",
+      "year": "TTM",
+      "npm": 23.21,
+      "opm": 38.0,
+      "eps": 33.0,
+      "sales": 54650,
+      "net_profit": 12686,
+      "operating_profit": 20965.0
+    }
+  ],
+  "leverage": [
+    {
+      "company_id": "CANBK",
+      "company_name": "Canara Bank",
+      "year": "Mar 2024",
+      "borrowings": 1369780,
+      "equity_capital": 1814.0,
+      "reserves": 90319,
+      "de_ratio": 14.87,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "BANKBARODA",
+      "company_name": "Bank of Baroda",
+      "year": "Mar 2024",
+      "borrowings": 1453761,
+      "equity_capital": 1036.0,
+      "reserves": 118677,
+      "de_ratio": 12.14,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "PFC",
+      "company_name": "Power Finance Corporation Ltd",
+      "year": "Sep 2024",
+      "borrowings": 910447,
+      "equity_capital": 3300.0,
+      "reserves": 106746,
+      "de_ratio": 8.27,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "AXISBANK",
+      "company_name": "Axis Bank Ltd",
+      "year": "Mar 2024",
+      "borrowings": 1295302,
+      "equity_capital": 617.0,
+      "reserves": 156406,
+      "de_ratio": 8.25,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "IRFC",
+      "company_name": "Indian Railway Finance Corporation Ltd",
+      "year": "Sep 2024",
+      "borrowings": 403111,
+      "equity_capital": 13069.0,
+      "reserves": 38396,
+      "de_ratio": 7.83,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "CHOLAFIN",
+      "company_name": "Cholamandalam Investment & Finance Company Ltd",
+      "year": "Sep 2024",
+      "borrowings": 157943,
+      "equity_capital": 168.0,
+      "reserves": 21243,
+      "de_ratio": 7.38,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "INDUSINDBK",
+      "company_name": "IndusInd Bank Ltd",
+      "year": "Mar 2024",
+      "borrowings": 432404,
+      "equity_capital": 778.0,
+      "reserves": 62019,
+      "de_ratio": 6.89,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "year": "Mar 2024",
+      "borrowings": 3107503,
+      "equity_capital": 760.0,
+      "reserves": 455636,
+      "de_ratio": 6.81,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "RECLTD",
+      "company_name": "REC Ltd",
+      "year": "Sep 2024",
+      "borrowings": 483617,
+      "equity_capital": 2633.0,
+      "reserves": 70877,
+      "de_ratio": 6.58,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "ICICIBANK",
+      "company_name": "ICICI Bank Ltd",
+      "year": "Mar 2024",
+      "borrowings": 1651008,
+      "equity_capital": 1405.0,
+      "reserves": 254739,
+      "de_ratio": 6.45,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "ADANIGREEN",
+      "company_name": "Adani Green Energy Ltd",
+      "year": "Sep 2024",
+      "borrowings": 67430,
+      "equity_capital": 1584.0,
+      "reserves": 8992,
+      "de_ratio": 6.38,
+      "sector": "Energy"
+    },
+    {
+      "company_id": "BAJAJFINSV",
+      "company_name": "Bajaj Finserv Ltd",
+      "year": "Sep 2024",
+      "borrowings": 318675,
+      "equity_capital": 160.0,
+      "reserves": 68165,
+      "de_ratio": 4.66,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "KOTAKBANK",
+      "company_name": "Kotak Mahindra Bank Ltd\n",
+      "year": "Mar 2024",
+      "borrowings": 520374,
+      "equity_capital": 994.0,
+      "reserves": 128978,
+      "de_ratio": 4.0,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "SHRIRAMFIN",
+      "company_name": "Shriram Finance Ltd\n",
+      "year": "Sep 2024",
+      "borrowings": 207820,
+      "equity_capital": 376.0,
+      "reserves": 52016,
+      "de_ratio": 3.97,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "BAJFINANCE",
+      "company_name": "Bajaj Finance Ltd",
+      "year": "Sep 2024",
+      "borrowings": 324218,
+      "equity_capital": 124.0,
+      "reserves": 86679,
+      "de_ratio": 3.74,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "borrowings": 55017,
+      "equity_capital": 260.0,
+      "reserves": 14673,
+      "de_ratio": 3.68,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "borrowings": 55017,
+      "equity_capital": 260.0,
+      "reserves": 14673,
+      "de_ratio": 3.68,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "borrowings": 55017,
+      "equity_capital": 260.0,
+      "reserves": 14673,
+      "de_ratio": 3.68,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "borrowings": 55017,
+      "equity_capital": 260.0,
+      "reserves": 14673,
+      "de_ratio": 3.68,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "borrowings": 55017,
+      "equity_capital": 260.0,
+      "reserves": 14673,
+      "de_ratio": 3.68,
+      "sector": "Financials"
+    }
+  ],
+  "cashflow": [
+    {
+      "company_id": "RELIANCE",
+      "company_name": "Reliance Industries Ltd\n",
+      "year": "Mar 2024",
+      "operating_activity": 158788.0,
+      "investing_activity": -113581.0,
+      "financing_activity": -16646.0,
+      "net_cash_flow": 28561.0
+    },
+    {
+      "company_id": "ICICIBANK",
+      "company_name": "ICICI Bank Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 157284.0,
+      "investing_activity": -144737.0,
+      "financing_activity": 13765.0,
+      "net_cash_flow": 26312.0
+    },
+    {
+      "company_id": "ONGC",
+      "company_name": "Oil & Natural Gas Corpn Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 99263.0,
+      "investing_activity": -57203.0,
+      "financing_activity": -45650.0,
+      "net_cash_flow": -3591.0
+    },
+    {
+      "company_id": "BHARTIARTL",
+      "company_name": "Bharti Airtel Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 78898.0,
+      "investing_activity": -51089.0,
+      "financing_activity": -27778.0,
+      "net_cash_flow": 31.0
+    },
+    {
+      "company_id": "IOC",
+      "company_name": "Indian Oil Corporation\n",
+      "year": "Mar 2024",
+      "operating_activity": 71099.0,
+      "investing_activity": -31464.0,
+      "financing_activity": -39385.0,
+      "net_cash_flow": 250.0
+    },
+    {
+      "company_id": "TATAMOTORS",
+      "company_name": "Tata Motors Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 67915.0,
+      "investing_activity": -22782.0,
+      "financing_activity": -37006.0,
+      "net_cash_flow": 8128.0
+    },
+    {
+      "company_id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "year": "Mar-24",
+      "operating_activity": 44338.0,
+      "investing_activity": 6091.0,
+      "financing_activity": -48536.0,
+      "net_cash_flow": 1893.0
+    },
+    {
+      "company_id": "NTPC",
+      "company_name": "NTPC Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 40785.0,
+      "investing_activity": -32141.0,
+      "financing_activity": -8246.0,
+      "net_cash_flow": 398.0
+    },
+    {
+      "company_id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 37290.0,
+      "investing_activity": -13114.0,
+      "financing_activity": -25903.0,
+      "net_cash_flow": -1728.0
+    },
+    {
+      "company_id": "BPCL",
+      "company_name": "Bharat Petroleum Corporation Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 35936.0,
+      "investing_activity": -10521.0,
+      "financing_activity": -25427.0,
+      "net_cash_flow": -12.0
+    },
+    {
+      "company_id": "SBILIFE",
+      "company_name": "SBI Life Insurance Company Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 29122.0,
+      "investing_activity": -31221.0,
+      "financing_activity": -227.0,
+      "net_cash_flow": -2327.0
+    },
+    {
+      "company_id": "LICI",
+      "company_name": "Life Insurance Corporation of India",
+      "year": "Mar 2024",
+      "operating_activity": 26122.0,
+      "investing_activity": -25269.0,
+      "financing_activity": -4427.0,
+      "net_cash_flow": -3574.0
+    },
+    {
+      "company_id": "INFY",
+      "company_name": "Infosys Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 25210.0,
+      "investing_activity": -5093.0,
+      "financing_activity": -17504.0,
+      "net_cash_flow": 2613.0
+    },
+    {
+      "company_id": "HINDALCO",
+      "company_name": "Hindalco Industries Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 24056.0,
+      "investing_activity": -14267.0,
+      "financing_activity": -10817.0,
+      "net_cash_flow": -1028.0
+    },
+    {
+      "company_id": "HCLTECH",
+      "company_name": "HCL Technologies Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 22448.0,
+      "investing_activity": -6608.0,
+      "financing_activity": -15464.0,
+      "net_cash_flow": 376.0
+    },
+    {
+      "company_id": "SBIN",
+      "company_name": "State Bank of India",
+      "year": "Mar 2024",
+      "operating_activity": 21632.0,
+      "investing_activity": -3476.0,
+      "financing_activity": -9896.0,
+      "net_cash_flow": 8260.0
+    },
+    {
+      "company_id": "INDIGO",
+      "company_name": "Interglobe Aviation Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 21183.0,
+      "investing_activity": -11759.0,
+      "financing_activity": -9979.0,
+      "net_cash_flow": -555.0
+    },
+    {
+      "company_id": "TATASTEEL",
+      "company_name": "Tata Steel Ltd\n",
+      "year": "Mar 2024",
+      "operating_activity": 20301.0,
+      "investing_activity": -14253.0,
+      "financing_activity": -11097.0,
+      "net_cash_flow": -5049.0
+    },
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 19069.0,
+      "investing_activity": 16600.0,
+      "financing_activity": -3983.0,
+      "net_cash_flow": 31687.0
+    },
+    {
+      "company_id": "LT",
+      "company_name": "Larsen & Toubro Ltd",
+      "year": "Mar 2024",
+      "operating_activity": 18266.0,
+      "investing_activity": 2179.0,
+      "financing_activity": -25413.0,
+      "net_cash_flow": -4968.0
+    }
+  ],
+  "cagr_data": [
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "compounded_sales_growth": "10 Years: 21%",
+      "compounded_profit_growth": "10 Years: 22%",
+      "stock_price_cagr": "10 Years:     15%",
+      "roe": "10 Years:     17%"
+    },
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "compounded_sales_growth": "5 Years:       22%",
+      "compounded_profit_growth": "5 Years:           23%",
+      "stock_price_cagr": "      5 Years:       8%",
+      "roe": "5 Years:       17%"
+    },
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "compounded_sales_growth": "3 Years:       30%",
+      "compounded_profit_growth": "3 Years:           26%",
+      "stock_price_cagr": "      3 Years:       8%",
+      "roe": "3 Years:       17%"
+    },
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "compounded_sales_growth": "TTM:            47%",
+      "compounded_profit_growth": "TTM:                27%",
+      "stock_price_cagr": "      1 Year:        13%",
+      "roe": "Last Year:    17%"
+    },
+    {
+      "company_id": "INFY",
+      "company_name": "Infosys Ltd",
+      "compounded_sales_growth": "10 Years:     12%",
+      "compounded_profit_growth": "10 Years:         9%",
+      "stock_price_cagr": "     10 Years:     15%",
+      "roe": "10 Years:      27%"
+    },
+    {
+      "company_id": "INFY",
+      "company_name": "Infosys Ltd",
+      "compounded_sales_growth": "5 Years:       13%",
+      "compounded_profit_growth": "5 Years:           11%",
+      "stock_price_cagr": "       5 Years:     22%",
+      "roe": "5 Years:        29%"
+    },
+    {
+      "company_id": "INFY",
+      "company_name": "Infosys Ltd",
+      "compounded_sales_growth": "3 Years:       5%",
+      "compounded_profit_growth": "3 Years:           10%",
+      "stock_price_cagr": "       3 Years:     4%",
+      "roe": "3 Years:        31%"
+    },
+    {
+      "company_id": "INFY",
+      "company_name": "Infosys Ltd",
+      "compounded_sales_growth": "TTM:            3%",
+      "compounded_profit_growth": "TTM:                 8%",
+      "stock_price_cagr": "       1 Year:       27%",
+      "roe": "Last Year:     32%"
+    },
+    {
+      "company_id": "SBILIFE",
+      "company_name": "SBI Life Insurance Company Ltd",
+      "compounded_sales_growth": "10 Years:     23%",
+      "compounded_profit_growth": "10 Years:          9%",
+      "stock_price_cagr": "    10 Years:      9%",
+      "roe": "10 Years:      16%"
+    },
+    {
+      "company_id": "SBILIFE",
+      "company_name": "SBI Life Insurance Company Ltd",
+      "compounded_sales_growth": "5 Years:       24%",
+      "compounded_profit_growth": "5 Years:            6%",
+      "stock_price_cagr": "     5 Years:       8%",
+      "roe": "5 Years          14%"
+    },
+    {
+      "company_id": "SBILIFE",
+      "company_name": "SBI Life Insurance Company Ltd",
+      "compounded_sales_growth": "3 Years:       17%",
+      "compounded_profit_growth": "3 Years:            9%",
+      "stock_price_cagr": "     3 Years:       7%",
+      "roe": "3 Years:         13%"
+    },
+    {
+      "company_id": "SBILIFE",
+      "company_name": "SBI Life Insurance Company Ltd",
+      "compounded_sales_growth": "TTM:            43%",
+      "compounded_profit_growth": "TTM:                 18%",
+      "stock_price_cagr": "     1 Year:         -2%",
+      "roe": "Last Year:      12%"
+    },
+    {
+      "company_id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "compounded_sales_growth": "10 Years:     11%             ",
+      "compounded_profit_growth": "10 Years:          9%",
+      "stock_price_cagr": "    10 Years:      14%",
+      "roe": "10 Years:       40%"
+    },
+    {
+      "company_id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "compounded_sales_growth": "5 Years:       10%             ",
+      "compounded_profit_growth": "5 Years:            8%",
+      "stock_price_cagr": "      5 Years:      16%",
+      "roe": "5 Years:          44%"
+    },
+    {
+      "company_id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "compounded_sales_growth": "3 Years:       14%             ",
+      "compounded_profit_growth": "3 Years:            12%",
+      "stock_price_cagr": "      3 Years:      8%",
+      "roe": "3 Years:          47%"
+    },
+    {
+      "company_id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "compounded_sales_growth": "TTM:            5%             ",
+      "compounded_profit_growth": "TTM:                 8%",
+      "stock_price_cagr": "      1 Year:       16%",
+      "roe": "Last Year:       52%"
+    }
+  ],
+  "financial_ratios": [
+    {
+      "company_id": "ABB",
+      "company_name": "Abbott India Ltd",
+      "year": "Mar 2024",
+      "ratio1": 20.53,
+      "ratio2": 25.0,
+      "ratio3": 32.47,
+      "ratio4": 0.0224,
+      "ratio5": 141.75,
+      "free_cash_flow_cr": 1095.0,
+      "cfo_quality_score": 4.63,
+      "capex_intensity_pct": 84.51,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 75.36,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "ABB",
+      "company_name": "Abbott India Ltd",
+      "year": "Mar 2024",
+      "ratio1": 20.53,
+      "ratio2": 25.0,
+      "ratio3": 32.47,
+      "ratio4": 0.0224,
+      "ratio5": 141.75,
+      "free_cash_flow_cr": 1095.0,
+      "cfo_quality_score": 4.63,
+      "capex_intensity_pct": 84.51,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 75.36,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "ADANIENSOL",
+      "company_name": "Adani Energy Solutions Ltd",
+      "year": "Mar 2024",
+      "ratio1": 7.199999999999999,
+      "ratio2": 30.0,
+      "ratio3": 9.46,
+      "ratio4": 2.9325,
+      "ratio5": 2.2848,
+      "free_cash_flow_cr": 1095.0,
+      "cfo_quality_score": 4.39,
+      "capex_intensity_pct": 29.76,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 19.17,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "ADANIENT",
+      "company_name": "Adani Enterprises Ltd",
+      "year": "Mar 2024",
+      "ratio1": 3.46,
+      "ratio2": 12.0,
+      "ratio3": 8.53,
+      "ratio4": 1.6714,
+      "ratio5": 2.7493,
+      "free_cash_flow_cr": -8455.0,
+      "cfo_quality_score": 3.67,
+      "capex_intensity_pct": 19.46,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -74.32,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "ADANIGREEN",
+      "company_name": "Adani Green Energy Ltd",
+      "year": "Mar 2024",
+      "ratio1": 13.67,
+      "ratio2": 79.0,
+      "ratio3": 12.81,
+      "ratio4": 6.5953,
+      "ratio5": 1.7139,
+      "free_cash_flow_cr": -13347.0,
+      "cfo_quality_score": -0.02,
+      "capex_intensity_pct": 228.42,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -182.39,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "ADANIPORTS",
+      "company_name": "Adani Ports & Special Economic Zone Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 30.34,
+      "ratio2": 58.0,
+      "ratio3": 15.35,
+      "ratio4": 0.9373,
+      "ratio5": 5.9495,
+      "free_cash_flow_cr": 8250.0,
+      "cfo_quality_score": 2.04,
+      "capex_intensity_pct": 25.34,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 52.92,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "ADANIPORTS",
+      "company_name": "Adani Ports & Special Economic Zone Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 30.34,
+      "ratio2": 58.0,
+      "ratio3": 15.35,
+      "ratio4": 0.9373,
+      "ratio5": 5.9495,
+      "free_cash_flow_cr": 8250.0,
+      "cfo_quality_score": 2.04,
+      "capex_intensity_pct": 25.34,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 52.92,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "ADANIPOWER",
+      "company_name": "Adani Power Ltd",
+      "year": "Mar 2024",
+      "ratio1": 41.37,
+      "ratio2": 36.0,
+      "ratio3": 48.28,
+      "ratio4": 0.8023,
+      "ratio5": 8.2972,
+      "free_cash_flow_cr": 17651.0,
+      "cfo_quality_score": 1.32,
+      "capex_intensity_pct": 6.91,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 96.83,
+      "capital_allocation_pattern": "Liquidating Assets"
+    },
+    {
+      "company_id": "AMBUJACEM",
+      "company_name": "Ambuja Cements Ltd",
+      "year": "Mar 2024",
+      "ratio1": 14.29,
+      "ratio2": 19.0,
+      "ratio3": 11.43,
+      "ratio4": 0.0169,
+      "ratio5": 28.2645,
+      "free_cash_flow_cr": -3295.0,
+      "cfo_quality_score": 1.29,
+      "capex_intensity_pct": 26.96,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -51.48,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "APOLLOHOSP",
+      "company_name": "Apollo Hospitals\nChain of Indian private hospitals",
+      "year": "Mar 2024",
+      "ratio1": 4.91,
+      "ratio2": 13.0,
+      "ratio3": 13.48,
+      "ratio4": 0.7689,
+      "ratio5": 5.5657,
+      "free_cash_flow_cr": 383.0,
+      "cfo_quality_score": 3.49,
+      "capex_intensity_pct": 8.06,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 16.0,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "ASIANPAINT",
+      "company_name": "Asian Paints\nIndian Multi-National Paint and Coating Manufacturing Company",
+      "year": "Mar 2024",
+      "ratio1": 15.66,
+      "ratio2": 21.0,
+      "ratio3": 29.68,
+      "ratio4": 0.1321,
+      "ratio5": 41.0049,
+      "free_cash_flow_cr": 3556.0,
+      "cfo_quality_score": 0.9,
+      "capex_intensity_pct": 7.18,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 46.88,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "ASIANPAINT",
+      "company_name": "Asian Paints\nIndian Multi-National Paint and Coating Manufacturing Company",
+      "year": "Mar 2024",
+      "ratio1": 15.66,
+      "ratio2": 21.0,
+      "ratio3": 29.68,
+      "ratio4": 0.1321,
+      "ratio5": 41.0049,
+      "free_cash_flow_cr": 3556.0,
+      "cfo_quality_score": 0.9,
+      "capex_intensity_pct": 7.18,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 46.88,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "BAJAJ-AUTO",
+      "company_name": "Bajaj Auto Ltd",
+      "year": "Mar 2024",
+      "ratio1": 17.18,
+      "ratio2": 20.0,
+      "ratio3": 26.61,
+      "ratio4": 0.066,
+      "ratio5": 174.4167,
+      "free_cash_flow_cr": 6486.0,
+      "cfo_quality_score": 0.82,
+      "capex_intensity_pct": 0.16,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 74.0,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "BAJAJ-AUTO",
+      "company_name": "Bajaj Auto Ltd",
+      "year": "Mar 2024",
+      "ratio1": 17.18,
+      "ratio2": 20.0,
+      "ratio3": 26.61,
+      "ratio4": 0.066,
+      "ratio5": 174.4167,
+      "free_cash_flow_cr": 6486.0,
+      "cfo_quality_score": 0.82,
+      "capex_intensity_pct": 0.16,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 74.0,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "AXISBANK",
+      "company_name": "Axis Bank Ltd",
+      "year": "Mar 2024",
+      "ratio1": 22.73,
+      "ratio2": 11952.0,
+      "ratio3": 15.83,
+      "ratio4": 8.2491,
+      "ratio5": 1.6912,
+      "free_cash_flow_cr": -14556.0,
+      "cfo_quality_score": 4.97,
+      "capex_intensity_pct": 8.23,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -38.36,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "BAJAJFINSV",
+      "company_name": "Bajaj Finserv Ltd",
+      "year": "Mar 2024",
+      "ratio1": 14.13,
+      "ratio2": 37.0,
+      "ratio3": 25.85,
+      "ratio4": 4.7894,
+      "ratio5": 2.1971,
+      "free_cash_flow_cr": -79634.0,
+      "cfo_quality_score": -2.99,
+      "capex_intensity_pct": 9.93,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -194.77,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "BAJAJHLDNG",
+      "company_name": "Bajaj Holdings & Investment Ltd",
+      "year": "Mar 2024",
+      "ratio1": 432.73,
+      "ratio2": 92.0,
+      "ratio3": 13.58,
+      "ratio4": 0.0012,
+      "ratio5": 3764.5,
+      "free_cash_flow_cr": 1469.0,
+      "cfo_quality_score": 0.34,
+      "capex_intensity_pct": 27.73,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 94.05,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "BAJFINANCE",
+      "company_name": "Bajaj Finance Ltd",
+      "year": "Mar 2024",
+      "ratio1": 26.29,
+      "ratio2": 19987.0,
+      "ratio3": 18.84,
+      "ratio4": 3.8248,
+      "ratio5": 2689.1667,
+      "free_cash_flow_cr": -79931.0,
+      "cfo_quality_score": -3.76,
+      "capex_intensity_pct": 13.04,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -496.5,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "BANKBARODA",
+      "company_name": "Bank of Baroda",
+      "year": "Mar 2024",
+      "ratio1": 15.94,
+      "ratio2": 4102.0,
+      "ratio3": 15.76,
+      "ratio4": 12.1437,
+      "ratio5": 1.8967,
+      "free_cash_flow_cr": -7559.0,
+      "cfo_quality_score": 3.47,
+      "capex_intensity_pct": 1.09,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": -17.03,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "BHARTIARTL",
+      "company_name": "Bharti Airtel Ltd",
+      "year": "Mar 2024",
+      "ratio1": 5.71,
+      "ratio2": 52.0,
+      "ratio3": 10.36,
+      "ratio4": 2.6095,
+      "ratio5": 3.3055,
+      "free_cash_flow_cr": 27809.0,
+      "cfo_quality_score": 3.33,
+      "capex_intensity_pct": 34.06,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 35.52,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "BEL",
+      "company_name": "Bharat Electronics Ltd",
+      "year": "Mar 2024",
+      "ratio1": 19.66,
+      "ratio2": 25.0,
+      "ratio3": 4744.05,
+      "ratio4": 0.5119,
+      "ratio5": 476.75,
+      "free_cash_flow_cr": -1265.0,
+      "cfo_quality_score": 1.43,
+      "capex_intensity_pct": 29.23,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -25.04,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "BHEL",
+      "company_name": "Bharat Heavy Electricals Limited\n",
+      "year": "Mar 2024",
+      "ratio1": 1.18,
+      "ratio2": 3.0,
+      "ratio3": 1.15,
+      "ratio4": 0.3624,
+      "ratio5": 1.593,
+      "free_cash_flow_cr": -2382.0,
+      "cfo_quality_score": -2.21,
+      "capex_intensity_pct": 5.57,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": -335.02,
+      "capital_allocation_pattern": "Distress Signal"
+    },
+    {
+      "company_id": "BOSCHLTD",
+      "company_name": "Bosch Ltd",
+      "year": "Mar 2024",
+      "ratio1": 14.89,
+      "ratio2": 13.0,
+      "ratio3": 20.64,
+      "ratio4": 0.0032,
+      "ratio5": 71.7843,
+      "free_cash_flow_cr": 1536.0,
+      "cfo_quality_score": 1.07,
+      "capex_intensity_pct": 1.69,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 73.32,
+      "capital_allocation_pattern": "Liquidating Assets"
+    },
+    {
+      "company_id": "BPCL",
+      "company_name": "Bharat Petroleum Corporation Ltd",
+      "year": "Mar 2024",
+      "ratio1": 5.99,
+      "ratio2": 10.0,
+      "ratio3": 35.51000000000001,
+      "ratio4": 0.7219,
+      "ratio5": 11.3555,
+      "free_cash_flow_cr": 25415.0,
+      "cfo_quality_score": 2.49,
+      "capex_intensity_pct": 2.35,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 57.65,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "BRITANNIA",
+      "company_name": "Britannia Industries Ltd",
+      "year": "Mar 2024",
+      "ratio1": 12.73,
+      "ratio2": 19.0,
+      "ratio3": 54.15,
+      "ratio4": 0.524,
+      "ratio5": 20.5976,
+      "free_cash_flow_cr": 3050.0,
+      "cfo_quality_score": 1.05,
+      "capex_intensity_pct": 2.84,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 96.31,
+      "capital_allocation_pattern": "Liquidating Assets"
+    },
+    {
+      "company_id": "CANBK",
+      "company_name": "Canara Bank",
+      "year": "Mar 2024",
+      "ratio1": 13.94,
+      "ratio2": -7745.0,
+      "ratio3": 16.72,
+      "ratio4": 14.8674,
+      "ratio5": 1.6107,
+      "free_cash_flow_cr": 13296.0,
+      "cfo_quality_score": 4.07,
+      "capex_intensity_pct": 1.58,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 28.81,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "CHOLAFIN",
+      "company_name": "Cholamandalam Investment & Finance Company Ltd",
+      "year": "Mar 2024",
+      "ratio1": 17.85,
+      "ratio2": 4548.0,
+      "ratio3": 17.46,
+      "ratio4": 6.8634,
+      "ratio5": 21.2118,
+      "free_cash_flow_cr": -38538.0,
+      "cfo_quality_score": -6.2,
+      "capex_intensity_pct": 14.9,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -715.65,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "CIPLA",
+      "company_name": "Cipla Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 16.12,
+      "ratio2": 6291.0,
+      "ratio3": 15.55,
+      "ratio4": 0.0209,
+      "ratio5": 35.3388,
+      "free_cash_flow_cr": 1152.0,
+      "cfo_quality_score": 1.41,
+      "capex_intensity_pct": 11.57,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 5.91,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "COALINDIA",
+      "company_name": "Coal India Ltd",
+      "year": "Mar 2024",
+      "ratio1": 26.26,
+      "ratio2": 47971.0,
+      "ratio3": 45.17,
+      "ratio4": 0.0788,
+      "ratio5": 11.2418,
+      "free_cash_flow_cr": 13617.0,
+      "cfo_quality_score": 1.02,
+      "capex_intensity_pct": 3.15,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 14.43,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "DABUR",
+      "company_name": "Dabur India Ltd",
+      "year": "Mar 2024",
+      "ratio1": 14.6,
+      "ratio2": 19.0,
+      "ratio3": 18.36,
+      "ratio4": 0.1384,
+      "ratio5": 23.2419,
+      "free_cash_flow_cr": 1042.0,
+      "cfo_quality_score": 1.08,
+      "capex_intensity_pct": 7.83,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 43.42,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "DIVISLAB",
+      "company_name": "Divis Laboratories Ltd",
+      "year": "Mar 2024",
+      "ratio1": 20.4,
+      "ratio2": 28.0,
+      "ratio3": 11.79,
+      "ratio4": 0.0002,
+      "ratio5": 636.25,
+      "free_cash_flow_cr": 992.0,
+      "cfo_quality_score": 0.93,
+      "capex_intensity_pct": 3.43,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 44.89,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "DLF",
+      "company_name": "DLF Ltd",
+      "year": "Mar 2024",
+      "ratio1": 42.38,
+      "ratio2": 33.0,
+      "ratio3": 6.909999999999999,
+      "ratio4": 0.1226,
+      "ratio5": 7.4579,
+      "free_cash_flow_cr": 1010.0,
+      "cfo_quality_score": 0.95,
+      "capex_intensity_pct": 23.79,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 47.55,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "DMART",
+      "company_name": "Avenue Supermarts Ltd",
+      "year": "Mar 2024",
+      "ratio1": 4.99,
+      "ratio2": 8.0,
+      "ratio3": 13.56,
+      "ratio4": 0.0317,
+      "ratio5": 73.2931,
+      "free_cash_flow_cr": 278.0,
+      "cfo_quality_score": 1.07,
+      "capex_intensity_pct": 4.86,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 6.77,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "DRREDDY",
+      "company_name": "Dr Reddys Laboratories Ltd",
+      "year": "Mar 2024",
+      "ratio1": 19.91,
+      "ratio2": 28.0,
+      "ratio3": 19.74,
+      "ratio4": 0.0709,
+      "ratio5": 51.7076,
+      "free_cash_flow_cr": 509.0,
+      "cfo_quality_score": 1.34,
+      "capex_intensity_pct": 14.4,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 6.42,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "EICHERMOT",
+      "company_name": "Eicher Motors Ltd",
+      "year": "Mar 2024",
+      "ratio1": 24.2,
+      "ratio2": 26.0,
+      "ratio3": 22.17,
+      "ratio4": 0.0232,
+      "ratio5": 114.7059,
+      "free_cash_flow_cr": 890.0,
+      "cfo_quality_score": 1.0,
+      "capex_intensity_pct": 17.14,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 20.56,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "GAIL",
+      "company_name": "GAIL (India) Ltd",
+      "year": "Mar 2024",
+      "ratio1": 7.430000000000001,
+      "ratio2": 11.0,
+      "ratio3": 12.86,
+      "ratio4": 0.283,
+      "ratio5": 23.6245,
+      "free_cash_flow_cr": 4360.0,
+      "cfo_quality_score": 0.99,
+      "capex_intensity_pct": 6.17,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 30.46,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "GODREJCP",
+      "company_name": "Godrej Consumer Products Ltd",
+      "year": "Mar 2024",
+      "ratio1": -3.98,
+      "ratio2": 21.0,
+      "ratio3": -4.45,
+      "ratio4": 0.2558,
+      "ratio5": 2.4129,
+      "free_cash_flow_cr": -1365.0,
+      "cfo_quality_score": 0.13,
+      "capex_intensity_pct": 24.37,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -46.16,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "GRASIM",
+      "company_name": "Grasim Industries Ltd",
+      "year": "Mar 2024",
+      "ratio1": 7.580000000000001,
+      "ratio2": 21.0,
+      "ratio3": 11.2,
+      "ratio4": 1.5471,
+      "ratio5": 3.0158,
+      "free_cash_flow_cr": -33833.0,
+      "cfo_quality_score": 0.61,
+      "capex_intensity_pct": 17.65,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -124.41,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "HAL",
+      "company_name": "Hindustan Aeronautics Ltd",
+      "year": "Mar 2024",
+      "ratio1": 25.0,
+      "ratio2": 32.0,
+      "ratio3": 3816.58,
+      "ratio4": 0.6181,
+      "ratio5": 270.8837,
+      "free_cash_flow_cr": 1814.0,
+      "cfo_quality_score": 1.96,
+      "capex_intensity_pct": 21.11,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 18.61,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "HAVELLS",
+      "company_name": "Havells India Ltd",
+      "year": "Mar 2024",
+      "ratio1": 6.84,
+      "ratio2": 10.0,
+      "ratio3": 17.07,
+      "ratio4": 0.0407,
+      "ratio5": 25.3571,
+      "free_cash_flow_cr": 335.0,
+      "cfo_quality_score": 1.05,
+      "capex_intensity_pct": 8.7,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 17.81,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "HCLTECH",
+      "company_name": "HCL Technologies Ltd",
+      "year": "Mar 2024",
+      "ratio1": 14.29,
+      "ratio2": 22.0,
+      "ratio3": 23.01,
+      "ratio4": 0.0844,
+      "ratio5": 46.4611,
+      "free_cash_flow_cr": 15840.0,
+      "cfo_quality_score": 1.37,
+      "capex_intensity_pct": 6.01,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 65.46,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "year": "Mar 2024",
+      "ratio1": 23.07,
+      "ratio2": -44685.0,
+      "ratio3": 14.34,
+      "ratio4": 6.8088,
+      "ratio5": 1.4008,
+      "free_cash_flow_cr": 35669.0,
+      "cfo_quality_score": 0.23,
+      "capex_intensity_pct": 5.85,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 20.48,
+      "capital_allocation_pattern": "Liquidating Assets"
+    },
+    {
+      "company_id": "HDFCLIFE",
+      "company_name": "HDFC Life Insurance Company Ltd",
+      "year": "Mar 2024",
+      "ratio1": 1.55,
+      "ratio2": 531.0,
+      "ratio3": 10.73,
+      "ratio4": 0.0648,
+      "ratio5": 192.2895,
+      "free_cash_flow_cr": -2893.0,
+      "cfo_quality_score": 5.83,
+      "capex_intensity_pct": 13.42,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -2.87,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "HEROMOTOCO",
+      "company_name": "Hero MotoCorp Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 9.9,
+      "ratio2": 5235.0,
+      "ratio3": 21.14,
+      "ratio4": 0.0342,
+      "ratio5": 47.2685,
+      "free_cash_flow_cr": 3095.0,
+      "cfo_quality_score": 1.21,
+      "capex_intensity_pct": 4.84,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 9.51,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "HINDALCO",
+      "company_name": "Hindalco Industries Ltd",
+      "year": "Mar 2024",
+      "ratio1": 4.7,
+      "ratio2": 23872.0,
+      "ratio3": 9.569999999999999,
+      "ratio4": 0.5309,
+      "ratio5": 126.4654,
+      "free_cash_flow_cr": 9789.0,
+      "cfo_quality_score": 2.77,
+      "capex_intensity_pct": 6.61,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 5.1,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "HINDUNILVR",
+      "company_name": "Hindustan Unilever Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 16.61,
+      "ratio2": 14659.0,
+      "ratio3": 20.07,
+      "ratio4": 0.029,
+      "ratio5": 57.847,
+      "free_cash_flow_cr": 10145.0,
+      "cfo_quality_score": 1.16,
+      "capex_intensity_pct": 8.6,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 21.48,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "ICICIBANK",
+      "company_name": "ICICI Bank Ltd",
+      "year": "Mar 2024",
+      "ratio1": 28.89,
+      "ratio2": -14152.0,
+      "ratio3": 17.99,
+      "ratio4": 6.4456,
+      "ratio5": 1.3009,
+      "free_cash_flow_cr": 12547.0,
+      "cfo_quality_score": 3.87,
+      "capex_intensity_pct": 90.74,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 12.6,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "ICICIGI",
+      "company_name": "ICICI Lombard General Insurance Company Ltd",
+      "year": "Mar 2024",
+      "ratio1": 9.370000000000001,
+      "ratio2": 2577.0,
+      "ratio3": 15.72,
+      "ratio4": 0.0029,
+      "ratio5": 160.0268,
+      "free_cash_flow_cr": 486.0,
+      "cfo_quality_score": 1.46,
+      "capex_intensity_pct": 9.38,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 2.71,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "ICICIPRULI",
+      "company_name": "ICICI Prudential Life Insurance Company Ltd",
+      "year": "Mar 2024",
+      "ratio1": 0.9400000000000001,
+      "ratio2": -1829.0,
+      "ratio3": 7.73,
+      "ratio4": 0.109,
+      "ratio5": 31.0215,
+      "free_cash_flow_cr": 105.0,
+      "cfo_quality_score": 1.93,
+      "capex_intensity_pct": 8.22,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 0.11,
+      "capital_allocation_pattern": "Other"
+    },
+    {
+      "company_id": "INDUSINDBK",
+      "company_name": "IndusInd Bank Ltd",
+      "year": "Mar 2024",
+      "ratio1": 19.56,
+      "ratio2": 2978.0,
+      "ratio3": 14.25,
+      "ratio4": 6.8857,
+      "ratio5": 1.8795,
+      "free_cash_flow_cr": -17468.0,
+      "cfo_quality_score": 2.61,
+      "capex_intensity_pct": 1.37,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": -99.04,
+      "capital_allocation_pattern": "Pre-Revenue"
+    },
+    {
+      "company_id": "INFY",
+      "company_name": "Infosys Ltd",
+      "year": "Mar 2024",
+      "ratio1": 17.08,
+      "ratio2": 24.0,
+      "ratio3": 29.79,
+      "ratio4": 0.0949,
+      "ratio5": 87.5234,
+      "free_cash_flow_cr": 20117.0,
+      "cfo_quality_score": 1.04,
+      "capex_intensity_pct": 3.31,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 55.23,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "IOC",
+      "company_name": "Indian Oil Corporation\n",
+      "year": "Mar 2024",
+      "ratio1": 5.56,
+      "ratio2": 10.0,
+      "ratio3": 23.53,
+      "ratio4": 0.7231,
+      "ratio5": 10.2823,
+      "free_cash_flow_cr": 39635.0,
+      "cfo_quality_score": 0.73,
+      "capex_intensity_pct": 4.05,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 52.4,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "IRCTC",
+      "company_name": "Indian Railway Catering & Tourism Corporation Ltd",
+      "year": "Mar 2024",
+      "ratio1": 26.02,
+      "ratio2": 34.0,
+      "ratio3": 34.4,
+      "ratio4": 0.0186,
+      "ratio5": 82.7368,
+      "free_cash_flow_cr": 667.0,
+      "cfo_quality_score": 0.9,
+      "capex_intensity_pct": 5.04,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 45.5,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "IRFC",
+      "company_name": "Indian Railway Finance Corporation Ltd",
+      "year": "Mar 2024",
+      "ratio1": 24.06,
+      "ratio2": 100.0,
+      "ratio3": 13.04,
+      "ratio4": 8.3784,
+      "ratio5": 1.3195,
+      "free_cash_flow_cr": 7906.0,
+      "cfo_quality_score": -10.8,
+      "capex_intensity_pct": 0.03,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 29.82,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "ITC",
+      "company_name": "ITC Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 29.28,
+      "ratio2": 37.0,
+      "ratio3": 27.85,
+      "ratio4": 0.0041,
+      "ratio5": 362.9625,
+      "free_cash_flow_cr": 18742.0,
+      "cfo_quality_score": 0.94,
+      "capex_intensity_pct": 2.21,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 71.44,
+      "capital_allocation_pattern": "Liquidating Assets"
+    },
+    {
+      "company_id": "JINDALSTEL",
+      "company_name": "Jindal Steel & Power Ltd",
+      "year": "Mar 2024",
+      "ratio1": 11.8,
+      "ratio2": 20.0,
+      "ratio3": 13.41,
+      "ratio4": 0.3717,
+      "ratio5": 8.0046,
+      "free_cash_flow_cr": -2336.0,
+      "cfo_quality_score": -2.8,
+      "capex_intensity_pct": 16.57,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -22.9,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "JIOFIN",
+      "company_name": "Jio Financial Services Ltd",
+      "year": "Mar 2024",
+      "ratio1": 86.52,
+      "ratio2": 84.0,
+      "ratio3": 1.15,
+      "ratio4": 0.0,
+      "ratio5": 198.8,
+      "free_cash_flow_cr": 763.0,
+      "cfo_quality_score": 32.93,
+      "capex_intensity_pct": 77.68,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 48.94,
+      "capital_allocation_pattern": "Other"
+    },
+    {
+      "company_id": "JSWENERGY",
+      "company_name": "JSW Energy Ltd",
+      "year": "Mar 2024",
+      "ratio1": 15.02,
+      "ratio2": 47.0,
+      "ratio3": 8.28,
+      "ratio4": 1.5156,
+      "ratio5": 2.8514,
+      "free_cash_flow_cr": -1963.0,
+      "cfo_quality_score": 2.63,
+      "capex_intensity_pct": 71.37,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -36.47,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "JSWSTEEL",
+      "company_name": "JSW Steel Ltd",
+      "year": "Mar 2024",
+      "ratio1": 5.13,
+      "ratio2": 16.0,
+      "ratio3": 11.55,
+      "ratio4": 1.1328,
+      "ratio5": 3.6591,
+      "free_cash_flow_cr": -2389.0,
+      "cfo_quality_score": 2.78,
+      "capex_intensity_pct": 8.27,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -8.48,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "KOTAKBANK",
+      "company_name": "Kotak Mahindra Bank Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 32.39,
+      "ratio2": -13382.0,
+      "ratio3": 14.01,
+      "ratio4": 4.0037,
+      "ratio5": 1.2364,
+      "free_cash_flow_cr": 6766.0,
+      "cfo_quality_score": 1.48,
+      "capex_intensity_pct": 15.86,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 14.38,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "LICI",
+      "company_name": "Life Insurance Corporation of India",
+      "year": "Mar 2024",
+      "ratio1": 4.84,
+      "ratio2": 4.0,
+      "ratio3": 49.45,
+      "ratio4": 0.0,
+      "ratio5": 371.9375,
+      "free_cash_flow_cr": 853.0,
+      "cfo_quality_score": 9.68,
+      "capex_intensity_pct": 2.99,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 2.6,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "LODHA",
+      "company_name": "Macrotech Developers Ltd",
+      "year": "Mar 2024",
+      "ratio1": 15.06,
+      "ratio2": 26.0,
+      "ratio3": 8.9,
+      "ratio4": 0.4407,
+      "ratio5": 5.6286,
+      "free_cash_flow_cr": -435.0,
+      "cfo_quality_score": 13.31,
+      "capex_intensity_pct": 28.57,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -16.32,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "LT",
+      "company_name": "Larsen & Toubro Ltd",
+      "year": "Mar 2024",
+      "ratio1": 7.03,
+      "ratio2": 14.0,
+      "ratio3": 77.66999999999999,
+      "ratio4": 0.1035,
+      "ratio5": 3.5442,
+      "free_cash_flow_cr": 20445.0,
+      "cfo_quality_score": 1.45,
+      "capex_intensity_pct": 0.99,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 68.46,
+      "capital_allocation_pattern": "Liquidating Assets"
+    },
+    {
+      "company_id": "LTIM",
+      "company_name": "LTIMindtree Ltd",
+      "year": "Mar 2024",
+      "ratio1": 12.91,
+      "ratio2": 18.0,
+      "ratio3": 22.9,
+      "ratio4": 0.1035,
+      "ratio5": 31.9324,
+      "free_cash_flow_cr": 1752.0,
+      "cfo_quality_score": 1.02,
+      "capex_intensity_pct": 11.03,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 27.43,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "M&M",
+      "company_name": "Mahindra & Mahindra Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 8.82,
+      "ratio2": 18.0,
+      "ratio3": 18.54,
+      "ratio4": 1.6414,
+      "ratio5": 3.7647,
+      "free_cash_flow_cr": -11245.0,
+      "cfo_quality_score": 3.32,
+      "capex_intensity_pct": 4.04,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": -45.18,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "MARUTI",
+      "company_name": "Maruti Suzuki India Ltd",
+      "year": "Mar 2024",
+      "ratio1": 9.51,
+      "ratio2": 13.0,
+      "ratio3": 15.75,
+      "ratio4": 0.0014,
+      "ratio5": 117.9072,
+      "free_cash_flow_cr": 4936.0,
+      "cfo_quality_score": 1.13,
+      "capex_intensity_pct": 8.36,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 26.5,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "MOTHERSON",
+      "company_name": "Samvardhana Motherson International Ltd",
+      "year": "Mar 2024",
+      "ratio1": 3.06,
+      "ratio2": 9.0,
+      "ratio3": 11.55,
+      "ratio4": 0.7617,
+      "ratio5": 5.2247,
+      "free_cash_flow_cr": 925.0,
+      "cfo_quality_score": 3.1,
+      "capex_intensity_pct": 6.73,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 9.92,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "NAUKRI",
+      "company_name": "Info Edge (India) Ltd",
+      "year": "Mar 2024",
+      "ratio1": 23.46,
+      "ratio2": 28.0,
+      "ratio3": 1.97,
+      "ratio4": 0.0081,
+      "ratio5": 28.9714,
+      "free_cash_flow_cr": -150.0,
+      "cfo_quality_score": -1.46,
+      "capex_intensity_pct": 33.6,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -21.1,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "NESTLEIND",
+      "company_name": "Nestle India Ltd",
+      "year": "Mar 2024",
+      "ratio1": 16.12,
+      "ratio2": 24.0,
+      "ratio3": 117.75,
+      "ratio4": 0.1033,
+      "ratio5": 41.1862,
+      "free_cash_flow_cr": 2938.0,
+      "cfo_quality_score": 1.11,
+      "capex_intensity_pct": 5.07,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 50.54,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "NHPC",
+      "company_name": "NHPC Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 41.82,
+      "ratio2": 50.0,
+      "ratio3": 10.41,
+      "ratio4": 0.8413,
+      "ratio5": 11.2434,
+      "free_cash_flow_cr": 970.0,
+      "cfo_quality_score": 1.27,
+      "capex_intensity_pct": 61.96,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 20.18,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "NTPC",
+      "company_name": "NTPC Ltd",
+      "year": "Mar 2024",
+      "ratio1": 11.95,
+      "ratio2": 29.0,
+      "ratio3": 13.27,
+      "ratio4": 1.4755,
+      "ratio5": 4.605,
+      "free_cash_flow_cr": 8644.0,
+      "cfo_quality_score": 2.26,
+      "capex_intensity_pct": 18.01,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 16.8,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "ONGC",
+      "company_name": "Oil & Natural Gas Corpn Ltd",
+      "year": "Mar 2024",
+      "ratio1": 9.66,
+      "ratio2": 17.0,
+      "ratio3": 16.94,
+      "ratio4": 0.4544,
+      "ratio5": 11.3613,
+      "free_cash_flow_cr": 42060.0,
+      "cfo_quality_score": 2.86,
+      "capex_intensity_pct": 9.67,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 40.9,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "PFC",
+      "company_name": "Power Finance Corporation Ltd",
+      "year": "Mar 2024",
+      "ratio1": 28.92,
+      "ratio2": 37.0,
+      "ratio3": 26.16,
+      "ratio4": 8.5219,
+      "ratio5": 0.5804,
+      "free_cash_flow_cr": -101229.0,
+      "cfo_quality_score": -3.03,
+      "capex_intensity_pct": 3.73,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": -301.52,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "PIDILITIND",
+      "company_name": "Pidilite Industries Ltd",
+      "year": "Mar 2024",
+      "ratio1": 14.11,
+      "ratio2": 22.0,
+      "ratio3": 20.78,
+      "ratio4": 0.0454,
+      "ratio5": 54.3333,
+      "free_cash_flow_cr": 955.0,
+      "cfo_quality_score": 1.19,
+      "capex_intensity_pct": 14.29,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 35.27,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "ratio1": 8.4,
+      "ratio2": null,
+      "ratio3": 61.31999999999999,
+      "ratio4": 3.6843,
+      "ratio5": null,
+      "free_cash_flow_cr": -29445.0,
+      "cfo_quality_score": -3.05,
+      "capex_intensity_pct": 1.38,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": null,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "ratio1": 8.4,
+      "ratio2": null,
+      "ratio3": 61.31999999999999,
+      "ratio4": 3.6843,
+      "ratio5": null,
+      "free_cash_flow_cr": -29445.0,
+      "cfo_quality_score": -3.05,
+      "capex_intensity_pct": 1.38,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": null,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "ratio1": 8.4,
+      "ratio2": null,
+      "ratio3": 61.31999999999999,
+      "ratio4": 3.6843,
+      "ratio5": null,
+      "free_cash_flow_cr": -29445.0,
+      "cfo_quality_score": -3.05,
+      "capex_intensity_pct": 1.38,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": null,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "ratio1": 8.4,
+      "ratio2": null,
+      "ratio3": 61.31999999999999,
+      "ratio4": 3.6843,
+      "ratio5": null,
+      "free_cash_flow_cr": -29445.0,
+      "cfo_quality_score": -3.05,
+      "capex_intensity_pct": 1.38,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": null,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "PNB",
+      "company_name": "Punjab National Bank",
+      "year": "Mar 2024",
+      "ratio1": 8.4,
+      "ratio2": null,
+      "ratio3": 61.31999999999999,
+      "ratio4": 3.6843,
+      "ratio5": null,
+      "free_cash_flow_cr": -29445.0,
+      "cfo_quality_score": -3.05,
+      "capex_intensity_pct": 1.38,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": null,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "year": "Mar 2024",
+      "ratio1": 33.97,
+      "ratio2": 87.0,
+      "ratio3": 17.87,
+      "ratio4": 1.4173,
+      "ratio5": 4.603,
+      "free_cash_flow_cr": 24176.0,
+      "cfo_quality_score": 2.31,
+      "capex_intensity_pct": 28.61,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 60.7,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "year": "Mar 2024",
+      "ratio1": 33.97,
+      "ratio2": 87.0,
+      "ratio3": 17.87,
+      "ratio4": 1.4173,
+      "ratio5": 4.603,
+      "free_cash_flow_cr": 24176.0,
+      "cfo_quality_score": 2.31,
+      "capex_intensity_pct": 28.61,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 60.7,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "RECLTD",
+      "company_name": "REC Ltd",
+      "year": "Mar 2024",
+      "ratio1": 29.77,
+      "ratio2": 101.0,
+      "ratio3": 20.4,
+      "ratio4": 6.4249,
+      "ratio5": 1.6005,
+      "free_cash_flow_cr": -59554.0,
+      "cfo_quality_score": -3.86,
+      "capex_intensity_pct": 3.85,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": -124.37,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "RELIANCE",
+      "company_name": "Reliance Industries Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 8.790000000000001,
+      "ratio2": 18.0,
+      "ratio3": 9.959999999999999,
+      "ratio4": 0.5785,
+      "ratio5": 7.7289,
+      "free_cash_flow_cr": 45207.0,
+      "cfo_quality_score": 1.61,
+      "capex_intensity_pct": 12.63,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 27.82,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "SBILIFE",
+      "company_name": "SBI Life Insurance Company Ltd",
+      "year": "Mar 2024",
+      "ratio1": 1.43,
+      "ratio2": 0.0,
+      "ratio3": 12.7,
+      "ratio4": 0.0,
+      "ratio5": 240.3333,
+      "free_cash_flow_cr": -2099.0,
+      "cfo_quality_score": 15.3,
+      "capex_intensity_pct": 23.65,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": -853.25,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "SHREECEM",
+      "company_name": "Shree Cement Ltd",
+      "year": "Mar 2024",
+      "ratio1": 8.450000000000001,
+      "ratio2": 22.0,
+      "ratio3": 8.37,
+      "ratio4": 0.08,
+      "ratio5": 19.8256,
+      "free_cash_flow_cr": 1929.0,
+      "cfo_quality_score": 1.9,
+      "capex_intensity_pct": 6.91,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 42.7,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "SHRIRAMFIN",
+      "company_name": "Shriram Finance Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 20.33,
+      "ratio2": 29.0,
+      "ratio3": 15.12,
+      "ratio4": 3.994,
+      "ratio5": 0.6767,
+      "free_cash_flow_cr": -31359.0,
+      "cfo_quality_score": -2.61,
+      "capex_intensity_pct": 0.71,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": -298.0,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "SIEMENS",
+      "company_name": "Siemens Ltd",
+      "year": "Sep 2024",
+      "ratio1": 12.22,
+      "ratio2": 14.0,
+      "ratio3": 17.7,
+      "ratio4": 0.0182,
+      "ratio5": 67.15,
+      "free_cash_flow_cr": 1168.0,
+      "cfo_quality_score": 0.84,
+      "capex_intensity_pct": 2.26,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 37.63,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "SUNPHARMA",
+      "company_name": "Sun Pharmaceuticals Industries Ltd",
+      "year": "Mar 2024",
+      "ratio1": 19.82,
+      "ratio2": 28.0,
+      "ratio3": 15.09,
+      "ratio4": 0.0514,
+      "ratio5": 58.3319,
+      "free_cash_flow_cr": 11372.0,
+      "cfo_quality_score": 1.76,
+      "capex_intensity_pct": 1.57,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 87.36,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "TATACONSUM",
+      "company_name": "Tata Consumer Products Ltd",
+      "year": "Mar 2024",
+      "ratio1": 7.99,
+      "ratio2": 15.0,
+      "ratio3": 7.57,
+      "ratio4": 0.2165,
+      "ratio5": 25.3218,
+      "free_cash_flow_cr": 26.0,
+      "cfo_quality_score": 1.67,
+      "capex_intensity_pct": 12.57,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 1.14,
+      "capital_allocation_pattern": "Mixed"
+    },
+    {
+      "company_id": "TATAMOTORS",
+      "company_name": "Tata Motors Ltd",
+      "year": "Mar 2024",
+      "ratio1": 7.26,
+      "ratio2": 14.0,
+      "ratio3": 37.46,
+      "ratio4": 1.2631,
+      "ratio5": 6.5302,
+      "free_cash_flow_cr": 45133.0,
+      "cfo_quality_score": 1.93,
+      "capex_intensity_pct": 5.2,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 75.81,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "TATAPOWER",
+      "company_name": "Tata Power Company Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 6.97,
+      "ratio2": 17.0,
+      "ratio3": 13.23,
+      "ratio4": 1.6593,
+      "ratio5": 3.0544,
+      "free_cash_flow_cr": 3569.0,
+      "cfo_quality_score": 3.87,
+      "capex_intensity_pct": 14.69,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 33.25,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "TATASTEEL",
+      "company_name": "Tata Steel Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": -2.14,
+      "ratio2": 10.0,
+      "ratio3": -5.33,
+      "ratio4": 0.9462,
+      "ratio5": 2.1634,
+      "free_cash_flow_cr": 6048.0,
+      "cfo_quality_score": 4.44,
+      "capex_intensity_pct": 6.22,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 27.18,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "year": "Mar 2024",
+      "ratio1": 19.14,
+      "ratio2": 27.0,
+      "ratio3": 50.94,
+      "ratio4": 0.0886,
+      "ratio5": 87.0951,
+      "free_cash_flow_cr": 50429.0,
+      "cfo_quality_score": 1.04,
+      "capex_intensity_pct": 2.53,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 78.43,
+      "capital_allocation_pattern": "Liquidating Assets"
+    },
+    {
+      "company_id": "TECHM",
+      "company_name": "Tech Mahindra Ltd",
+      "year": "Mar 2024",
+      "ratio1": 4.61,
+      "ratio2": 9.0,
+      "ratio3": 8.99,
+      "ratio4": 0.0951,
+      "ratio5": 13.8597,
+      "free_cash_flow_cr": 5058.0,
+      "cfo_quality_score": 1.71,
+      "capex_intensity_pct": 2.53,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 112.25,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "TECHM",
+      "company_name": "Tech Mahindra Ltd",
+      "year": "Mar 2024",
+      "ratio1": 4.61,
+      "ratio2": 9.0,
+      "ratio3": 8.99,
+      "ratio4": 0.0951,
+      "ratio5": 13.8597,
+      "free_cash_flow_cr": 5058.0,
+      "cfo_quality_score": 1.71,
+      "capex_intensity_pct": 2.53,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 112.25,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "TITAN",
+      "company_name": "Titan Company Ltd\n",
+      "year": "Mar 2024",
+      "ratio1": 6.84,
+      "ratio2": 10.0,
+      "ratio3": 37.22,
+      "ratio4": 1.6531,
+      "ratio5": 9.412,
+      "free_cash_flow_cr": 1506.0,
+      "cfo_quality_score": 0.92,
+      "capex_intensity_pct": 0.37,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 28.46,
+      "capital_allocation_pattern": "Reinvestor"
+    },
+    {
+      "company_id": "TORNTPHARM",
+      "company_name": "Torrent Pharmaceuticals Ltd",
+      "year": "Mar 2024",
+      "ratio1": 15.44,
+      "ratio2": 31.0,
+      "ratio3": 24.15,
+      "ratio4": 0.5866,
+      "ratio5": 9.9266,
+      "free_cash_flow_cr": 3106.0,
+      "cfo_quality_score": 1.83,
+      "capex_intensity_pct": 1.49,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": 92.22,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "TRENT",
+      "company_name": "Trent Ltd",
+      "year": "Mar 2024",
+      "ratio1": 11.94,
+      "ratio2": 16.0,
+      "ratio3": 36.31,
+      "ratio4": 0.4309,
+      "ratio5": 8.0435,
+      "free_cash_flow_cr": 841.0,
+      "cfo_quality_score": 1.18,
+      "capex_intensity_pct": 4.11,
+      "capex_label": "Moderate",
+      "fcf_conversion_pct": 42.67,
+      "capital_allocation_pattern": "Shareholder Returns"
+    },
+    {
+      "company_id": "TVSMOTOR",
+      "company_name": "TVS Motor Company Ltd",
+      "year": "Mar 2024",
+      "ratio1": 4.54,
+      "ratio2": 14.0,
+      "ratio3": 26.22,
+      "ratio4": 3.8334,
+      "ratio5": 2.9077,
+      "free_cash_flow_cr": -2254.0,
+      "cfo_quality_score": -0.75,
+      "capex_intensity_pct": 2.56,
+      "capex_label": "Asset Light",
+      "fcf_conversion_pct": -40.98,
+      "capital_allocation_pattern": "Growth Funded by Debt"
+    },
+    {
+      "company_id": "INDIGO",
+      "company_name": "Interglobe Aviation Ltd",
+      "year": "Mar 2024",
+      "ratio1": 11.85,
+      "ratio2": 16331.0,
+      "ratio3": 892.57,
+      "ratio4": 0.0186,
+      "ratio5": 22.6126,
+      "free_cash_flow_cr": 9424.0,
+      "cfo_quality_score": -14.34,
+      "capex_intensity_pct": 17.07,
+      "capex_label": "Capital Intensive",
+      "fcf_conversion_pct": 17.93,
+      "capital_allocation_pattern": "Reinvestor"
+    }
+  ],
+  "table_counts": {
+    "companies": 92,
+    "profitandloss": 1276,
+    "balancesheet": 1312,
+    "cashflow": 1187,
+    "analysis": 20,
+    "documents": 1585,
+    "prosandcons": 16,
+    "sectors": 92,
+    "stock_prices": 5520,
+    "market_cap": 552,
+    "financial_ratios": 1184,
+    "peer_groups": 56
+  },
+  "roe_roce_scatter": [
+    {
+      "id": "ABB",
+      "company_name": "Abbott India Ltd",
+      "roe_percentage": 34.9,
+      "roce_percentage": 46.0,
+      "sector": "Industrials"
+    },
+    {
+      "id": "ADANIENSOL",
+      "company_name": "Adani Energy Solutions Ltd",
+      "roe_percentage": 8.59,
+      "roce_percentage": 9.0,
+      "sector": "Energy"
+    },
+    {
+      "id": "ADANIENT",
+      "company_name": "Adani Enterprises Ltd",
+      "roe_percentage": 13.64,
+      "roce_percentage": 11.6,
+      "sector": "Industrials"
+    },
+    {
+      "id": "ADANIGREEN",
+      "company_name": "Adani Green Energy Ltd",
+      "roe_percentage": 14.7,
+      "roce_percentage": 96.5,
+      "sector": "Energy"
+    },
+    {
+      "id": "ADANIPORTS",
+      "company_name": "Adani Ports & Special Economic Zone Ltd\n",
+      "roe_percentage": 18.1,
+      "roce_percentage": 12.9,
+      "sector": "Industrials"
+    },
+    {
+      "id": "ADANIPOWER",
+      "company_name": "Adani Power Ltd",
+      "roe_percentage": 57.1,
+      "roce_percentage": 32.2,
+      "sector": "Energy"
+    },
+    {
+      "id": "AMBUJACEM",
+      "company_name": "Ambuja Cements Ltd",
+      "roe_percentage": 9.24,
+      "roce_percentage": 12.8,
+      "sector": "Materials"
+    },
+    {
+      "id": "APOLLOHOSP",
+      "company_name": "Apollo Hospitals\nChain of Indian private hospitals",
+      "roe_percentage": 13.81,
+      "roce_percentage": 17.2,
+      "sector": "Healthcare"
+    },
+    {
+      "id": "ASIANPAINT",
+      "company_name": "Asian Paints\nIndian Multi-National Paint and Coating Manufacturing Company",
+      "roe_percentage": 31.45,
+      "roce_percentage": 41.75,
+      "sector": "Materials"
+    },
+    {
+      "id": "ATGL",
+      "company_name": "Adani Total Gas Ltd",
+      "roe_percentage": 20.5,
+      "roce_percentage": 21.2,
+      "sector": "Energy"
+    },
+    {
+      "id": "AXISBANK",
+      "company_name": "Axis Bank Ltd",
+      "roe_percentage": 18.4,
+      "roce_percentage": 7.06,
+      "sector": "Financials"
+    },
+    {
+      "id": "BAJAJ-AUTO",
+      "company_name": "Bajaj Auto Ltd",
+      "roe_percentage": 26.5,
+      "roce_percentage": 33.5,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "BAJAJFINSV",
+      "company_name": "Bajaj Finserv Ltd",
+      "roe_percentage": 11.72,
+      "roce_percentage": 21.14,
+      "sector": "Financials"
+    },
+    {
+      "id": "BAJAJHLDNG",
+      "company_name": "Bajaj Holdings & Investment Ltd",
+      "roe_percentage": 14.8,
+      "roce_percentage": 13.1,
+      "sector": "Financials"
+    },
+    {
+      "id": "BAJFINANCE",
+      "company_name": "Bajaj Finance Ltd",
+      "roe_percentage": 22.1,
+      "roce_percentage": 11.9,
+      "sector": "Financials"
+    },
+    {
+      "id": "BANKBARODA",
+      "company_name": "Bank of Baroda",
+      "roe_percentage": 16.7,
+      "roce_percentage": 6.33,
+      "sector": "Financials"
+    },
+    {
+      "id": "BEL",
+      "company_name": "Bharat Electronics Ltd",
+      "roe_percentage": 26.3,
+      "roce_percentage": 34.6,
+      "sector": "Industrials"
+    },
+    {
+      "id": "BHARTIARTL",
+      "company_name": "Bharti Airtel Ltd",
+      "roe_percentage": 14.9,
+      "roce_percentage": 13.1,
+      "sector": "Communication Services"
+    },
+    {
+      "id": "BHEL",
+      "company_name": "Bharat Heavy Electricals Limited\n",
+      "roe_percentage": 1.05,
+      "roce_percentage": 3.28,
+      "sector": "Industrials"
+    },
+    {
+      "id": "BOSCHLTD",
+      "company_name": "Bosch Ltd",
+      "roe_percentage": 16.0,
+      "roce_percentage": 20.6,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "BPCL",
+      "company_name": "Bharat Petroleum Corporation Ltd",
+      "roe_percentage": 41.9,
+      "roce_percentage": 32.1,
+      "sector": "Energy"
+    },
+    {
+      "id": "BRITANNIA",
+      "company_name": "Britannia Industries Ltd",
+      "roe_percentage": 57.1,
+      "roce_percentage": 48.9,
+      "sector": "Consumer Staples"
+    },
+    {
+      "id": "CANBK",
+      "company_name": "Canara Bank",
+      "roe_percentage": 17.9,
+      "roce_percentage": 6.63,
+      "sector": "Financials"
+    },
+    {
+      "id": "CHOLAFIN",
+      "company_name": "Cholamandalam Investment & Finance Company Ltd",
+      "roe_percentage": 20.2,
+      "roce_percentage": 10.4,
+      "sector": "Financials"
+    },
+    {
+      "id": "CIPLA",
+      "company_name": "Cipla Ltd\n",
+      "roe_percentage": 16.8,
+      "roce_percentage": 22.8,
+      "sector": "Healthcare"
+    },
+    {
+      "id": "COALINDIA",
+      "company_name": "Coal India Ltd",
+      "roe_percentage": 52.0,
+      "roce_percentage": 63.6,
+      "sector": "Materials"
+    },
+    {
+      "id": "DABUR",
+      "company_name": "Dabur India Ltd",
+      "roe_percentage": 19.2,
+      "roce_percentage": 22.3,
+      "sector": "Consumer Staples"
+    },
+    {
+      "id": "DIVISLAB",
+      "company_name": "Divis Laboratories Ltd",
+      "roe_percentage": 12.2,
+      "roce_percentage": 16.5,
+      "sector": "Healthcare"
+    },
+    {
+      "id": "DLF",
+      "company_name": "DLF Ltd",
+      "roe_percentage": 6.95,
+      "roce_percentage": 5.74,
+      "sector": "Real Estate"
+    },
+    {
+      "id": "DMART",
+      "company_name": "Avenue Supermarts Ltd",
+      "roe_percentage": 14.5,
+      "roce_percentage": 19.4,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "DRREDDY",
+      "company_name": "Dr Reddys Laboratories Ltd",
+      "roe_percentage": 21.4,
+      "roce_percentage": 26.5,
+      "sector": "Healthcare"
+    },
+    {
+      "id": "EICHERMOT",
+      "company_name": "Eicher Motors Ltd",
+      "roe_percentage": 24.2,
+      "roce_percentage": 31.1,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "GAIL",
+      "company_name": "GAIL (India) Ltd",
+      "roe_percentage": 14.0,
+      "roce_percentage": 14.7,
+      "sector": "Energy"
+    },
+    {
+      "id": "GODREJCP",
+      "company_name": "Godrej Consumer Products Ltd",
+      "roe_percentage": 6.77,
+      "roce_percentage": 26.49,
+      "sector": "Consumer Staples"
+    },
+    {
+      "id": "GRASIM",
+      "company_name": "Grasim Industries Ltd",
+      "roe_percentage": 6.9,
+      "roce_percentage": 9.3,
+      "sector": "Industrials"
+    },
+    {
+      "id": "HAL",
+      "company_name": "Hindustan Aeronautics Ltd",
+      "roe_percentage": 28.9,
+      "roce_percentage": 38.9,
+      "sector": "Industrials"
+    },
+    {
+      "id": "HAVELLS",
+      "company_name": "Havells India Ltd",
+      "roe_percentage": 18.0,
+      "roce_percentage": 24.4,
+      "sector": "Industrials"
+    },
+    {
+      "id": "HCLTECH",
+      "company_name": "HCL Technologies Ltd",
+      "roe_percentage": 23.3,
+      "roce_percentage": 29.6,
+      "sector": "Information Technology"
+    },
+    {
+      "id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "roe_percentage": 17.1,
+      "roce_percentage": 7.67,
+      "sector": "Financials"
+    },
+    {
+      "id": "HDFCLIFE",
+      "company_name": "HDFC Life Insurance Company Ltd",
+      "roe_percentage": 11.4,
+      "roce_percentage": 6.61,
+      "sector": "Financials"
+    },
+    {
+      "id": "HEROMOTOCO",
+      "company_name": "Hero MotoCorp Ltd\n",
+      "roe_percentage": 22.0,
+      "roce_percentage": 29.1,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "HINDALCO",
+      "company_name": "Hindalco Industries Ltd",
+      "roe_percentage": 10.2,
+      "roce_percentage": 11.3,
+      "sector": "Materials"
+    },
+    {
+      "id": "HINDUNILVR",
+      "company_name": "Hindustan Unilever Ltd\n",
+      "roe_percentage": 20.2,
+      "roce_percentage": 27.2,
+      "sector": "Consumer Staples"
+    },
+    {
+      "id": "ICICIBANK",
+      "company_name": "ICICI Bank Ltd",
+      "roe_percentage": 18.8,
+      "roce_percentage": 7.6,
+      "sector": "Financials"
+    },
+    {
+      "id": "ICICIGI",
+      "company_name": "ICICI Lombard General Insurance Company Ltd",
+      "roe_percentage": 17.0,
+      "roce_percentage": 22.5,
+      "sector": "Financials"
+    },
+    {
+      "id": "ICICIPRULI",
+      "company_name": "ICICI Prudential Life Insurance Company Ltd",
+      "roe_percentage": 8.07,
+      "roce_percentage": 8.75,
+      "sector": "Financials"
+    },
+    {
+      "id": "INDUSINDBK",
+      "company_name": "IndusInd Bank Ltd",
+      "roe_percentage": 15.2,
+      "roce_percentage": 7.93,
+      "sector": "Financials"
+    },
+    {
+      "id": "INFY",
+      "company_name": "Infosys Ltd",
+      "roe_percentage": 31.8,
+      "roce_percentage": 40.0,
+      "sector": "Information Technology"
+    },
+    {
+      "id": "IOC",
+      "company_name": "Indian Oil Corporation\n",
+      "roe_percentage": 25.44,
+      "roce_percentage": 21.31,
+      "sector": "Energy"
+    },
+    {
+      "id": "IRCTC",
+      "company_name": "Indian Railway Catering & Tourism Corporation Ltd",
+      "roe_percentage": 40.4,
+      "roce_percentage": 53.8,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "IRFC",
+      "company_name": "Indian Railway Finance Corporation Ltd",
+      "roe_percentage": 13.7,
+      "roce_percentage": 5.73,
+      "sector": "Financials"
+    },
+    {
+      "id": "ITC",
+      "company_name": "ITC Ltd\n",
+      "roe_percentage": 29.47,
+      "roce_percentage": 34.76,
+      "sector": "Consumer Staples"
+    },
+    {
+      "id": "JINDALSTEL",
+      "company_name": "Jindal Steel & Power Ltd",
+      "roe_percentage": 14.1,
+      "roce_percentage": 13.2,
+      "sector": "Materials"
+    },
+    {
+      "id": "JIOFIN",
+      "company_name": "Jio Financial Services Ltd",
+      "roe_percentage": 1.82,
+      "roce_percentage": 2.16,
+      "sector": "Financials"
+    },
+    {
+      "id": "JSWENERGY",
+      "company_name": "JSW Energy Ltd",
+      "roe_percentage": 8.4,
+      "roce_percentage": 8.59,
+      "sector": "Energy"
+    },
+    {
+      "id": "JSWSTEEL",
+      "company_name": "JSW Steel Ltd",
+      "roe_percentage": 11.66,
+      "roce_percentage": 13.36,
+      "sector": "Materials"
+    },
+    {
+      "id": "KOTAKBANK",
+      "company_name": "Kotak Mahindra Bank Ltd\n",
+      "roe_percentage": 15.1,
+      "roce_percentage": 7.86,
+      "sector": "Financials"
+    },
+    {
+      "id": "LICI",
+      "company_name": "Life Insurance Corporation of India",
+      "roe_percentage": 63.61,
+      "roce_percentage": 63.79,
+      "sector": "Financials"
+    },
+    {
+      "id": "LODHA",
+      "company_name": "Macrotech Developers Ltd",
+      "roe_percentage": 10.7,
+      "roce_percentage": 11.1,
+      "sector": "Real Estate"
+    },
+    {
+      "id": "LT",
+      "company_name": "Larsen & Toubro Ltd",
+      "roe_percentage": 10.49,
+      "roce_percentage": 17.18,
+      "sector": "Industrials"
+    },
+    {
+      "id": "LTIM",
+      "company_name": "LTIMindtree Ltd",
+      "roe_percentage": 26.04,
+      "roce_percentage": 34.1,
+      "sector": "Information Technology"
+    },
+    {
+      "id": "M&M",
+      "company_name": "Mahindra & Mahindra Ltd\n",
+      "roe_percentage": 17.99,
+      "roce_percentage": 26.98,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "MARUTI",
+      "company_name": "Maruti Suzuki India Ltd",
+      "roe_percentage": 15.75,
+      "roce_percentage": 23.67,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "MOTHERSON",
+      "company_name": "Samvardhana Motherson International Ltd",
+      "roe_percentage": 11.8,
+      "roce_percentage": 13.7,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "NAUKRI",
+      "company_name": "Info Edge (India) Ltd",
+      "roe_percentage": 2.44,
+      "roce_percentage": 3.65,
+      "sector": "Communication Services"
+    },
+    {
+      "id": "NESTLEIND",
+      "company_name": "Nestle India Ltd",
+      "roe_percentage": 135.61,
+      "roce_percentage": 185.43,
+      "sector": "Consumer Staples"
+    },
+    {
+      "id": "NHPC",
+      "company_name": "NHPC Ltd\n",
+      "roe_percentage": 9.61,
+      "roce_percentage": 7.67,
+      "sector": "Energy"
+    },
+    {
+      "id": "NTPC",
+      "company_name": "NTPC Ltd",
+      "roe_percentage": 12.52,
+      "roce_percentage": 10.58,
+      "sector": "Energy"
+    },
+    {
+      "id": "ONGC",
+      "company_name": "Oil & Natural Gas Corpn Ltd",
+      "roe_percentage": 14.32,
+      "roce_percentage": 19.71,
+      "sector": "Energy"
+    },
+    {
+      "id": "PFC",
+      "company_name": "Power Finance Corporation Ltd",
+      "roe_percentage": 19.49,
+      "roce_percentage": 9.96,
+      "sector": "Financials"
+    },
+    {
+      "id": "PIDILITIND",
+      "company_name": "Pidilite Industries Ltd",
+      "roe_percentage": 22.8,
+      "roce_percentage": 29.7,
+      "sector": "Materials"
+    },
+    {
+      "id": "PNB",
+      "company_name": "Punjab National Bank",
+      "roe_percentage": 8.7,
+      "roce_percentage": 1.63,
+      "sector": "Financials"
+    },
+    {
+      "id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "roe_percentage": 19.0,
+      "roce_percentage": 13.2,
+      "sector": "Energy"
+    },
+    {
+      "id": "RECLTD",
+      "company_name": "REC Ltd",
+      "roe_percentage": 22.2,
+      "roce_percentage": 10.0,
+      "sector": "Financials"
+    },
+    {
+      "id": "RELIANCE",
+      "company_name": "Reliance Industries Ltd\n",
+      "roe_percentage": 9.25,
+      "roce_percentage": 9.61,
+      "sector": "Energy"
+    },
+    {
+      "id": "SBILIFE",
+      "company_name": "SBI Life Insurance Company Ltd",
+      "roe_percentage": 12.0,
+      "roce_percentage": 13.2,
+      "sector": "Financials"
+    },
+    {
+      "id": "SBIN",
+      "company_name": "State Bank of India",
+      "roe_percentage": 17.3,
+      "roce_percentage": 6.16,
+      "sector": "Financials"
+    },
+    {
+      "id": "SHREECEM",
+      "company_name": "Shree Cement Ltd",
+      "roe_percentage": 12.2,
+      "roce_percentage": 14.8,
+      "sector": "Materials"
+    },
+    {
+      "id": "SHRIRAMFIN",
+      "company_name": "Shriram Finance Ltd\n",
+      "roe_percentage": 15.9,
+      "roce_percentage": 11.3,
+      "sector": "Financials"
+    },
+    {
+      "id": "SIEMENS",
+      "company_name": "Siemens Ltd",
+      "roe_percentage": 19.1,
+      "roce_percentage": 25.6,
+      "sector": "Industrials"
+    },
+    {
+      "id": "SUNPHARMA",
+      "company_name": "Sun Pharmaceuticals Industries Ltd",
+      "roe_percentage": 16.7,
+      "roce_percentage": 17.3,
+      "sector": "Healthcare"
+    },
+    {
+      "id": "TATACONSUM",
+      "company_name": "Tata Consumer Products Ltd",
+      "roe_percentage": 8.32,
+      "roce_percentage": 10.6,
+      "sector": "Consumer Staples"
+    },
+    {
+      "id": "TATAMOTORS",
+      "company_name": "Tata Motors Ltd",
+      "roe_percentage": 49.4,
+      "roce_percentage": 20.1,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "TATAPOWER",
+      "company_name": "Tata Power Company Ltd\n",
+      "roe_percentage": 11.3,
+      "roce_percentage": 11.1,
+      "sector": "Energy"
+    },
+    {
+      "id": "TATASTEEL",
+      "company_name": "Tata Steel Ltd\n",
+      "roe_percentage": 6.55,
+      "roce_percentage": 7.02,
+      "sector": "Materials"
+    },
+    {
+      "id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "roe_percentage": 0.52,
+      "roce_percentage": 64.3,
+      "sector": "Information Technology"
+    },
+    {
+      "id": "TECHM",
+      "company_name": "Tech Mahindra Ltd",
+      "roe_percentage": 8.63,
+      "roce_percentage": 11.9,
+      "sector": "Information Technology"
+    },
+    {
+      "id": "TITAN",
+      "company_name": "Titan Company Ltd\n",
+      "roe_percentage": 32.9,
+      "roce_percentage": 22.7,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "id": "TORNTPHARM",
+      "company_name": "Torrent Pharmaceuticals Ltd",
+      "roe_percentage": 24.2,
+      "roce_percentage": 23.2,
+      "sector": "Healthcare"
+    },
+    {
+      "id": "TRENT",
+      "company_name": "Trent Ltd",
+      "roe_percentage": 27.2,
+      "roce_percentage": 23.8,
+      "sector": "Consumer Discretionary"
+    }
+  ],
+  "debt_free_count": 17,
+  "sector_roe": [
+    {
+      "sector": "Consumer Staples",
+      "avg_roe": 39.52,
+      "avg_roce": 50.81,
+      "company_count": 7
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "avg_roe": 24.89,
+      "avg_roce": 26.54,
+      "company_count": 12
+    },
+    {
+      "sector": "Energy",
+      "avg_roe": 19.04,
+      "avg_roce": 21.96,
+      "company_count": 14
+    },
+    {
+      "sector": "Materials",
+      "avg_roe": 18.91,
+      "avg_roce": 23.06,
+      "company_count": 9
+    },
+    {
+      "sector": "Information Technology",
+      "avg_roe": 18.06,
+      "avg_roce": 35.98,
+      "company_count": 5
+    },
+    {
+      "sector": "Industrials",
+      "avg_roe": 17.74,
+      "avg_roce": 22.38,
+      "company_count": 10
+    },
+    {
+      "sector": "Healthcare",
+      "avg_roe": 17.52,
+      "avg_roce": 20.58,
+      "company_count": 6
+    },
+    {
+      "sector": "Financials",
+      "avg_roe": 17.36,
+      "avg_roce": 11.71,
+      "company_count": 23
+    },
+    {
+      "sector": "Real Estate",
+      "avg_roe": 8.82,
+      "avg_roce": 8.42,
+      "company_count": 2
+    },
+    {
+      "sector": "Communication Services",
+      "avg_roe": 8.67,
+      "avg_roce": 8.38,
+      "company_count": 2
+    }
+  ],
+  "top_fcf": [
+    {
+      "company_id": "TCS",
+      "company_name": "Tata Consultancy Services Ltd",
+      "free_cash_flow_cr": 50429.0,
+      "capex_label": "Asset Light",
+      "cfo_quality_score": 1.04,
+      "sector": "Information Technology"
+    },
+    {
+      "company_id": "RELIANCE",
+      "company_name": "Reliance Industries Ltd\n",
+      "free_cash_flow_cr": 45207.0,
+      "capex_label": "Capital Intensive",
+      "cfo_quality_score": 1.61,
+      "sector": "Energy"
+    },
+    {
+      "company_id": "TATAMOTORS",
+      "company_name": "Tata Motors Ltd",
+      "free_cash_flow_cr": 45133.0,
+      "capex_label": "Moderate",
+      "cfo_quality_score": 1.93,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "company_id": "ONGC",
+      "company_name": "Oil & Natural Gas Corpn Ltd",
+      "free_cash_flow_cr": 42060.0,
+      "capex_label": "Capital Intensive",
+      "cfo_quality_score": 2.86,
+      "sector": "Energy"
+    },
+    {
+      "company_id": "IOC",
+      "company_name": "Indian Oil Corporation\n",
+      "free_cash_flow_cr": 39635.0,
+      "capex_label": "Moderate",
+      "cfo_quality_score": 0.73,
+      "sector": "Energy"
+    },
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "free_cash_flow_cr": 35669.0,
+      "capex_label": "Moderate",
+      "cfo_quality_score": 0.23,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "BHARTIARTL",
+      "company_name": "Bharti Airtel Ltd",
+      "free_cash_flow_cr": 27809.0,
+      "capex_label": "Capital Intensive",
+      "cfo_quality_score": 3.33,
+      "sector": "Communication Services"
+    },
+    {
+      "company_id": "BPCL",
+      "company_name": "Bharat Petroleum Corporation Ltd",
+      "free_cash_flow_cr": 25415.0,
+      "capex_label": "Asset Light",
+      "cfo_quality_score": 2.49,
+      "sector": "Energy"
+    },
+    {
+      "company_id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "free_cash_flow_cr": 24176.0,
+      "capex_label": "Capital Intensive",
+      "cfo_quality_score": 2.31,
+      "sector": "Energy"
+    },
+    {
+      "company_id": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Ltd",
+      "free_cash_flow_cr": 24176.0,
+      "capex_label": "Capital Intensive",
+      "cfo_quality_score": 2.31,
+      "sector": "Energy"
+    },
+    {
+      "company_id": "LT",
+      "company_name": "Larsen & Toubro Ltd",
+      "free_cash_flow_cr": 20445.0,
+      "capex_label": "Asset Light",
+      "cfo_quality_score": 1.45,
+      "sector": "Industrials"
+    },
+    {
+      "company_id": "INFY",
+      "company_name": "Infosys Ltd",
+      "free_cash_flow_cr": 20117.0,
+      "capex_label": "Moderate",
+      "cfo_quality_score": 1.04,
+      "sector": "Information Technology"
+    },
+    {
+      "company_id": "ITC",
+      "company_name": "ITC Ltd\n",
+      "free_cash_flow_cr": 18742.0,
+      "capex_label": "Asset Light",
+      "cfo_quality_score": 0.94,
+      "sector": "Consumer Staples"
+    },
+    {
+      "company_id": "ADANIPOWER",
+      "company_name": "Adani Power Ltd",
+      "free_cash_flow_cr": 17651.0,
+      "capex_label": "Moderate",
+      "cfo_quality_score": 1.32,
+      "sector": "Energy"
+    },
+    {
+      "company_id": "HCLTECH",
+      "company_name": "HCL Technologies Ltd",
+      "free_cash_flow_cr": 15840.0,
+      "capex_label": "Moderate",
+      "cfo_quality_score": 1.37,
+      "sector": "Information Technology"
+    }
+  ],
+  "capex_labels": [
+    {
+      "capex_label": "Asset Light",
+      "count": 27
+    },
+    {
+      "capex_label": "Capital Intensive",
+      "count": 50
+    },
+    {
+      "capex_label": "Moderate",
+      "count": 25
+    }
+  ],
+  "high_leverage": [
+    {
+      "company_id": "CANBK",
+      "company_name": "Canara Bank",
+      "de_ratio": 14.87,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "BANKBARODA",
+      "company_name": "Bank of Baroda",
+      "de_ratio": 12.14,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "PFC",
+      "company_name": "Power Finance Corporation Ltd",
+      "de_ratio": 8.27,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "AXISBANK",
+      "company_name": "Axis Bank Ltd",
+      "de_ratio": 8.25,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "IRFC",
+      "company_name": "Indian Railway Finance Corporation Ltd",
+      "de_ratio": 7.83,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "CHOLAFIN",
+      "company_name": "Cholamandalam Investment & Finance Company Ltd",
+      "de_ratio": 7.38,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "INDUSINDBK",
+      "company_name": "IndusInd Bank Ltd",
+      "de_ratio": 6.89,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "HDFCBANK",
+      "company_name": "HDFC Bank Ltd",
+      "de_ratio": 6.81,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "RECLTD",
+      "company_name": "REC Ltd",
+      "de_ratio": 6.58,
+      "sector": "Financials"
+    },
+    {
+      "company_id": "ICICIBANK",
+      "company_name": "ICICI Bank Ltd",
+      "de_ratio": 6.45,
+      "sector": "Financials"
+    }
+  ],
+  "dq_rules": [
+    {
+      "rule": "DQ01",
+      "desc": "Unique Companies",
+      "status": "PASS",
+      "severity": "Critical",
+      "count": 0
+    },
+    {
+      "rule": "DQ02",
+      "desc": "Duplicate Records",
+      "status": "PASS",
+      "severity": "Critical",
+      "count": 0
+    },
+    {
+      "rule": "DQ03",
+      "desc": "Foreign Key Check",
+      "status": "PASS",
+      "severity": "Critical",
+      "count": 0
+    },
+    {
+      "rule": "DQ04",
+      "desc": "Balance Sheet Validation",
+      "status": "PASS",
+      "severity": "Critical",
+      "count": 0
+    },
+    {
+      "rule": "DQ05",
+      "desc": "OPM Percentage Mismatch",
+      "status": "WARN",
+      "severity": "Warning",
+      "count": 234
+    },
+    {
+      "rule": "DQ06",
+      "desc": "Sales Zero Check",
+      "status": "FAIL",
+      "severity": "Critical",
+      "count": 1
+    },
+    {
+      "rule": "DQ07",
+      "desc": "Year Format",
+      "status": "PASS",
+      "severity": "Critical",
+      "count": 0
+    },
+    {
+      "rule": "DQ08",
+      "desc": "Ticker Format",
+      "status": "PASS",
+      "severity": "Critical",
+      "count": 0
+    },
+    {
+      "rule": "DQ09",
+      "desc": "Cash Flow Mismatch",
+      "status": "WARN",
+      "severity": "Warning",
+      "count": 396
+    },
+    {
+      "rule": "DQ10",
+      "desc": "EPS Consistency",
+      "status": "PASS",
+      "severity": "Warning",
+      "count": 0
+    },
+    {
+      "rule": "DQ11",
+      "desc": "Invalid Tax Percentage",
+      "status": "WARN",
+      "severity": "Warning",
+      "count": 163
+    },
+    {
+      "rule": "DQ12",
+      "desc": "Invalid Dividend Payout",
+      "status": "WARN",
+      "severity": "Warning",
+      "count": 153
+    },
+    {
+      "rule": "DQ13",
+      "desc": "Invalid Document URLs",
+      "status": "WARN",
+      "severity": "Warning",
+      "count": 383
+    },
+    {
+      "rule": "DQ14",
+      "desc": "EPS/Net Profit Sign Mismatch",
+      "status": "FAIL",
+      "severity": "Critical",
+      "count": 3
+    },
+    {
+      "rule": "DQ15",
+      "desc": "Non-negative Values",
+      "status": "INFO",
+      "severity": "Info",
+      "count": 0
+    },
+    {
+      "rule": "DQ16",
+      "desc": "Interest Coverage < 1",
+      "status": "WARN",
+      "severity": "Warning",
+      "count": 302
+    }
+  ],
+  "sprint_stats": {
+    "companies": 92,
+    "financial_years": "FY2012-FY2024",
+    "ratio_records": 1184,
+    "tests_passed": 139,
+    "kpi_count": 50,
+    "dq_rules": 16,
+    "tables": 12,
+    "datasets": 12,
+    "db_rows": 12892
+  }
+}

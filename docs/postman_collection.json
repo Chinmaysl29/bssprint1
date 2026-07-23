@@ -1,0 +1,504 @@
+{
+  "info": {
+    "name": "Nifty100 API (FastAPI)",
+    "description": "Postman collection generated from FastAPI routes.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "health_check",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/health/",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "health"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "health_check",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/health",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "health"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "get_schema",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/health/schema",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "health",
+                "schema"
+              ],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Companies",
+      "item": [
+        {
+          "name": "list_companies",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies/",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "list_companies",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "company_profile",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies/:ticker",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies",
+                "{ticker}"
+              ],
+              "variable": [
+                {
+                  "key": "ticker",
+                  "value": "sample_ticker"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "company_pl",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies/:ticker/pl",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies",
+                "{ticker}",
+                "pl"
+              ],
+              "variable": [
+                {
+                  "key": "ticker",
+                  "value": "sample_ticker"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "company_bs",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies/:ticker/bs",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies",
+                "{ticker}",
+                "bs"
+              ],
+              "variable": [
+                {
+                  "key": "ticker",
+                  "value": "sample_ticker"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "company_cashflow",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies/:ticker/cashflow",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies",
+                "{ticker}",
+                "cashflow"
+              ],
+              "variable": [
+                {
+                  "key": "ticker",
+                  "value": "sample_ticker"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "company_ratios",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies/:ticker/ratios",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies",
+                "{ticker}",
+                "ratios"
+              ],
+              "variable": [
+                {
+                  "key": "ticker",
+                  "value": "sample_ticker"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "download_tearsheet",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies/:ticker/tearsheet",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies",
+                "{ticker}",
+                "tearsheet"
+              ],
+              "variable": [
+                {
+                  "key": "ticker",
+                  "value": "sample_ticker"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "compare_peers",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies/:ticker/peers/compare",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies",
+                "{ticker}",
+                "peers",
+                "compare"
+              ],
+              "variable": [
+                {
+                  "key": "ticker",
+                  "value": "sample_ticker"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Screener",
+      "item": [
+        {
+          "name": "run_screener",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/screener/",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "screener"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "run_screener",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/screener",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "screener"
+              ],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sectors",
+      "item": [
+        {
+          "name": "get_sectors",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/sectors/",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "sectors"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "get_sectors",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/sectors",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "sectors"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "get_sector_companies",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/sectors/:sector/companies",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "sectors",
+                "{sector}",
+                "companies"
+              ],
+              "variable": [
+                {
+                  "key": "sector",
+                  "value": "sample_sector"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Peers",
+      "item": [
+        {
+          "name": "get_peers",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/peers/:group",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "peers",
+                "{group}"
+              ],
+              "variable": [
+                {
+                  "key": "group",
+                  "value": "sample_group"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Valuation",
+      "item": [
+        {
+          "name": "get_historical_valuation",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/market-cap/:ticker",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "market-cap",
+                "{ticker}"
+              ],
+              "variable": [
+                {
+                  "key": "ticker",
+                  "value": "sample_ticker"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Portfolio",
+      "item": [
+        {
+          "name": "get_portfolio_stats",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/portfolio/stats",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "portfolio",
+                "stats"
+              ],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Documents",
+      "item": [
+        {
+          "name": "get_company_documents",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/companies/:ticker/documents",
+              "host": [
+                "http://localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies",
+                "{ticker}",
+                "documents"
+              ],
+              "variable": [
+                {
+                  "key": "ticker",
+                  "value": "sample_ticker"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

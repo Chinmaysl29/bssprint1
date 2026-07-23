@@ -1,0 +1,138 @@
+// https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String?
+  email     String?  @unique
+  phone     String?
+  role      String?  // 'admin', 'owner', 'customer'
+  status    String   @default("pending") // 'pending', 'approved'
+  createdAt DateTime @default(now()) @map("created_at")
+
+  owner         Owner?
+  customer      Customer?
+  notifications Notification[]
+
+  @@map("users")
+}
+
+model Owner {
+  id           String       @id @default(uuid())
+  userId       String       @unique @map("user_id")
+  businessName String?      @map("business_name")
+  address      String?
+  documentUrl  String?      @map("document_url")
+  verified     Boolean      @default(false)
+
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  properties   PgProperty[]
+
+  @@map("owners")
+}
+
+model Customer {
+  id       String    @id @default(uuid())
+  userId   String    @unique @map("user_id")
+  age      Int?
+  gender   String?
+  address  String?
+  verified Boolean   @default(false)
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bookings Booking[]
+  reviews  Review[]
+
+  @@map("customers")
+}
+
+model PgProperty {
+  id          String   @id @default(uuid())
+  ownerId     String   @map("owner_id")
+  name        String?
+  location    String?
+  description String?
+  price       Int?
+  status      String   @default("pending") // 'pending', 'approved', 'rejected'
+
+  owner       Owner    @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  rooms       Room[]
+  reviews     Review[]
+  bookings    Booking[]
+
+  @@map("pg_properties")
+}
+
+model Room {
+  id        String     @id @default(uuid())
+  pgId      String     @map("pg_id")
+  roomNo    String?    @map("room_no")
+  capacity  Int?
+  available Boolean    @default(true)
+
+  property  PgProperty @relation(fields: [pgId], references: [id], onDelete: Cascade)
+  bookings  Booking[]
+
+  @@map("rooms")
+}
+
+model Booking {
+  id         String     @id @default(uuid())
+  customerId String     @map("customer_id")
+  pgId       String     @map("pg_id")
+  status     String     @default("pending") // 'pending', 'confirmed', 'rejected', 'cancelled'
+  createdAt  DateTime   @default(now()) @map("created_at")
+
+  customer   Customer   @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  property   PgProperty @relation(fields: [pgId], references: [id], onDelete: Cascade)
+  payments   Payment[]
+
+  @@map("bookings")
+}
+
+model Payment {
+  id            String   @id @default(uuid())
+  bookingId     String   @map("booking_id")
+  amount        Int?
+  commission    Int?     // 2% of amount → admin
+  ownerAmount   Int?     @map("owner_amount") // 98% of amount → owner
+  paymentStatus String?  @map("payment_status") // 'pending', 'completed', 'failed', 'refunded'
+  date          DateTime @default(now())
+
+  booking       Booking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+
+  @@map("payments")
+}
+
+model Review {
+  id         String     @id @default(uuid())
+  customerId String     @map("customer_id")
+  pgId       String     @map("pg_id")
+  rating     Int?       // 1-5
+  comment    String?
+
+  customer   Customer   @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  property   PgProperty @relation(fields: [pgId], references: [id], onDelete: Cascade)
+
+  @@map("reviews")
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  type      String   // 'booking', 'payment', 'system', 'reminder'
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

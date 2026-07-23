@@ -157,3 +157,12 @@ CREATE TABLE peer_groups (
     is_primary BOOLEAN,
     FOREIGN KEY (company_id) REFERENCES companies(id)
 );
+
+CREATE TABLE peer_percentiles (
+    company_id INTEGER,
+    peer_group_name TEXT,
+    metric TEXT,
+    value REAL,
+    percentile_rank REAL,
+    year INTEGER
+);

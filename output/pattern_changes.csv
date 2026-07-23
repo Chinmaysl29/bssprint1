@@ -1,0 +1,109 @@
+company_id,company_name,sector,previous_year,current_year,previous_pattern,current_pattern,status,reason
+ABB,Abbott India Ltd,Industrials,FYMar 2024,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+ADANIENSOL,Adani Energy Solutions Ltd,Energy,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+ADANIENT,Adani Enterprises Ltd,Industrials,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+ADANIGREEN,Adani Green Energy Ltd,Energy,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Industrials,FYMar 2024,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+ADANIPOWER,Adani Power Ltd,Energy,FYMar 2023,FYMar 2024,Mixed Strategy,Cash Accumulator,Changed,Allocation strategy shifted
+AMBUJACEM,Ambuja Cements Ltd,Materials,FYMar 2023,FYMar 2024,Balanced,Capital Intensive,Changed,Allocation strategy shifted
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Healthcare,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Materials,FYMar 2024,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+AXISBANK,Axis Bank Ltd,Financials,FYMar 2023,FYMar 2024,Capital Intensive,Distress,Changed,Allocation strategy shifted
+BAJAJ-AUTO,Bajaj Auto Ltd,Consumer Discretionary,FYMar 2024,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+BAJAJFINSV,Bajaj Finserv Ltd,Financials,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Financials,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+BAJFINANCE,Bajaj Finance Ltd,Financials,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+BANKBARODA,Bank of Baroda,Financials,FYMar 2023,FYMar 2024,Shareholder Returns,Distress,Changed,Allocation strategy shifted
+BEL,Bharat Electronics Ltd,Industrials,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+BHARTIARTL,Bharti Airtel Ltd,Communication Services,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+BHEL,"Bharat Heavy Electricals Limited
+",Industrials,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+BOSCHLTD,Bosch Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+BPCL,Bharat Petroleum Corporation Ltd,Energy,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+BRITANNIA,Britannia Industries Ltd,Consumer Staples,FYMar 2023,FYMar 2024,Capital Intensive,Shareholder Returns,Changed,Allocation strategy shifted
+CANBK,Canara Bank,Financials,FYMar 2023,FYMar 2024,Distress,Shareholder Returns,Changed,Allocation strategy shifted
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Financials,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+CIPLA,"Cipla Ltd
+",Healthcare,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+COALINDIA,Coal India Ltd,Materials,FYMar 2023,FYMar 2024,Capital Intensive,Shareholder Returns,Changed,Allocation strategy shifted
+DABUR,Dabur India Ltd,Consumer Staples,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+DIVISLAB,Divis Laboratories Ltd,Healthcare,FYMar 2023,FYMar 2024,Capital Intensive,Shareholder Returns,Changed,Allocation strategy shifted
+DLF,DLF Ltd,Real Estate,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+DMART,Avenue Supermarts Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Reinvestor,Reinvestor,No Change,Stable allocation strategy maintained
+DRREDDY,Dr Reddys Laboratories Ltd,Healthcare,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+EICHERMOT,Eicher Motors Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+GAIL,GAIL (India) Ltd,Energy,FYMar 2023,FYMar 2024,Balanced,Shareholder Returns,Changed,Allocation strategy shifted
+GODREJCP,Godrej Consumer Products Ltd,Consumer Staples,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+GRASIM,Grasim Industries Ltd,Industrials,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+HAL,Hindustan Aeronautics Ltd,Industrials,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+HAVELLS,Havells India Ltd,Industrials,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+HCLTECH,HCL Technologies Ltd,Information Technology,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+HDFCBANK,HDFC Bank Ltd,Financials,FYMar 2023,FYMar 2024,Balanced,Shareholder Returns,Changed,Allocation strategy shifted
+HDFCLIFE,HDFC Life Insurance Company Ltd,Financials,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Consumer Discretionary,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+HINDALCO,Hindalco Industries Ltd,Materials,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+HINDUNILVR,"Hindustan Unilever Ltd
+",Consumer Staples,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+ICICIBANK,ICICI Bank Ltd,Financials,FYMar 2023,FYMar 2024,Distress,Capital Intensive,Changed,Allocation strategy shifted
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Financials,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Financials,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+INDIGO,Interglobe Aviation Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Reinvestor,Capital Intensive,Changed,Significant increase in CapEx for expansion projects
+INDUSINDBK,IndusInd Bank Ltd,Financials,FYMar 2023,FYMar 2024,Distress,Shareholder Returns,Changed,Allocation strategy shifted
+INFY,Infosys Ltd,Information Technology,FYMar 2023,FYMar 2024,Shareholder Returns,Reinvestor,Changed,Allocation strategy shifted
+IOC,"Indian Oil Corporation
+",Energy,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Capital Intensive,Shareholder Returns,Changed,Allocation strategy shifted
+IRFC,Indian Railway Finance Corporation Ltd,Financials,FYMar 2023,FYMar 2024,Distress,Shareholder Returns,Changed,Allocation strategy shifted
+ITC,"ITC Ltd
+",Consumer Staples,FYMar 2023,FYMar 2024,Capital Intensive,Shareholder Returns,Changed,Allocation strategy shifted
+JINDALSTEL,Jindal Steel & Power Ltd,Materials,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+JIOFIN,Jio Financial Services Ltd,Financials,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+JSWENERGY,JSW Energy Ltd,Energy,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+JSWSTEEL,JSW Steel Ltd,Materials,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Financials,FYMar 2023,FYMar 2024,Distress,Capital Intensive,Changed,Allocation strategy shifted
+LICI,Life Insurance Corporation of India,Financials,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+LODHA,Macrotech Developers Ltd,Real Estate,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+LT,Larsen & Toubro Ltd,Industrials,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+LTIM,LTIMindtree Ltd,Information Technology,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+M&M,"Mahindra & Mahindra Ltd
+",Consumer Discretionary,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+MARUTI,Maruti Suzuki India Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+MOTHERSON,Samvardhana Motherson International Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Shareholder Returns,Balanced,Changed,Allocation strategy shifted
+NAUKRI,Info Edge (India) Ltd,Communication Services,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+NESTLEIND,Nestle India Ltd,Consumer Staples,FYDec 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+NHPC,"NHPC Ltd
+",Energy,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+NTPC,NTPC Ltd,Energy,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+ONGC,Oil & Natural Gas Corpn Ltd,Energy,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+PFC,Power Finance Corporation Ltd,Financials,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+PIDILITIND,Pidilite Industries Ltd,Materials,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+PNB,Punjab National Bank,Financials,FYMar 2024,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+POWERGRID,Power Grid Corporation of India Ltd,Energy,FYMar 2024,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+RECLTD,REC Ltd,Financials,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+RELIANCE,"Reliance Industries Ltd
+",Energy,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+SBILIFE,SBI Life Insurance Company Ltd,Financials,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+SBIN,State Bank of India,Financials,FYMar 2023,FYMar 2024,Distress,Shareholder Returns,Changed,Allocation strategy shifted
+SHREECEM,Shree Cement Ltd,Materials,FYMar 2023,FYMar 2024,Capital Intensive,Shareholder Returns,Changed,Allocation strategy shifted
+SHRIRAMFIN,"Shriram Finance Ltd
+",Financials,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow
+SIEMENS,Siemens Ltd,Industrials,FYSep 2023,FYSep 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Healthcare,FYMar 2023,FYMar 2024,Capital Intensive,Shareholder Returns,Changed,Allocation strategy shifted
+TATACONSUM,Tata Consumer Products Ltd,Consumer Staples,FYMar 2023,FYMar 2024,Shareholder Returns,Capital Intensive,Changed,Allocation strategy shifted
+TATAMOTORS,Tata Motors Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+TATAPOWER,"Tata Power Company Ltd
+",Energy,FYMar 2023,FYMar 2024,Capital Intensive,Capital Intensive,No Change,Stable allocation strategy maintained
+TATASTEEL,"Tata Steel Ltd
+",Materials,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+TCS,Tata Consultancy Services Ltd,Information Technology,FYMar-23,FYMar-24,Mixed Strategy,Cash Accumulator,Changed,Allocation strategy shifted
+TECHM,Tech Mahindra Ltd,Information Technology,FYMar 2024,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+TITAN,"Titan Company Ltd
+",Consumer Discretionary,FYMar 2023,FYMar 2024,Balanced,Shareholder Returns,Changed,Allocation strategy shifted
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Healthcare,FYMar 2023,FYMar 2024,Capital Intensive,Shareholder Returns,Changed,Allocation strategy shifted
+TRENT,Trent Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Shareholder Returns,Shareholder Returns,No Change,Consistent dividend and buyback policy
+TVSMOTOR,TVS Motor Company Ltd,Consumer Discretionary,FYMar 2023,FYMar 2024,Distress,Distress,No Change,Continued negative operating cash flow

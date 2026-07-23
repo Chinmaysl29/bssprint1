@@ -11,3 +11,4 @@ dist/
 build/
 *.db
 *.DS_Store
+output/
