@@ -1,4 +1,4 @@
 
-# Nifty100 Sprint tak
+# BlueStocks Nifty100 Sprint task 
 
 
